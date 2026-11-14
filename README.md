@@ -34,3 +34,5 @@ Hoje o projeto é uma página estática (`index.html`, HTML + CSS + JavaScript p
 ## Aviso
 
 Projeto independente, sem vínculo partidário. Não emite opinião, apenas organiza números públicos com a fonte indicada. Encontrou algum erro? Abra uma *issue*.
+
+Site no ar: https://guilhermechimilouski.github.io/quem-paga-indaial/
