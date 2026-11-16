@@ -51,6 +51,16 @@ def teste_ata():
     assert coletar.data_por_extenso(ATA) == "2026-03-03"
 
 
+def teste_lista_atas():
+    html = ('<a href="https://www.camaraindaial.sc.gov.br/atas/sessao_ordinaria/2026/1/0/2324" class="x">'
+            '<h4>Ata da 47ª Sessão Ordinária de 2026</h4><span>Data e Hora: 13/10/2026 18:30</span></a>'
+            '<a href="https://www.camaraindaial.sc.gov.br/atas/sessao_ordinaria/2026/2/0">2</a>')
+    achados = coletar.RE_ATA.findall(html)
+    assert len(achados) == 1 and achados[0][2] == "2324"
+    rotulo = coletar.limpar_html(achados[0][3])
+    assert "47ª Sessão" in rotulo and coletar.data_por_extenso(rotulo) == "2026-10-13"
+
+
 def teste_classificar():
     assert classificar.tema("Operação tapa-buraco na Rua Mal. Floriano Peixoto, bairro Centro") == "Buracos, asfalto e manutenção de ruas"
     assert classificar.rua("Operação tapa-buraco na Rua Mal. Floriano Peixoto, bairro Centro") == "rua marechal floriano peixoto"
@@ -77,6 +87,8 @@ def teste_agregar_e_montar():
                     setattr(m, nome, getattr(comum, nome) if nome != "MANUAL" else tmp / "dados/manual")
         comum.MANUAL = tmp / "dados/manual"
         coletar.DB = tmp / "dados/radar.db"
+        for f in ("radar.db", "brutos/coletado.json"):
+            (tmp / "dados" / f).unlink(missing_ok=True)
         con = coletar.conectar()
         con.execute("INSERT INTO sessoes VALUES ('2026-03-03 19:00:00','7ª Sessão Ordinária de 2026','Sessão Ordinária',7,2026,'',1,2)")
         con.execute("INSERT INTO sessoes VALUES ('2026-03-10 19:00:00','8ª Sessão Ordinária de 2026','Sessão Ordinária',8,2026,'',1,0)")

@@ -21,13 +21,16 @@ def montar():
     seed = ler(BRUTOS / "base_v1.json")
     col = ler(BRUTOS / "coletado.json")
     fa = ler(BRUTOS / "folha_agg.json")
-    ult = ler(BRUTOS / "folha_ultimo.json")["pessoas"]
+    fu = ler(BRUTOS / "folha_ultimo.json")
+    ult, ult_mes = fu["pessoas"], fu["mes"]
     dh = ler(BRUTOS / "diarias_hist.json")
     dv = ler(BRUTOS / "diarias_vereador.json")
     desp = ler(BRUTOS / "despesas2026.json")
     seedv = {v["nome"]: v for v in seed["vereadores"]}
-    pres = col["presenca"] if col else ler(BRUTOS / "presenca.json")
-    ped = col["pedidos"] if col else ler(BRUTOS / "pedidos.json")
+    col = col or {}
+    tem = lambda k: k in col
+    pres = col["presenca"] if tem("presenca") else ler(BRUTOS / "presenca.json")
+    ped = col["pedidos"] if tem("pedidos") else ler(BRUTOS / "pedidos.json")
     PATR = cfg["patronal"]
 
     mand = fa["meses"]
@@ -48,7 +51,7 @@ def montar():
         diar = round(sum(dv[k][a] for a in anos), 2)
         sal = f["sub"] + f["ass"]
         cur = [{"nome": ult[a][0].title(), "cargo": ult[a][1].capitalize(), "bruto": ult[a][2]} for a in gab[k] if a in ult]
-        if not col:
+        if ult_mes == "10/2026":
             cur = [{"nome": a["nome"], "cargo": a["cargo"], "bruto": a["bruto"]} for a in seedv[v["nome"]]["assessores"]]
         last = f["s"][-1]
         gab_total += sal
@@ -60,12 +63,12 @@ def montar():
                                               total=round(sal + diar + round(sal * PATR, 2), 2)),
                                  serie=serie, assessorDesde=desde),
                       presenca=pres[v["nome"]],
-                      votos=col["votos"][v["nome"]] if col else sv["votos"],
-                      props=col["props"].get(v["nome"], {}) if col else sv["props"],
-                      contra=col["contra"][v["nome"]] if col else sv["contra"],
+                      votos=col["votos"][v["nome"]] if tem("votos") else sv["votos"],
+                      props=col["props"].get(v["nome"], {}) if tem("props") else sv["props"],
+                      contra=col["contra"][v["nome"]] if tem("contra") else sv["contra"],
                       pedidos={x: ped["per"][v["nome"]][x] for x in ("ind", "inf", "selfRep", "selfTop")}))
 
-    c = col["camara"] if col else seed["camara"]
+    c = dict(seed["camara"], **col.get("camara", {}))
     anteriores = [a for a in dh if "2021" <= a <= "2024"]
     anos_mand = sorted(a for a in dh if a >= "2025")
     cam = dict(folhaMandato=round(sum(tot[m][1] for m in mand), 2),
@@ -78,11 +81,11 @@ def montar():
                folhaMensal=[{"m": iso(m), "v": tot[m][1]} for m in mand],
                folhaMensalAnt=[{"m": iso(m), "v": tot[m][1]} for m in ant],
                subsidio2025=cfg["subsidio"]["2025"], subsidio2026=cfg["subsidio"]["2026"])
-    data = dict(atualizado=col["atualizado"] if col else seed["atualizado"],
+    data = dict(atualizado=col.get("atualizado") or col.get("atualizadoProps") or seed["atualizado"],
                 periodoFolha=f"{per(mand[0])} a {per(mand[-1])}", ultimoMes=per(mand[-1]),
                 camara=cam, vereadores=V,
-                divididas=col["divididas"] if col else seed["divididas"],
-                atas=col["atas"] if col else seed["atas"],
+                divididas=col["divididas"] if tem("divididas") else seed["divididas"],
+                atas=col["atas"] if tem("atas") else seed["atas"],
                 pedidos={x: ped[x] for x in ("top", "indT", "infT", "repGrupos", "repPedidos", "indTotal", "infTotal")},
                 repo=cfg.get("repo", ""), correcoes=ler("correcoes.json", []))
     gravar(SITE / "data.json", data, compacto=True)

@@ -77,7 +77,7 @@ def conectar():
 
 def _bloqueio(texto):
     t = texto[:5000].lower()
-    return "captcha" in t or "verifica" in t and "rob" in t or "turnstile" in t
+    return "captcha" in t or ("verifica" in t and "rob" in t) or "turnstile" in t
 
 
 def api_get(s, token, call, **params):
@@ -178,7 +178,7 @@ def baixar_pdf(s, data_sessao):
     r.raise_for_status()
     if not r.content.startswith(b"%PDF"):
         if _bloqueio(r.content.decode("latin-1")):
-            raise Bloqueado("o site devolveu a verificação anti-robô em vez do PDF")
+            raise Bloqueado(f"o site devolveu a verificação anti-robô em vez do PDF (HTTP {r.status_code})")
         return None
     return r.content
 
@@ -199,6 +199,9 @@ def coletar_votacoes(con, s, desde, refazer=False):
     for i, (data, titulo) in enumerate(sessoes, 1):
         try:
             pdf = baixar_pdf(s, data)
+        except Bloqueado:
+            con.commit()
+            raise
         except requests.RequestException as e:
             print(f"  [{i}] {titulo}: erro de rede ({e}), fica para a próxima")
             continue
@@ -231,30 +234,42 @@ def data_por_extenso(t):
     return f"{m.group(3)}-{m.group(2)}-{m.group(1)}" if m else None
 
 
+RE_ATA = re.compile(r'href="([^"]*/atas/sessao_ordinaria/(20\d{2})/\d+/0/(\d+))"[^>]*>(.*?)</a>', re.S | re.I)
+
+
 def coletar_atas(con, s, anos):
     for ano in anos:
-        r = s.get(f"{BASE}/atas/sessao_ordinaria/{ano}", timeout=60)
-        if _bloqueio(r.text):
-            raise Bloqueado("a página de atas pediu verificação anti-robô")
-        links = sorted(set(re.findall(r'href="([^"]*/atas/[^"]*(?:show|visualizar|ata)[^"]*)"', r.text, re.I)))
         conhecidas = {n for (n,) in con.execute("SELECT numero FROM atas WHERE ano=?", (ano,))}
+        lista, pagina = {}, 1
+        while pagina < 20:
+            r = s.get(f"{BASE}/atas/sessao_ordinaria/{ano}/{pagina}/0", timeout=60)
+            if _bloqueio(r.text):
+                raise Bloqueado("a lista de atas pediu verificação anti-robô")
+            novos = 0
+            for url, a, _id, rotulo in RE_ATA.findall(r.text):
+                m = re.search(r"(\d+)\s*[ªºa]\s*Sess", limpar_html(rotulo))
+                if m and int(a) == ano and int(m.group(1)) not in lista:
+                    lista[int(m.group(1))] = (url if url.startswith("http") else BASE + url, limpar_html(rotulo))
+                    novos += 1
+            if not novos:
+                break
+            pagina += 1
+            time.sleep(PAUSA / 2)
         novas = 0
-        for link in links:
-            url = link if link.startswith("http") else BASE + "/" + link.lstrip("/")
+        for num, (url, rotulo) in sorted(lista.items()):
+            if num in conhecidas:
+                continue
             p = s.get(url, timeout=60)
             if _bloqueio(p.text):
+                con.commit()
                 raise Bloqueado("a página da ata pediu verificação anti-robô")
             txt = limpar_html(p.text)
-            m = re.search(r"(\d+)\s*[ªa]\s*Sess[ãa]o Ordin[áa]ria", txt, re.I)
-            if not m or int(m.group(1)) in conhecidas:
-                continue
             con.execute("INSERT OR REPLACE INTO atas VALUES (?,?,?,?,?)",
-                        (ano, int(m.group(1)), data_por_extenso(txt), url, txt[:20000]))
-            conhecidas.add(int(m.group(1)))
+                        (ano, num, data_por_extenso(rotulo) or data_por_extenso(txt), url, txt[:60000]))
             novas += 1
             time.sleep(PAUSA)
         con.commit()
-        print(f"Atas {ano}: {len(links)} links, {novas} novas")
+        print(f"Atas {ano}: {len(lista)} publicadas, {novas} novas lidas")
 
 
 def resumo(con):
@@ -282,26 +297,30 @@ def main():
         return
     con = conectar()
     s = http()
-    bloqueado = None
-    try:
-        if a.comando in ("api", "atualizar"):
-            coletar_api(con, s, carregar_token(), a.desde)
-        if a.comando in ("votacoes", "atualizar"):
-            coletar_votacoes(con, s, a.desde, a.refazer)
-        if a.comando in ("atas", "atualizar"):
-            coletar_atas(con, s, range(int(a.desde[:4]), datetime.now().year + 1))
-    except Bloqueado as e:
-        bloqueado = str(e)
-        print(f"\nPARADO: {bloqueado}. O que já foi coletado está salvo.")
+    avisos = []
+    etapas = []
+    if a.comando in ("api", "atualizar"):
+        etapas.append(("API", lambda: coletar_api(con, s, carregar_token(), a.desde)))
+    if a.comando in ("votacoes", "atualizar"):
+        etapas.append(("votações", lambda: coletar_votacoes(con, s, a.desde, a.refazer)))
+    if a.comando in ("atas", "atualizar"):
+        etapas.append(("atas", lambda: coletar_atas(con, s, range(int(a.desde[:4]), datetime.now().year + 1))))
+    for nome, etapa in etapas:
+        try:
+            etapa()
+        except (Bloqueado, requests.RequestException) as e:
+            con.commit()
+            avisos.append(f"{nome}: {e}")
+            print(f"\nPARADO em {nome}: {e}. O que já foi coletado está salvo; sigo para a próxima etapa.")
     if a.comando == "resumo":
         resumo(con)
     if a.comando == "atualizar":
         importar.tudo()
-        if con.execute("SELECT COUNT(*) FROM votacoes").fetchone()[0]:
-            agregar.agregar(con)
+        agregar.agregar(con)
         montar.montar()
     con.close()
-    if bloqueado:
+    if avisos:
+        print("\nResumo dos bloqueios:\n- " + "\n- ".join(avisos))
         sys.exit(2)
 
 

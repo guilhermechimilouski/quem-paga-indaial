@@ -40,6 +40,53 @@ def ausencias(texto, lista):
     return saida
 
 
+def proposicoes(con, lista, nomes):
+    props = {n: collections.Counter() for n in nomes + ["Executivo"]}
+    ind_t, inf_t = collections.Counter(), collections.Counter()
+    per = {n: dict(ind=collections.Counter(), inf=collections.Counter(), grupos=collections.Counter()) for n in nomes}
+    grupos = collections.defaultdict(lambda: dict(n=0, de="9999", ate="0000", aut=collections.Counter()))
+    total_props = 0
+    for tipo, data, ementa, autoria in con.execute("SELECT tipo, data, ementa, autoria FROM proposicoes WHERE data >= '2025-01-01'"):
+        total_props += 1
+        classe = tipo_prop(tipo, ementa)
+        autores = [x for x in (autoria or "").split(";") if x.strip()]
+        quem = set()
+        for a in autores:
+            n = identificar(a, lista) or ("Executivo" if re.search(r"PREFEIT|EXECUTIVO", up(a)) else None)
+            if n:
+                quem.add(n)
+        for n in quem:
+            props[n][classe] += 1
+        if classe not in ("indicacao", "req_info"):
+            continue
+        tm = tema(ementa)
+        (ind_t if classe == "indicacao" else inf_t)[tm] += 1
+        r = rua(ementa) if classe == "indicacao" else None
+        for n in quem & set(nomes):
+            per[n]["ind" if classe == "indicacao" else "inf"][tm] += 1
+            if r:
+                per[n]["grupos"][f"{tm}|{r}"] += 1
+        if r:
+            g = grupos[(tm, r)]
+            g["n"] += 1
+            g["de"], g["ate"] = min(g["de"], data[:10]), max(g["ate"], data[:10])
+            for n in quem & set(nomes):
+                g["aut"][n] += 1
+
+    rep = [g for g in grupos.values() if g["n"] > 1]
+    top = sorted(([k, g] for k, g in grupos.items() if g["n"] > 1), key=lambda x: -x[1]["n"])[:30]
+    pedidos = dict(
+        per={n: dict(ind=dict(per[n]["ind"]), inf=dict(per[n]["inf"]),
+                     selfRep=sum(c for c in per[n]["grupos"].values() if c > 1),
+                     selfTop=[[k, c] for k, c in per[n]["grupos"].most_common(5) if c > 1]) for n in nomes},
+        top=[dict(tema=k[0], rua=k[1], n=g["n"], de=g["de"], ate=g["ate"], aut=dict(g["aut"])) for k, g in top],
+        indT=dict(ind_t), infT=dict(inf_t), repGrupos=len(rep), repPedidos=sum(g["n"] for g in rep),
+        indTotal=sum(ind_t.values()), infTotal=sum(inf_t.values()))
+
+    props = {n: {c: props[n][c] for c in CLASSES if props[n][c]} for n in props}
+    return props, pedidos, total_props
+
+
 def agregar(con, minimo_sessoes=None):
     lista = vereadores()
     nomes = [v["nome"] for v in lista]
@@ -50,8 +97,15 @@ def agregar(con, minimo_sessoes=None):
     sess = con.execute("SELECT data, tipo, numero, ano FROM sessoes WHERE tipo IN (?,?) AND data >= '2025-01-01' AND data <= ? "
                        "AND votacao_coletada = 1 ORDER BY data", (*PLENARIO, hoje + " 23:59")).fetchall()
     if len(sess) < minimo:
-        print(f"Agregação NÃO gravada: só {len(sess)} sessões com votação lida (o site já tem {minimo}). "
-              "Rode de novo até completar; o site continua com os dados anteriores.")
+        print(f"Votações e presença NÃO atualizadas: só {len(sess)} sessões com votação lida (o site já tem {minimo}). "
+              "Rode o RODAR.bat para completar. Proposições e pedidos foram atualizados.")
+        if not con.execute("SELECT COUNT(*) FROM proposicoes").fetchone()[0]:
+            return None
+        anterior = ler(BRUTOS / "coletado.json", {}) or {}
+        props, pedidos, total_props = proposicoes(con, lista, nomes)
+        anterior.update(atualizadoProps=date.today().strftime("%d/%m/%Y"), props=props, pedidos=pedidos)
+        anterior.setdefault("camara", {})["propsTotal"] = total_props
+        gravar(BRUTOS / "coletado.json", anterior)
         return None
 
     atas = {(a, n): (d, t) for a, n, d, t in con.execute("SELECT ano, numero, data, texto FROM atas")}
@@ -122,52 +176,11 @@ def agregar(con, minimo_sessoes=None):
             else:
                 pres[n]["semAta"] += 1
 
-    # proposições e pedidos
-    props = {n: collections.Counter() for n in nomes + ["Executivo"]}
-    ind_t, inf_t = collections.Counter(), collections.Counter()
-    per = {n: dict(ind=collections.Counter(), inf=collections.Counter(), grupos=collections.Counter()) for n in nomes}
-    grupos = collections.defaultdict(lambda: dict(n=0, de="9999", ate="0000", aut=collections.Counter()))
-    total_props = 0
-    for tipo, data, ementa, autoria in con.execute("SELECT tipo, data, ementa, autoria FROM proposicoes WHERE data >= '2025-01-01'"):
-        total_props += 1
-        classe = tipo_prop(tipo, ementa)
-        autores = [x for x in (autoria or "").split(";") if x.strip()]
-        quem = set()
-        for a in autores:
-            n = identificar(a, lista) or ("Executivo" if re.search(r"PREFEIT|EXECUTIVO", up(a)) else None)
-            if n:
-                quem.add(n)
-        for n in quem:
-            props[n][classe] += 1
-        if classe not in ("indicacao", "req_info"):
-            continue
-        tm = tema(ementa)
-        (ind_t if classe == "indicacao" else inf_t)[tm] += 1
-        r = rua(ementa) if classe == "indicacao" else None
-        for n in quem & set(nomes):
-            per[n]["ind" if classe == "indicacao" else "inf"][tm] += 1
-            if r:
-                per[n]["grupos"][f"{tm}|{r}"] += 1
-        if r:
-            g = grupos[(tm, r)]
-            g["n"] += 1
-            g["de"], g["ate"] = min(g["de"], data[:10]), max(g["ate"], data[:10])
-            for n in quem & set(nomes):
-                g["aut"][n] += 1
-
-    rep = [g for g in grupos.values() if g["n"] > 1]
-    top = sorted(([k, g] for k, g in grupos.items() if g["n"] > 1), key=lambda x: -x[1]["n"])[:30]
-    pedidos = dict(
-        per={n: dict(ind=dict(per[n]["ind"]), inf=dict(per[n]["inf"]),
-                     selfRep=sum(c for c in per[n]["grupos"].values() if c > 1),
-                     selfTop=[[k, c] for k, c in per[n]["grupos"].most_common(5) if c > 1]) for n in nomes},
-        top=[dict(tema=k[0], rua=k[1], n=g["n"], de=g["de"], ate=g["ate"], aut=dict(g["aut"])) for k, g in top],
-        indT=dict(ind_t), infT=dict(inf_t), repGrupos=len(rep), repPedidos=sum(g["n"] for g in rep),
-        indTotal=sum(ind_t.values()), infTotal=sum(inf_t.values()))
+    props, pedidos, total_props = proposicoes(con, lista, nomes)
 
     out = dict(
         atualizado=date.today().strftime("%d/%m/%Y"),
-        props={n: {c: props[n][c] for c in CLASSES if props[n][c]} for n in props},
+        props=props,
         votos=agg, contra=contra_idx, divididas=div, atas=sem_ata, presenca=pres, pedidos=pedidos,
         camara=dict(votacoes=nominais, sessoes=len(sess), rejeitadas=rej, divididas=len(div),
                     rejSemAta=sum(1 for x in div if x["rejeitada"] and x["semAta"]),
