@@ -1,38 +1,58 @@
 # Quem paga, Indaial?
 
-Painel independente que mostra **quanto custa cada vereador da Câmara Municipal de Indaial (SC)**, como vota, o que propõe e com que frequência comparece às sessões. Usa só dados públicos oficiais, cada número com a sua fonte.
+**https://quempagaindaial.com.br**
 
-> Status: **protótipo**. Os dados vão de jan/2025 (início do mandato) até out/2026.
+Monitor independente dos 13 vereadores de Indaial (SC), legislatura 2025–2028: quanto cada um custa (salário, assessores, diárias, encargos), presença, como vota, o que propõe e quais pedidos se repetem.
 
-## O que o painel mostra
+Tudo vem de fontes oficiais e públicas:
 
-- **Quanto custa:** subsídio, assessores e encargos de cada gabinete, mês a mês, e a folha da Câmara comparada com a do mandato anterior.
-- **Como vota:** votos favoráveis e contrários, votações divididas e projetos rejeitados.
-- **O que propõe:** indicações, requerimentos, moções e projetos de lei, cada tipo contado separadamente. Mais leis não significa mais produtividade.
-- **Presença:** sessões com presença, faltas justificadas e não justificadas.
-- **Pedidos repetidos:** ruas e temas que voltam às indicações várias vezes, sinal de problema que não foi resolvido.
-- **Atas atrasadas:** sessões cujas atas ainda não foram publicadas e o que foi votado nelas.
+- API de dados abertos da Câmara Municipal de Indaial (proposições, sessões)
+- Relatórios do painel eletrônico de votação (PDF por sessão)
+- Atas das sessões publicadas no site da Câmara
+- Portal da Transparência da Câmara (folha de pagamento, diárias, despesas)
 
-## Fontes de dados
-
-- API de dados abertos da Câmara Municipal de Indaial
-- Relatórios do painel eletrônico de votação
-- Atas publicadas no site da Câmara
-- Portal da Transparência da Câmara (folha de pagamento, diárias e despesas)
+O site não dá nota, não apoia partido nem candidato e não recebe dinheiro de ninguém. Encontrou um erro? Escreva para **contato@quempagaindaial.com.br**.
 
 ## Como funciona
 
-Hoje o projeto é uma página estática (`index.html`, HTML + CSS + JavaScript puro, sem dependências), com os dados já tratados embutidos em JSON. Funciona no celular e no computador.
+```
+docs/                 site (GitHub Pages): index.html lê data.json
+  data.json           todos os números do site, gerado automaticamente
+coletor/              programa que coleta e calcula
+  coletar.py          baixa API, PDFs de votação e atas
+  agregar.py          transforma o que foi coletado em números
+  importar.py         lê as planilhas manuais de folha e diárias
+  montar.py           gera docs/data.json
+dados/
+  vereadores.json     lista oficial, partidos e links
+  gabinetes.json      qual assessor trabalha com qual vereador (fonte: perfis oficiais)
+  correcoes.json      registro público de correções
+  manual/             planilhas mensais do Portal da Transparência (ver LEIA.md)
+  brutos/             dados intermediários
+.github/workflows/    atualização automática toda sexta-feira
+```
 
-## Próximos passos
+## Atualização
 
-- [ ] Coletor automatizado que busca e atualiza os dados nas fontes oficiais
-- [ ] Separar os dados da página (arquivos JSON versionados)
-- [ ] Atualização periódica automática
-- [ ] Ranking com critérios públicos e documentados
+- **Automática (toda sexta):** o GitHub Actions coleta sessões, votações, atas e proposições novas e republica o site.
+- **Manual (uma vez por mês):** folha e diárias, porque o Portal da Transparência bloqueia robôs. Veja `dados/manual/LEIA.md`.
+- **Se a Câmara bloquear o robô:** rode `RODAR.bat` no Windows e envie as mudanças pelo GitHub Desktop.
 
-## Aviso
+Para rodar no computador:
 
-Projeto independente, sem vínculo partidário. Não emite opinião, apenas organiza números públicos com a fonte indicada. Encontrou algum erro? Abra uma *issue*.
+```bash
+pip install -r requirements.txt
+cp .env.example .env          # cole o token da API em RADAR_TOKEN
+python -m coletor.coletar atualizar
+python -m testes.test_coletor # testes sem internet
+```
 
-Site no ar: https://guilhermechimilouski.github.io/quem-paga-indaial/
+## Correções
+
+Pedidos de correção são respondidos em até 2 dias úteis. Cada correção entra em `dados/correcoes.json` com data e aparece na página "Quem faz" do site.
+
+## Responsável
+
+Guilherme Patrick Chimilouski Glatz · contato@quempagaindaial.com.br
+
+Código sob licença MIT. Os dados são públicos e podem ser reutilizados citando a fonte original.

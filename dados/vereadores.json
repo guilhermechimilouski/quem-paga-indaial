@@ -1,0 +1,119 @@
+[
+ {
+  "nome": "Valentim Blasius",
+  "slug": "valentim-blasius",
+  "partido": "PSD",
+  "funcao": "Presidente",
+  "votosEleicao": 891,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/17",
+  "token": "Blasius"
+ },
+ {
+  "nome": "Jonatas Mizael Rosenbrock",
+  "slug": "jonatas-mizael-rosenbrock",
+  "partido": "PODE",
+  "funcao": "Vice-presidente",
+  "votosEleicao": 885,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/294",
+  "token": "Rosenbrock"
+ },
+ {
+  "nome": "Valmir Jordani",
+  "slug": "valmir-jordani",
+  "partido": "UNIÃO",
+  "funcao": "1º secretário",
+  "votosEleicao": 1036,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/291",
+  "token": "Jordani"
+ },
+ {
+  "nome": "Diogo de Pinho",
+  "slug": "diogo-de-pinho",
+  "partido": "PL",
+  "funcao": "2º secretário",
+  "votosEleicao": 834,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/5",
+  "token": "\\bPinho"
+ },
+ {
+  "nome": "Carlos Eduardo Cunha",
+  "slug": "carlos-eduardo-cunha",
+  "partido": "MDB",
+  "funcao": "Vereador",
+  "votosEleicao": 1413,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/288",
+  "token": "\\bCunha\\b"
+ },
+ {
+  "nome": "Caroline Laís Bertoldi",
+  "slug": "caroline-lais-bertoldi",
+  "partido": "PP",
+  "funcao": "Vereadora",
+  "votosEleicao": 483,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/298",
+  "token": "Bertoldi"
+ },
+ {
+  "nome": "Elaine Pickler",
+  "slug": "elaine-pickler",
+  "partido": "PSDB",
+  "funcao": "Vereadora",
+  "votosEleicao": 1414,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/287",
+  "token": "Pickler"
+ },
+ {
+  "nome": "Elton Marcos Possamai",
+  "slug": "elton-marcos-possamai",
+  "partido": "NOVO",
+  "funcao": "Vereador",
+  "votosEleicao": 1125,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/6",
+  "token": "Possamai"
+ },
+ {
+  "nome": "Fernanda Jacobi dos Santos",
+  "slug": "fernanda-jacobi-dos-santos",
+  "partido": "PL",
+  "funcao": "Vereadora",
+  "votosEleicao": 668,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/7",
+  "token": "Fernanda"
+ },
+ {
+  "nome": "Flávio Augusto Ferri Molinari",
+  "slug": "flavio-augusto-ferri-molinari",
+  "partido": "PSD",
+  "funcao": "Vereador",
+  "votosEleicao": 1098,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/8",
+  "token": "Molinari"
+ },
+ {
+  "nome": "Henrique Fritz",
+  "slug": "henrique-fritz",
+  "partido": "MDB",
+  "funcao": "Vereador",
+  "votosEleicao": 954,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/299",
+  "token": "Fritz"
+ },
+ {
+  "nome": "José Carlos Peixer",
+  "slug": "jose-carlos-peixer",
+  "partido": "PODE",
+  "funcao": "Vereador",
+  "votosEleicao": 715,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/69",
+  "token": "Peixer"
+ },
+ {
+  "nome": "Lucio Vanderlinde",
+  "slug": "lucio-vanderlinde",
+  "partido": "NOVO",
+  "funcao": "Vereador",
+  "votosEleicao": 900,
+  "perfil": "https://www.camaraindaial.sc.gov.br/camara/membros/show/292",
+  "token": "Vanderlinde"
+ }
+]

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem paga, Indaial? Quanto custa e o que faz cada vereador de Indaial</title>
+<meta name="description" content="Salários, assessores, diárias, presença, votos e pedidos dos 13 vereadores de Indaial (SC), com dados oficiais da Câmara e do Portal da Transparência. Atualizado toda semana.">
+<link rel="canonical" href="https://quempagaindaial.com.br/">
+<meta name="theme-color" content="#b3121f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Quem paga, Indaial?">
+<meta property="og:title" content="Quem paga, Indaial? Veja quanto custa cada vereador">
+<meta property="og:description" content="Salários, diárias, presença e votos dos 13 vereadores de Indaial, com dados oficiais.">
+<meta property="og:url" content="https://quempagaindaial.com.br/">
+<meta property="og:image" content="https://quempagaindaial.com.br/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b3121f'/%3E%3Ctext x='32' y='46' font-family='Arial Black,Arial' font-weight='900' font-size='40' text-anchor='middle' fill='white'%3E%3F%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Quem paga, Indaial?","url":"https://quempagaindaial.com.br/","inLanguage":"pt-BR","description":"Monitor independente dos custos, presença e votos dos vereadores de Indaial (SC).","author":{"@type":"Person","name":"Guilherme Patrick Chimilouski Glatz"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: painel cívico em cards — resumo primeiro, detalhe ao clicar */
+  --paper:#f2f1ed; --surface:#ffffff; --ink:#15171c; --muted:#61656e; --line:#e1dfd9;
+  --accent:#b3121f; --accent-soft:#f7e4e5; --ok:#1f6b45; --ok-soft:#e3f1e9; --warn:#a15c00; --warn-soft:#fbefdc; --grey:#9aa0aa;
+  --display:"Archivo", "Arial Narrow", Arial, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --r:14px; --shadow:0 1px 2px rgba(20,20,30,.05),0 4px 14px rgba(20,20,30,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#111216; --surface:#1a1c21; --ink:#ecebe8; --muted:#a3a6ae; --line:#2c2f36;
+  --accent:#ff5d66; --accent-soft:#3a1c20; --ok:#5fc48f; --ok-soft:#173326; --warn:#e8a94d; --warn-soft:#3a2a12; --grey:#6c717b;
+  --shadow:none; color-scheme: dark; } }
+:root[data-theme="dark"]{
+  --paper:#111216; --surface:#1a1c21; --ink:#ecebe8; --muted:#a3a6ae; --line:#2c2f36;
+  --accent:#ff5d66; --accent-soft:#3a1c20; --ok:#5fc48f; --ok-soft:#173326; --warn:#e8a94d; --warn-soft:#3a2a12; --grey:#6c717b;
+  --shadow:none; color-scheme: dark; }
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+header.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar1{display:flex;align-items:center}
+.logo{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--accent)}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;padding:7px 12px;border-radius:999px;white-space:nowrap;color:var(--muted)}
+nav.tabs a:hover{color:var(--ink);background:var(--paper)}
+nav.tabs a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+main{padding:24px 0 64px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+main > *{min-width:0}
+.kpi,.card,.vcard{min-width:0;overflow-wrap:anywhere}
+.kpi > *{min-width:0;max-width:100%}
+.hero{padding:10px 0 4px}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,5.5vw,52px);line-height:1;margin:0 0 10px;letter-spacing:-.02em;text-wrap:balance}
+.hero h1 span{color:var(--accent)}
+.hero p{margin:0;color:var(--muted);max-width:62ch;font-size:17px}
+.stamp{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stamp b{background:var(--ink);color:var(--paper);padding:2px 8px;border-radius:4px;font-weight:600}
+h2{font-family:var(--display);font-weight:900;font-size:24px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-family:var(--display);font-weight:700;font-size:17px;margin:0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:12px}
+.sec-head p{margin:0;color:var(--muted);font-size:14px;max-width:70ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow);min-width:0}
+.card > h3{margin-bottom:12px}
+.card .sub{color:var(--muted);font-size:13px;margin:-8px 0 12px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow);display:grid;gap:6px;align-content:start}
+.kpi .lab{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .n{font-family:var(--display);font-weight:900;font-size:30px;line-height:1.05;font-variant-numeric:tabular-nums}
+.kpi .exp{font-size:14px;color:var(--muted)}
+.kpi.hot{border-top:4px solid var(--accent)}
+.delta{max-width:100%;white-space:normal;display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;padding:2px 8px;border-radius:999px;width:fit-content}
+.delta.up{background:var(--accent-soft);color:var(--accent)}
+.delta.down{background:var(--ok-soft);color:var(--ok)}
+.delta.flat{background:var(--paper);color:var(--muted)}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--paper);color:var(--muted);white-space:nowrap}
+.pill.red{background:var(--accent-soft);color:var(--accent)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.party{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:1px 7px;border-radius:4px;border:1px solid var(--line);color:var(--ink);letter-spacing:.03em}
+.avatar{flex:none;width:44px;height:44px;border-radius:12px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:16px}
+.avatar.big{width:72px;height:72px;font-size:26px;border-radius:18px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
+.vcard{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.vcard:hover{transform:translateY(-2px);border-color:var(--ink)}
+.vhead{display:flex;gap:12px;align-items:center;min-width:0}
+.vname{font-weight:600;line-height:1.2}
+.vmeta{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.vstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.vstats div{background:var(--paper);border-radius:10px;padding:8px;font-size:11px;color:var(--muted);line-height:1.2}
+.vstats b{display:block;font-family:var(--mono);font-size:14px;color:var(--ink);font-weight:600;margin-bottom:2px}
+.rank-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.rank-tabs button{font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.rank-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.rank{display:grid;gap:6px}
+.rrow{display:grid;grid-template-columns:28px minmax(120px,220px) 1fr auto;gap:10px;align-items:center;text-decoration:none;padding:4px 6px;border-radius:8px}
+.rrow:hover{background:var(--paper)}
+.rrow .pos{font-family:var(--mono);font-size:13px;color:var(--muted);text-align:right}
+.rrow .nm{font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.track{height:12px;background:var(--paper);border-radius:6px;overflow:hidden}
+.track i{display:block;height:100%;border-radius:6px;background:var(--ink)}
+.track i.acc{background:var(--accent)}
+.track i.ok{background:var(--ok)}
+.rrow .val{font-family:var(--mono);font-size:13px;text-align:right;white-space:nowrap}
+.rank-note{font-size:13px;color:var(--muted);margin:12px 0 0}
+.receipt{font-family:var(--mono);font-size:14px}
+.line{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.line small{display:block;color:var(--muted);font-family:var(--body);font-size:12px}
+.line .v{white-space:nowrap;font-variant-numeric:tabular-nums}
+.total{display:flex;justify-content:space-between;gap:12px;padding:12px 0 0;margin-top:4px;border-top:2px solid var(--ink);font-weight:600;font-size:17px}
+.total .v{color:var(--accent)}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+.donut-wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.legend{display:grid;gap:6px;font-size:14px}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend span::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--c);flex:none}
+.legend b{font-family:var(--mono);margin-left:auto;padding-left:12px}
+.stackbar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--paper);margin:6px 0 12px}
+.stackbar i{display:block;height:100%}
+.kv{display:grid;grid-template-columns:1fr auto;gap:6px 16px;font-size:14px}
+.kv .k{color:var(--muted)}
+.kv .v{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.kv .grp{grid-column:1/-1;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.kv .grp:first-child{margin-top:0;padding-top:0;border-top:0}
+.tbars{display:grid;gap:8px}
+.tbar{display:grid;grid-template-columns:minmax(110px,190px) 1fr 44px;gap:10px;align-items:center;font-size:13px}
+.tbar .val{font-family:var(--mono);text-align:right}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--muted);font-family:var(--mono);font-size:10px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--paper)}
+td.num{font-family:var(--mono);white-space:nowrap}
+td .em{color:var(--muted);font-size:13px;display:block;max-width:62ch}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px;font-size:14px}
+select{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+label.chk{display:flex;gap:6px;align-items:center}
+details summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);padding:4px 0}
+.back{font-size:14px;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--ink)}
+.profile{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.profile h2{font-size:30px}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--r);padding:14px 18px;font-size:15px}
+.callout p{margin:0}
+ul.plain{margin:0;padding-left:18px;display:grid;gap:8px}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--muted)}
+
+/* ---------- cabeçalho em duas linhas ---------- */
+header.top{padding:0}
+.bar1{padding:12px 0 6px;justify-content:flex-start;gap:10px}
+.beta{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.navrow{position:relative}
+.navrow::after{content:"";position:absolute;right:0;top:0;bottom:0;width:28px;background:linear-gradient(to right,transparent,var(--surface));pointer-events:none}
+nav.tabs{padding-top:2px;padding-bottom:10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+nav.tabs a{scroll-snap-align:start;border:1px solid var(--line)}
+nav.tabs a[aria-current="page"]{border-color:var(--ink)}
+.hero .stamp{flex-wrap:wrap}
+
+/* ---------- celular ---------- */
+@media (max-width:700px){
+  body{font-size:15px}
+  .wrap{padding:0 14px}
+  .logo{font-size:19px}
+  main{padding:16px 0 48px;gap:16px}
+  .hero{padding:4px 0 0}
+  .hero h1{font-size:30px;margin-bottom:8px}
+  .hero p{font-size:15px}
+  h2{font-size:21px}
+  .card{padding:16px;border-radius:12px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:4px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .kpi{padding:12px;border-radius:12px}
+  .kpi .n{font-size:22px}
+  .kpi .lab{font-size:11px}
+  .kpi .exp{font-size:13px}
+  .vgrid{grid-template-columns:1fr}
+  .profile h2{font-size:24px}
+  .avatar.big{width:56px;height:56px;font-size:20px}
+  .rank-tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px 12px;padding:0 16px 4px;scrollbar-width:none}
+  .rank-tabs::-webkit-scrollbar{display:none}
+  .rank-tabs button{white-space:nowrap}
+  .rrow{grid-template-columns:26px 1fr auto;grid-template-areas:"pos nm val" "pos tr tr";gap:4px 8px;padding:8px 4px;border-bottom:1px solid var(--line);border-radius:0}
+  .rrow .pos{grid-area:pos;align-self:start;padding-top:1px}
+  .rrow .nm{grid-area:nm;white-space:normal}
+  .rrow .val{grid-area:val}
+  .rrow .track{grid-area:tr}
+  .tbar,.tbar[style]{grid-template-columns:1fr auto !important;grid-template-areas:"l v" "b b";gap:4px 10px}
+  .tbar > span:first-child{grid-area:l}
+  .tbar > .val{grid-area:v}
+  .tbar > .track,.tbar > div{grid-area:b}
+  .donut-wrap{flex-direction:column;align-items:stretch}
+  .donut-wrap svg{align-self:center}
+  .legend{width:100%}
+  .filters{flex-direction:column;align-items:stretch}
+  .filters select{width:100%}
+  /* tabelas viram cartões */
+  .tablewrap{border:0;background:transparent;box-shadow:none;overflow:visible}
+  .tablewrap table, .tablewrap tbody, .tablewrap tr, .tablewrap td{display:block;width:100%}
+  .tablewrap thead{display:none}
+  .tablewrap tr{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+  .tablewrap td{border:0;padding:3px 0}
+  .tablewrap td[data-label]::before{content:attr(data-label);display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:4px}
+  .tablewrap td.num{white-space:normal}
+  .line{font-size:13px}
+  .total{font-size:16px}
+  footer{padding:18px 0 32px}
+  .hero.home h1{display:none}
+}
+@media (max-width:380px){ .kpis{grid-template-columns:1fr} }
+
+@media (max-width:520px){ .rrow{grid-template-columns:22px minmax(90px,130px) 1fr auto;gap:6px} .tbar{grid-template-columns:100px 1fr 38px} th,td{padding:8px 10px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar1">
+    <a class="logo" href="#inicio">Quem paga, <span>Indaial?</span></a>
+    <span class="beta">beta</span>
+  </div>
+  <div class="navrow">
+    <nav class="tabs wrap" aria-label="Seções">
+      <a href="#inicio">Resumo</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#vereadores">Vereadores</a>
+      <a href="#pedidos">Pedidos</a>
+      <a href="#votacoes">Votações</a>
+      <a href="#atas">Atas</a>
+      <a href="#metodo">Como calculamos</a>
+      <a href="#sobre">Quem faz</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<footer class="wrap">
+  Fontes: <a href="https://www.camaraindaial.sc.gov.br/dadosabertos">API de dados abertos da Câmara de Indaial</a>, relatórios do painel eletrônico de votação, atas publicadas no site da Câmara e <a href="https://portalcamaraindaial.atende.net/transparencia/">Portal da Transparência da Câmara</a>. Projeto independente, sem vínculo partidário e sem opinião: só números com fonte. <a href="#sobre">Quem faz e como corrigir um erro</a>.
+</footer>
+<script>
+let D,C,V,P;
+const brl=(v,d=2)=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:d,maximumFractionDigits:d});
+const mil=v=>v>=1e6?'R$ '+(v/1e6).toLocaleString('pt-BR',{maximumFractionDigits:2})+' mi':v>=1e4?'R$ '+(v/1e3).toLocaleString('pt-BR',{maximumFractionDigits:0})+' mil':brl(v,0);
+const num=v=>v.toLocaleString('pt-BR');
+const pct=(a,b,d=1)=>b?(100*a/b).toLocaleString('pt-BR',{maximumFractionDigits:d})+'%':'–';
+const dt=s=>s.slice(0,10).split('-').reverse().join('/');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ini=n=>{const p=n.split(' ').filter(w=>w.length>2);return (p[0][0]+p[p.length-1][0]).toUpperCase()};
+const short=n=>{const p=n.split(' ');return p[0]+' '+p[p.length-1]};
+const tcase=s=>s.replace(/\b([a-zà-ú])([a-zà-ú]*)/g,(m,a,b)=>(['de','da','do','das','dos','e'].includes(m)?m:a.toUpperCase()+b));
+const sum=o=>Object.values(o||{}).reduce((a,b)=>a+b,0);
+function delta(cur,prev,label){ if(!prev) return ''; const d=100*(cur-prev)/prev; const cls=Math.abs(d)<1?'flat':d>0?'up':'down'; return `<span class="delta ${cls}">${d>0?'▲':d<0?'▼':'•'} ${Math.abs(d).toLocaleString('pt-BR',{maximumFractionDigits:0})}% ${label}</span>`; }
+
+const presTot=p=>p.pres+p.just+p.licenca+p.semJust+p.semAta;
+const presPct=v=>100*v.presenca.pres/presTot(v.presenca);
+const plTot=p=>(p.pl_substantivo||0)+(p.pl_rua||0)+(p.pl_homenagem||0);
+
+/* ---------- gráficos ---------- */
+function donut(segs,size=150){
+  const tot=segs.reduce((a,s)=>a+s.v,0)||1, r=size/2-12, c=2*Math.PI*r; let off=0;
+  const arcs=segs.filter(s=>s.v>0).map(s=>{const len=c*s.v/tot; const el=`<circle r="${r}" cx="${size/2}" cy="${size/2}" fill="none" stroke="${s.c}" stroke-width="20" stroke-dasharray="${len} ${c-len}" stroke-dashoffset="${-off}" transform="rotate(-90 ${size/2} ${size/2})"><title>${s.l}: ${s.v}</title></circle>`; off+=len; return el}).join('');
+  const main=segs[0];
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Gráfico de presença">${arcs}<text x="50%" y="48%" text-anchor="middle" style="font-family:var(--display);font-weight:900;font-size:26px;fill:var(--ink)">${pct(main.v,tot,0)}</text><text x="50%" y="62%" text-anchor="middle" style="font-size:11px;fill:var(--muted);font-family:var(--body)">${main.l.toLowerCase()}</text></svg>`;
+}
+function monthly(series,keyA,keyB){
+  const W=640,H=170,pad=28, n=series.length, max=Math.max(...series.map(s=>s[keyA]+(keyB?s[keyB]:0)))||1;
+  const bw=(W-pad*2)/n*0.72, step=(W-pad*2)/n;
+  const ticks=[0,max/2,max].map(t=>`<line x1="${pad}" x2="${W-6}" y1="${H-20-(H-40)*t/max}" y2="${H-20-(H-40)*t/max}" stroke="var(--line)"/><text x="${pad-4}" y="${H-17-(H-40)*t/max}" text-anchor="end">${t>=1000?Math.round(t/1000)+'k':Math.round(t)}</text>`).join('');
+  const bars=series.map((s,i)=>{const x=pad+i*step+(step-bw)/2; const ha=(H-40)*s[keyA]/max, hb=keyB?(H-40)*s[keyB]/max:0; const y=H-20-ha;
+    return `<g><title>${s.m}: ${brl(s[keyA]+(keyB?s[keyB]:0))}</title><rect x="${x}" y="${y}" width="${bw}" height="${ha}" rx="2" fill="var(--ink)"/>${keyB?`<rect x="${x}" y="${y-hb}" width="${bw}" height="${hb}" rx="2" fill="var(--accent)"/>`:''}${(i%3===0||i===n-1)?`<text x="${x+bw/2}" y="${H-6}" text-anchor="middle">${s.m.slice(5)}/${s.m.slice(2,4)}</text>`:''}</g>`}).join('');
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Custo mês a mês">${ticks}${bars}</svg></div>`;
+}
+function tbars(obj,cls='',limit=8){
+  const e=Object.entries(obj||{}).filter(x=>x[0]!=='Outros').sort((a,b)=>b[1]-a[1]).slice(0,limit); const max=e.length?e[0][1]:1;
+  const outros=(obj||{})['Outros'];
+  return `<div class="tbars">${e.map(([k,v])=>`<div class="tbar"><span>${esc(k)}</span><div class="track"><i class="${cls}" style="width:${100*v/max}%"></i></div><span class="val">${v}</span></div>`).join('')}${outros?`<div class="tbar" style="color:var(--muted)"><span>Outros temas</span><div></div><span class="val">${outros}</span></div>`:''}</div>`;
+}
+
+
+function moneyBars(items){ const max=items[0][1]; return `<div class="tbars">${items.map(([k,v])=>`<div class="tbar" style="grid-template-columns:minmax(120px,230px) 1fr 86px"><span>${esc(k)}</span><div class="track"><i class="${/Diárias|Passagens|Publicidade|Auxílio|INSS|FASSPI|RPPS/.test(k)?'acc':''}" style="width:${Math.max(1.5,100*v/max)}%"></i></div><span class="val">${mil(v)}</span></div>`).join('')}</div>`; }
+function yearBars(h){ const ys=Object.keys(h).sort(), max=Math.max(...ys.map(y=>h[y])); const W=520,H=170,bw=52,gap=(W-40-ys.length*bw)/(ys.length-1);
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diárias por ano">${ys.map((y,i)=>{const x=20+i*(bw+gap), hh=(H-50)*h[y]/max, yy=H-24-hh; const cur=+y>=2025; return `<rect x="${x}" y="${yy}" width="${bw}" height="${hh}" rx="4" fill="${cur?'var(--accent)':'var(--grey)'}"/><text x="${x+bw/2}" y="${yy-6}" text-anchor="middle" style="fill:var(--ink)">${Math.round(h[y]/1000)}k</text><text x="${x+bw/2}" y="${H-8}" text-anchor="middle">${y}</text>`}).join('')}</svg></div>`; }
+function compareMonths(a,b){ const W=680,H=190,pad=34,n=a.length,max=Math.max(...a.map(x=>x.v),...b.map(x=>x.v)); const step=(W-pad-8)/n, bw=step*0.36;
+  const ticks=[0,max/2,max].map(t=>`<line x1="${pad}" x2="${W-6}" y1="${H-22-(H-40)*t/max}" y2="${H-22-(H-40)*t/max}" stroke="var(--line)"/><text x="${pad-4}" y="${H-19-(H-40)*t/max}" text-anchor="end">${Math.round(t/1000)}k</text>`).join('');
+  const bars=a.map((x,i)=>{const X=pad+i*step+step*0.12; const hb=(H-40)*b[i].v/max, ha=(H-40)*x.v/max; return `<g><title>${x.m}: ${brl(x.v,0)} · mesmo mês ${b[i].m.slice(0,4)}: ${brl(b[i].v,0)}</title><rect x="${X}" y="${H-22-hb}" width="${bw}" height="${hb}" rx="2" fill="var(--grey)"/><rect x="${X+bw+1}" y="${H-22-ha}" width="${bw}" height="${ha}" rx="2" fill="var(--accent)"/>${i%3===0||i===n-1?`<text x="${X+bw}" y="${H-6}" text-anchor="middle">${x.m.slice(5)}/${x.m.slice(2,4)}</text>`:''}</g>`}).join('');
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Folha mês a mês comparada">${ticks}${bars}</svg></div>`; }
+
+/* ---------- rankings ---------- */
+const RANKS=[
+  {id:'presenca',t:'Presença',f:v=>presPct(v),fmt:v=>pct(v,100),cls:'ok',note:'Percentual de sessões em plenário (ordinárias e extraordinárias) em que o vereador esteve presente. Ausências justificadas em ata contam como ausência, mas aparecem separadas na página de cada um.'},
+  {id:'custo',t:'Custo no mandato',f:v=>v.custo.mandato.total,fmt:v=>mil(v),cls:'acc',note:'Salário do vereador + salários do(s) assessor(es) com 13º e férias + diárias + INSS estimado pago pela Câmara, desde jan/2025. O presidente aparece no topo porque o cargo inclui dois assessores da Presidência e salário maior.'},
+  {id:'diarias',t:'Diárias',f:v=>v.custo.mandato.diarias,fmt:v=>brl(v,0),cls:'acc',note:'Valor pago em diárias de viagem ao próprio vereador em 2025 e 2026.'},
+  {id:'pl',t:'Projetos de lei',f:v=>v.props.pl_substantivo||0,fmt:v=>num(v),note:'Só projetos sobre regras e serviços. Nomes de rua, títulos e datas comemorativas estão de fora (veja a página de cada vereador).'},
+  {id:'info',t:'Pedidos de informação',f:v=>v.props.req_info||0,fmt:v=>num(v),note:'Requerimentos que pedem explicações à Prefeitura: é a principal ferramenta de fiscalização do vereador.'},
+  {id:'ind',t:'Indicações',f:v=>v.props.indicacao||0,fmt:v=>num(v),note:'Pedidos de obra ou serviço (buraco, roçada, iluminação…) enviados à Prefeitura. Indicar não obriga a Prefeitura a fazer.'},
+  {id:'rep',t:'Pedidos repetidos',f:v=>v.pedidos.selfRep,fmt:v=>num(v),cls:'acc',note:'Indicações do mesmo vereador para o mesmo tipo de serviço na mesma rua, feitas mais de uma vez. Pode indicar problema não resolvido pela Prefeitura ou pedido em série.'},
+  {id:'contra',t:'Votos contra',f:v=>v.votos.con,fmt:v=>num(v),note:'Quantas vezes votou contra o que estava em votação. Não é bom nem ruim por si: veja em quais projetos na página de cada um.'},
+  {id:'homen',t:'Homenagens',f:v=>(v.props.mocao_homenagem||0)+(v.props.pl_homenagem||0)+(v.props.pl_rua||0),fmt:v=>num(v),note:'Moções de aplauso, nomes de rua, títulos de cidadão, utilidade pública e datas comemorativas.'}
+];
+function rankList(id){
+  const r=RANKS.find(x=>x.id===id); const arr=V.map(v=>({v,val:r.f(v)})).sort((a,b)=>b.val-a.val); const max=Math.max(...arr.map(a=>a.val))||1;
+  return `<div class="rank">${arr.map((a,i)=>`<a class="rrow" href="#v-${a.v.slug}"><span class="pos">${i+1}º</span><span class="nm">${esc(short(a.v.nome))} <span class="party">${a.v.partido}</span></span><span class="track"><i class="${r.cls||''}" style="width:${Math.max(2,100*a.val/max)}%"></i></span><span class="val">${r.fmt(a.val)}</span></a>`).join('')}</div><p class="rank-note">${r.note}</p>`;
+}
+function rankings(sel='presenca',compact=false){
+  return `<section class="card" id="rk">
+    <div class="sec-head"><h2>Rankings</h2><p>Os 13 vereadores em ordem, sem nota final. Escolha o que quer comparar.</p></div>
+    <div class="rank-tabs" role="group" aria-label="Escolher ranking">${RANKS.map(r=>`<button type="button" data-rk="${r.id}" aria-pressed="${r.id===sel}">${r.t}</button>`).join('')}</div>
+    <div id="rkbody">${rankList(sel)}</div>
+  </section>`;
+}
+function wireRank(){
+  document.querySelectorAll('[data-rk]').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('[data-rk]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    document.getElementById('rkbody').innerHTML=rankList(b.dataset.rk);
+  }));
+}
+
+/* ---------- páginas ---------- */
+function vcards(){
+  return `<div class="vgrid">${V.map(v=>`
+    <a class="vcard" href="#v-${v.slug}">
+      <div class="vhead"><span class="avatar" aria-hidden="true">${ini(v.nome)}</span>
+        <div style="min-width:0"><div class="vname">${esc(v.nome)}</div><div class="vmeta"><span class="party">${v.partido}</span>${v.funcao}</div></div></div>
+      <div class="vstats">
+        <div><b>${mil(v.custo.mandato.total)}</b>custo no mandato</div>
+        <div><b>${pct(v.presenca.pres,presTot(v.presenca),0)}</b>presença</div>
+        <div><b>${v.props.req_info||0}</b>pedidos de informação</div>
+      </div>
+    </a>`).join('')}</div>`;
+}
+function home(){
+  const k=C;
+  const presGeral=V.reduce((a,v)=>a+v.presenca.pres,0)/V.reduce((a,v)=>a+presTot(v.presenca),0)*100;
+  return `
+  <section class="hero home">
+    <h1>Quem paga, <span>Indaial?</span></h1>
+    <p>Você. Aqui está quanto custa, como vota e o que faz cada um dos 13 vereadores, com dados oficiais da Câmara e do Portal da Transparência.</p>
+    <div class="stamp"><b>ATUALIZADO</b> Mandato 2025–2028 · dados até ${D.atualizado}</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Quanto custa</h2><p>Valores brutos pagos pela Câmara, de ${D.periodoFolha}.</p></div>
+    <div class="kpis">
+      <div class="kpi hot"><span class="lab">Folha da Câmara no mandato</span><span class="n">${mil(k.folhaMandato)}</span><span class="exp">Tudo o que a Câmara pagou a vereadores e servidores (${k.folhaPessoasMes} pessoas hoje), com 13º e férias.</span>${delta(k.folhaMandato,k.folhaAnteriorMesmoPeriodo,'vs. 2021–22')}<span class="exp" style="font-size:12px">Mesmos 22 meses da legislatura passada, sem correção pela inflação.</span></div>
+      <div class="kpi"><span class="lab">Vereadores e gabinetes</span><span class="n">${mil(k.gabinetesMandato)}</span><span class="exp">Salários dos 13 vereadores e dos assessores de cada gabinete. Sozinho, é ${pct(k.gabinetesMandato,k.folhaMandato,0)} da folha.</span></div>
+      <div class="kpi"><span class="lab">Custo médio de um gabinete</span><span class="n">${brl(k.gabineteMedioMes,0)}</span><span class="exp">Por mês: salário do vereador + assessor, no último mês publicado.</span></div>
+      <div class="kpi hot"><span class="lab">Diárias de viagem em 2026</span><span class="n">${brl(k.diarias['2026'],0)}</span><span class="exp">Pagas a vereadores e servidores. Em 2025 foram ${brl(k.diarias['2025'],0)}.</span>${delta(k.diarias['2026'],k.diarias['2025'],'vs. 2025')} ${delta(k.diarias['2026'],k.diariasMediaAnterior,'vs. média 2021–24')}</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Como trabalha</h2><p>${num(k.sessoes)} sessões em plenário e ${num(k.votacoes)} votações desde janeiro de 2025.</p></div>
+    <div class="kpis">
+      <div class="kpi"><span class="lab">Presença média</span><span class="n">${presGeral.toLocaleString('pt-BR',{maximumFractionDigits:1})}%</span><span class="exp">Das sessões, em média, com cada vereador presente.</span></div>
+      <div class="kpi"><span class="lab">Votações sem nenhum voto contra</span><span class="n">${pct(k.votacoes-k.divididas,k.votacoes)}</span><span class="exp">Só ${k.divididas} votações tiveram alguém contra. ${k.rejeitadas} projetos ou pedidos foram rejeitados no mandato inteiro.</span></div>
+      <div class="kpi"><span class="lab">Pedidos à Prefeitura</span><span class="n">${num(P.indTotal)}</span><span class="exp">Indicações de obra e serviço. ${pct(P.indT['Buracos, asfalto e manutenção de ruas'],P.indTotal,0)} são sobre buracos e manutenção de ruas.</span></div>
+      <div class="kpi hot"><span class="lab">Sessões sem ata publicada</span><span class="n">${D.atas.length}</span><span class="exp">E ${k.rejSemAta} das ${k.rejeitadas} rejeições do mandato aconteceram justamente nessas sessões.</span></div>
+    </div>
+  </section>
+
+  <div class="grid g2">
+    <section class="card">
+      <h3>Para onde vai o dinheiro da Câmara</h3>
+      <p class="sub">Valores pagos em ${esc(C.despesas.periodo)}. Total: ${brl(C.despesas.pagoTotal,0)}.</p>
+      <div class="line receipt"><span>Salários, gratificações, 13º e férias</span><span class="v">${mil(C.despesas.itens.filter(i=>/Salários|Gratifica|13º|Férias/.test(i[0])).reduce((a,i)=>a+i[1],0))}</span></div>
+      <p class="sub" style="margin:12px 0 8px">Além dos salários:</p>
+      ${moneyBars(C.despesas.itens.filter(i=>!/Salários|Gratifica|13º|Férias/.test(i[0])).slice(0,12))}
+      <p class="note">Contratos ainda em execução já reservaram mais: publicidade (${brl(C.despesas.contratado['Publicidade e propaganda'],0)}), vigilância (${brl(C.despesas.contratado['Vigilância'],0)}) e passagens aéreas (${brl(C.despesas.contratado['Passagens aéreas'],0)}).</p>
+    </section>
+    <section class="card">
+      <h3>Diárias de viagem por ano</h3>
+      <p class="sub">Câmara inteira (vereadores e servidores). Legislatura passada em cinza.</p>
+      ${yearBars(C.diariasHist)}
+      <p class="note">2026 já é o dobro de 2025, mas ainda abaixo da média de ${brl(C.diariasMediaAnterior,0)} por ano da legislatura passada.</p>
+    </section>
+  </div>
+  <section class="card">
+    <h3>Folha da Câmara mês a mês</h3>
+    <p class="sub">Vermelho: este mandato. Cinza: mesmos meses da legislatura passada (2021–2022). Picos em julho e dezembro são férias e 13º.</p>
+    ${compareMonths(C.folhaMensal,C.folhaMensalAnt)}
+    <p class="note">Valores nominais, sem correção pela inflação. O salário de vereador passou de ${brl(C.subsidio2025)} em 2025 para ${brl(C.subsidio2026)} em 2026.</p>
+  </section>
+
+  ${rankings()}
+
+  <section>
+    <div class="sec-head"><h2>Os 13 vereadores</h2><p>Clique para ver custo mês a mês, presença, votos e pedidos.</p></div>
+    ${vcards()}
+  </section>`;
+}
+
+function vereador(v){
+  const vt=v.votos, pr=v.presenca, p=v.props, c=v.custo, m=c.mandato, pd=v.pedidos;
+  const pt=presTot(pr);
+  const segs=[{l:'Presente',v:pr.pres,c:'var(--ok)'},{l:'Licença registrada em ata',v:pr.licenca,c:'var(--grey)'},{l:'Falta justificada em ata',v:pr.just,c:'var(--warn)'},{l:'Falta sem justificativa em ata',v:pr.semJust,c:'var(--accent)'},{l:'Sem voto, ata não publicada',v:pr.semAta,c:'var(--line)'}];
+  const ass=c.mesAtual.assessores.map(a=>`<div class="line"><span>${esc(a.cargo)}<small>${esc(tcase(a.nome.toLowerCase()))}</small></span><span class="v">${brl(a.bruto)}</span></div>`).join('');
+  const contra=v.contra.map(i=>D.divididas[i]);
+  const rep=(pd.selfTop||[]).map(([k,n])=>{const [t,r]=k.split('|'); return `<div class="line"><span>${esc(tcase(r))}<small>${esc(t)}</small></span><span class="v">${n}×</span></div>`}).join('');
+  const tot=vt.fav+vt.con+vt.nr+vt.abs+vt.pres;
+  const sb=(n,col)=>n?`<i style="width:${100*n/tot}%;background:${col}" title="${n}"></i>`:'';
+  return `
+  <a class="back" href="#vereadores">← Todos os vereadores</a>
+  <section class="card">
+    <div class="profile"><span class="avatar big" aria-hidden="true">${ini(v.nome)}</span>
+      <div><h2>${esc(v.nome)}</h2><div class="vmeta"><span class="party">${v.partido}</span>${v.funcao} · ${num(v.votosEleicao)} votos em 2024 · <a href="${v.perfil}">perfil oficial e foto</a></div></div></div>
+  </section>
+  <div class="kpis">
+    <div class="kpi hot"><span class="lab">Custo no mandato</span><span class="n">${mil(m.total)}</span><span class="exp">Vereador + gabinete + diárias, de ${D.periodoFolha}.</span></div>
+    <div class="kpi"><span class="lab">Presença</span><span class="n">${pct(pr.pres,pt)}</span><span class="exp">${pr.pres} de ${pt} sessões.</span></div>
+    <div class="kpi"><span class="lab">Pedidos de informação</span><span class="n">${p.req_info||0}</span><span class="exp">Requerimentos de fiscalização à Prefeitura.</span></div>
+    <div class="kpi"><span class="lab">Votos contra</span><span class="n">${vt.con}</span><span class="exp">Em ${num(tot)} votações.</span></div>
+  </div>
+  <div class="grid g2">
+    <section class="card">
+      <h3>Quanto custa por mês</h3>
+      <p class="sub">Último mês publicado (${D.ultimoMes}), valores brutos.</p>
+      <div class="receipt">
+        <div class="line"><span>Salário de vereador${v.funcao==='Presidente'?' (presidente)':''}</span><span class="v">${brl(c.mesAtual.subsidio)}</span></div>
+        ${ass}
+        <div class="total"><span>Por mês</span><span class="v">${brl(c.mesAtual.total)}</span></div>
+      </div>
+      ${v.funcao==='Presidente'?'<p class="note">Os assessores acima são cargos da Presidência da Câmara, não do gabinete pessoal.</p>':''}
+    </section>
+    <section class="card">
+      <h3>Quanto já custou no mandato</h3>
+      <p class="sub">Soma de ${D.periodoFolha}.</p>
+      <div class="receipt">
+        <div class="line"><span>Salários do vereador</span><span class="v">${brl(m.subsidio)}</span></div>
+        <div class="line"><span>${v.funcao==='Presidente'?'Assessores da Presidência':'Salários do(s) assessor(es)'}<small>com 13º, férias e rescisões</small></span><span class="v">${brl(m.assessores)}</span></div>
+        <div class="line"><span>Diárias de viagem do vereador</span><span class="v">${brl(m.diarias)}</span></div>
+        <div class="line"><span>INSS pago pela Câmara<small>estimativa: 20% sobre os salários acima</small></span><span class="v">${brl(m.patronal)}</span></div>
+        <div class="total"><span>Total</span><span class="v">${brl(m.total)}</span></div>
+      </div>
+      <p class="note">Vereador não recebe 13º nem férias. ${c.assessorDesde&&c.assessorDesde!=='2025-01'?`O assessor atual aparece na folha a partir de ${c.assessorDesde.slice(5)}/${c.assessorDesde.slice(0,4)}; quem ocupava o gabinete antes ainda não foi identificado, então o custo real pode ser maior. `:''}Passagens aéreas são contratadas pela Câmara e ainda não estão separadas por pessoa.</p>
+    </section>
+  </div>
+  <section class="card">
+    <h3>Custo do gabinete mês a mês</h3>
+    <p class="sub">Preto: salário do vereador · vermelho: assessor(es).</p>
+    ${monthly(c.serie,'v','a')}
+  </section>
+  <div class="grid g2">
+    <section class="card">
+      <h3>Presença nas sessões</h3>
+      <div class="donut-wrap">${donut(segs)}
+        <div class="legend">${segs.filter(s=>s.v>0).map(s=>`<span style="--c:${s.c}">${s.l}<b>${s.v}</b></span>`).join('')}</div>
+      </div>
+      <p class="note">Baseado nas atas (quem é citado como ausente e por quê) e no painel eletrônico. "Sem voto, ata não publicada": o vereador não registrou nenhum voto na sessão e a ata ainda não saiu, então não dá para saber se faltou.</p>
+    </section>
+    <section class="card">
+      <h3>Como vota</h3>
+      <div class="stackbar">${sb(vt.fav,'var(--ok)')}${sb(vt.con,'var(--accent)')}${sb(vt.abs,'var(--warn)')}${sb(vt.nr,'var(--grey)')}${sb(vt.pres,'var(--line)')}</div>
+      <div class="kv">
+        <span class="k">A favor</span><span class="v">${num(vt.fav)}</span>
+        <span class="k">Contra</span><span class="v">${num(vt.con)}</span>
+        <span class="k">· contra projetos da Prefeitura</span><span class="v">${vt.conExec}</span>
+        ${vt.abs?`<span class="k">Abstenção</span><span class="v">${vt.abs}</span>`:''}
+        <span class="k">Sem voto registrado</span><span class="v">${num(vt.nr)}</span>
+        ${vt.pres?`<span class="k">Presidindo a sessão (não vota)</span><span class="v">${num(vt.pres)}</span>`:''}
+      </div>
+    </section>
+  </div>
+  <div class="grid g2">
+    <section class="card">
+      <h3>O que propõe</h3>
+      <div class="kv">
+        <span class="grp">Leis</span>
+        <span class="k">Projetos sobre regras e serviços</span><span class="v">${p.pl_substantivo||0}</span>
+        <span class="k">Nomes de rua</span><span class="v">${p.pl_rua||0}</span>
+        <span class="k">Títulos, utilidade pública e datas</span><span class="v">${p.pl_homenagem||0}</span>
+        <span class="grp">Fiscalização</span>
+        <span class="k">Pedidos de informação à Prefeitura</span><span class="v">${p.req_info||0}</span>
+        <span class="k">Outros requerimentos</span><span class="v">${p.req_outros||0}</span>
+        <span class="grp">Pedidos e manifestações</span>
+        <span class="k">Indicações de obra ou serviço</span><span class="v">${p.indicacao||0}</span>
+        <span class="k">Moções de aplauso ou homenagem</span><span class="v">${p.mocao_homenagem||0}</span>
+        <span class="k">Moções de apelo ou posição</span><span class="v">${p.mocao_posicionamento||0}</span>
+      </div>
+    </section>
+    <section class="card">
+      <h3>Sobre o que pede</h3>
+      <p class="sub">Indicações de obra ou serviço, por tema.</p>
+      ${tbars(pd.ind)}
+    </section>
+  </div>
+  <div class="grid g2">
+    <section class="card">
+      <h3>Sobre o que pede informação</h3>
+      <p class="sub">Pedidos de informação à Prefeitura, por tema.</p>
+      ${sum(pd.inf)?tbars(pd.inf,'acc'):'<p class="note">Nenhum pedido de informação no período.</p>'}
+    </section>
+    <section class="card">
+      <h3>Pedidos que se repetem</h3>
+      <p class="sub">${pd.selfRep} indicações para o mesmo serviço na mesma rua, feitas mais de uma vez por este vereador.</p>
+      <div class="receipt">${rep||'<p class="note">Nenhuma rua com 3 pedidos ou mais.</p>'}</div>
+    </section>
+  </div>
+  <section class="card">
+    <details><summary>Votos contra (${contra.length})</summary>
+    ${contra.length?`<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Data</th><th>Matéria</th><th>Resultado</th></tr></thead><tbody>${contra.map(d=>`<tr><td class="num">${dt(d.data)}</td><td>${esc(d.materia)}<span class="em">${esc(d.ementa)}</span></td><td>${d.rejeitada?'<span class="pill red">Rejeitado</span>':'<span class="pill">Aprovado</span>'} ${d.semAta?'<span class="pill warn">sem ata</span>':''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="note">Nenhum voto contrário.</p>'}
+    </details>
+  </section>`;
+}
+
+function pedidos(){
+  return `
+  <section class="hero"><h1>O que os vereadores pedem</h1><p>${num(P.indTotal)} indicações de obra e serviço e ${num(P.infTotal)} pedidos de informação desde janeiro de 2025, classificados por tema.</p></section>
+  <div class="grid g2">
+    <section class="card"><h3>Indicações por tema</h3>${tbars(P.indT,'',14)}</section>
+    <section class="card"><h3>Pedidos de informação por tema</h3>${tbars(P.infT,'acc',14)}</section>
+  </div>
+  <section class="callout"><p><b>${num(P.repPedidos)} indicações (${pct(P.repPedidos,P.indTotal,0)})</b> repetem o mesmo tipo de serviço na mesma rua. Em ruas longas, pedidos podem ser de trechos diferentes, mas a repetição mostra onde o problema volta ou não é resolvido.</p></section>
+  <section>
+    <div class="sec-head"><h2>Ruas com mais pedidos repetidos</h2><p>Mesmo tema, mesma rua, desde jan/2025.</p></div>
+    <div class="tablewrap"><table><thead><tr><th>Rua</th><th>Tema</th><th>Pedidos</th><th>Período</th><th>Quem pediu</th></tr></thead><tbody>
+    ${P.top.map(t=>`<tr><td><b>${esc(tcase(t.rua))}</b></td><td>${esc(t.tema)}</td><td class="num">${t.n}</td><td class="num">${dt(t.de)} a ${dt(t.ate)}</td><td>${Object.entries(t.aut).sort((a,b)=>b[1]-a[1]).map(([n,c])=>`${esc(short(n))} (${c})`).join(', ')}</td></tr>`).join('')}
+    </tbody></table></div>
+  </section>`;
+}
+
+function votacoes(){
+  return `<section class="hero"><h1>Votações divididas</h1><p>${C.divididas} das ${num(C.votacoes)} votações tiveram ao menos um voto contra. Em todas as outras, quem votou votou igual.</p></section>
+  <div class="filters">
+    <label for="fv">Vereador</label><select id="fv"><option value="">Todos</option>${V.map(v=>`<option>${esc(v.nome)}</option>`).join('')}</select>
+    <label class="chk"><input type="checkbox" id="fr"> só rejeitadas</label>
+    <label class="chk"><input type="checkbox" id="fa"> só sessões sem ata</label>
+  </div>
+  <div class="tablewrap"><table><thead><tr><th>Data</th><th>Matéria</th><th>Resultado</th><th>Votaram contra</th></tr></thead><tbody id="tb"></tbody></table></div>`;
+}
+function wireVot(){
+  const fv=document.getElementById('fv'),fr=document.getElementById('fr'),fa=document.getElementById('fa'),tb=document.getElementById('tb');
+  const draw=()=>{ const r=D.divididas.filter(d=>(!fv.value||d.contra.includes(fv.value))&&(!fr.checked||d.rejeitada)&&(!fa.checked||d.semAta));
+    tb.innerHTML=r.map(d=>`<tr><td class="num">${dt(d.data)}</td><td>${esc(d.materia)}<span class="em">${esc(d.ementa)}${d.autoria?' · Autoria: '+esc(d.autoria):''}</span></td><td>${d.rejeitada?'<span class="pill red">Rejeitado</span>':'<span class="pill">Aprovado</span>'} ${d.semAta?'<span class="pill warn">sem ata</span>':''}<span class="em">${esc(d.resultado)}</span></td><td>${d.contra.map(n=>esc(short(n))).join(', ')}</td></tr>`).join('')||'<tr><td colspan="4">Nenhuma votação com esses filtros.</td></tr>'; labelTables(); };
+  [fv,fr,fa].forEach(e=>e.addEventListener('change',draw)); draw();
+}
+function atas(){
+  return `<section class="hero"><h1>Atas que faltam</h1><p>A ata é o registro oficial de cada sessão. Estas ${D.atas.length} sessões ordinárias aconteceram, mas a ata não está no site da Câmara. As votações delas existem no painel eletrônico.</p></section>
+  <div class="kpis">
+    <div class="kpi hot"><span class="lab">Rejeições em sessões sem ata</span><span class="n">${C.rejSemAta} de ${C.rejeitadas}</span><span class="exp">Metade de tudo o que a Câmara rejeitou no mandato.</span></div>
+    <div class="kpi"><span class="lab">Votações divididas sem ata</span><span class="n">${C.divSemAta} de ${C.divididas}</span><span class="exp">Votações com ao menos um voto contra.</span></div>
+    <div class="kpi"><span class="lab">Atraso mais antigo</span><span class="n">${dt(D.atas[0].data)}</span><span class="exp">Sessão de 2025 ainda sem ata publicada.</span></div>
+  </div>
+  <div class="tablewrap"><table><thead><tr><th>Data</th><th>Sessão</th><th>Votações divididas nessa sessão</th></tr></thead><tbody>
+  ${D.atas.map(a=>{const ds=D.divididas.filter(d=>d.data===a.data); return `<tr><td class="num">${dt(a.data)}</td><td>${a.num}ª Sessão Ordinária de ${a.ano}</td><td>${ds.length?ds.map(d=>`${esc(d.materia)} ${d.rejeitada?'<span class="pill red">Rejeitado</span>':''}`).join('<br>'):'<span class="em">nenhuma</span>'}</td></tr>`}).join('')}
+  </tbody></table></div>`;
+}
+function metodo(){
+  return `<section class="card" style="max-width:820px">
+    <h2 style="margin-bottom:12px">Como calculamos</h2>
+    <ul class="plain">
+      <li><b>Custos:</b> folha de pagamento mês a mês do Portal da Transparência da Câmara (${D.periodoFolha}), somando salário bruto, 13º e férias. O assessor de cada vereador vem da biografia oficial no site da Câmara. Diárias de viagem do mesmo portal. A comparação com a legislatura passada usa os mesmos meses de 2021–2022.</li>
+      <li><b>Encargos e benefícios:</b> o INSS que a Câmara paga sobre cada salário é estimado em 20% (alíquota patronal do INSS). Auxílio-alimentação, fundo de saúde e previdência própria aparecem nas despesas da Câmara como um todo, porque o portal não os separa por pessoa. Pelo que o portal mostra, o auxílio-alimentação é pago aos servidores.</li>
+      <li><b>Limites:</b> o vínculo assessor ↔ vereador usa o assessor citado hoje na biografia oficial. Ex-assessores ainda não foram ligados aos gabinetes. Passagens aéreas não estão separadas por pessoa.</li>
+      <li><b>Presença:</b> cada sessão em plenário desde jan/2025. Ausente é quem a ata cita como ausente; a justificativa (licença, saúde, luto) vem do texto da ata. Quando a ata não foi publicada, usamos o painel: sem nenhum voto na sessão.</li>
+      <li><b>Votos:</b> ${num(C.votacoes)} votações nominais lidas dos relatórios do painel eletrônico, sessão por sessão.</li>
+      <li><b>Pedidos:</b> ${num(C.propsTotal)} proposições da API de dados abertos. Temas definidos por palavras-chave no texto da ementa (ex.: "roçada", "buraco", "lâmpada"). "Repetido" é o mesmo tema na mesma rua mais de uma vez.</li>
+      <li><b>Fotos:</b> este protótipo não reproduz fotos. A foto oficial de cada vereador está no link "perfil oficial".</li>
+    </ul>
+    <p class="note">Encontrou um erro? Veja <a href="#sobre">como pedir correção</a>. Todo número aqui pode ser conferido na fonte.</p>
+  </section>`;
+}
+
+
+function sobre(){
+  const corr=(D.correcoes||[]);
+  return `<section class="hero"><h1>Quem faz</h1><p>Um projeto independente, feito por um morador da região de Indaial.</p></section>
+  <div class="grid g2">
+    <section class="card">
+      <h3>Responsável</h3>
+      <p style="margin:0 0 10px"><b>Guilherme Patrick Chimilouski Glatz</b><br>Morador da região, profissional da área de dados.</p>
+      <div class="receipt">
+        <div class="line"><span>Contato e correções<small>contato@quempagaindaial.com.br</small></span><span class="v"><a href="mailto:contato@quempagaindaial.com.br">escrever</a></span></div>
+        <div class="line"><span>Instagram<small>@quempagaindaial</small></span><span class="v"><a href="https://www.instagram.com/quempagaindaial/">abrir</a></span></div>
+        ${D.repo?`<div class="line"><span>Código e dados abertos<small>github.com/${esc(D.repo)}</small></span><span class="v"><a href="https://github.com/${esc(D.repo)}">abrir</a></span></div>`:''}
+      </div>
+      
+    </section>
+    <section class="card">
+      <h3>Por que existe</h3>
+      <ul class="plain">
+        <li>Os dados da Câmara são públicos, mas estão espalhados em PDFs, atas e consultas difíceis. Aqui eles ficam num lugar só.</li>
+        <li>O site não dá nota, não faz campanha e não apoia partido ou candidato. Mostra números e de onde eles vêm.</li>
+        <li>Não recebe dinheiro de político, partido, empresa ou da Câmara. O custo é só o domínio, pago pelo responsável.</li>
+      </ul>
+    </section>
+  </div>
+  <section class="card">
+    <h3>Encontrou um erro?</h3>
+    <ul class="plain">
+      <li>Escreva para <b>contato@quempagaindaial.com.br</b> dizendo qual número está errado e, se possível, a fonte correta.</li>
+      <li>Vereadores, assessores e a própria Câmara podem pedir correção ou enviar esclarecimentos. Esclarecimentos com fonte oficial são publicados junto ao dado.</li>
+      <li>Correções são feitas em até 2 dias úteis e ficam registradas abaixo, com data.</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h3>Registro de correções</h3>
+    ${corr.length?`<div class="kv">${corr.map(c=>`<span class="k">${esc(c.texto)}</span><span class="v">${esc(c.data)}</span>`).join('')}</div>`:'<p class="note">Nenhuma correção até agora.</p>'}
+  </section>`;
+}
+
+function route(){
+  const h=location.hash.slice(1)||'inicio', app=document.getElementById('app'); let tab=h, after=null;
+  if(h.startsWith('v-')){ const v=V.find(x=>'v-'+x.slug===h); app.innerHTML=v?vereador(v):home(); tab='vereadores'; }
+  else if(h==='rankings'){ app.innerHTML=rankings(); after=wireRank; }
+  else if(h==='vereadores'){ app.innerHTML=`<section class="hero"><h1>Os 13 vereadores</h1><p>Mandato 2025–2028.</p></section>`+vcards(); }
+  else if(h==='pedidos') app.innerHTML=pedidos();
+  else if(h==='votacoes'){ app.innerHTML=votacoes(); after=wireVot; }
+  else if(h==='atas') app.innerHTML=atas();
+  else if(h==='metodo') app.innerHTML=metodo();
+  else if(h==='sobre') app.innerHTML=sobre();
+  else { app.innerHTML=home(); tab='inicio'; after=wireRank; }
+  document.querySelectorAll('nav.tabs a').forEach(a=>{ if(a.getAttribute('href')==='#'+tab) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  if(after) after();
+  labelTables();
+  window.scrollTo(0,0);
+}
+function labelTables(){ document.querySelectorAll('.tablewrap table').forEach(tb=>{ const h=[...tb.querySelectorAll('thead th')].map(th=>th.textContent.trim()); tb.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>{ if(h[i]&&!td.hasAttribute('colspan')) td.setAttribute('data-label',h[i]); })); }); }
+window.addEventListener('hashchange',route);
+fetch('data.json',{cache:'no-cache'}).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(j=>{ D=j; C=D.camara; V=D.vereadores; P=D.pedidos; route(); })
+  .catch(()=>{ document.getElementById('app').innerHTML='<section class="card"><h2>Não foi possível carregar os dados</h2><p class="note">Tente recarregar a página. Se continuar, escreva para contato@quempagaindaial.com.br.</p></section>'; });
+</script>
+</body>
+</html>
