@@ -89,5 +89,7 @@ def montar():
                 pedidos={x: ped[x] for x in ("top", "indT", "infT", "repGrupos", "repPedidos", "indTotal", "infTotal")},
                 repo=cfg.get("repo", ""), correcoes=ler("correcoes.json", []))
     gravar(SITE / "data.json", data, compacto=True)
+    from . import paginas
+    paginas.gerar()
     print(f"docs/data.json gerado: folha até {per(mand[-1])}, {len(V)} vereadores, atualizado {data['atualizado']}")
     return data

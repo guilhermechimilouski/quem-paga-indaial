@@ -21,22 +21,24 @@ docs/                 site (GitHub Pages): index.html lê data.json
 coletor/              programa que coleta e calcula
   coletar.py          baixa API, PDFs de votação e atas
   agregar.py          transforma o que foi coletado em números
-  importar.py         lê as planilhas manuais de folha e diárias
+  importar.py         lê as planilhas de folha e diárias do Portal da Transparência
+  paginas.py          gera as páginas dos vereadores e o sitemap
   montar.py           gera docs/data.json
 dados/
   vereadores.json     lista oficial, partidos e links
   gabinetes.json      qual assessor trabalha com qual vereador (fonte: perfis oficiais)
   correcoes.json      registro público de correções
-  manual/             planilhas mensais do Portal da Transparência (ver LEIA.md)
+  manual/             planilhas mensais do Portal da Transparência
   brutos/             dados intermediários
-.github/workflows/    atualização automática toda sexta-feira
+.github/workflows/    vigia diário e atualização de reserva
 ```
 
 ## Atualização
 
-- **Automática (toda sexta):** o GitHub Actions coleta sessões, votações, atas e proposições novas e republica o site.
-- **Manual (uma vez por mês):** folha e diárias, porque o Portal da Transparência bloqueia robôs. Veja `dados/manual/LEIA.md`.
-- **Se a Câmara bloquear o robô:** rode `RODAR.bat` no Windows e envie as mudanças pelo GitHub Desktop.
+- **Todo dia (automática):** uma tarefa agendada no computador do responsável coleta sessões, votações, atas e proposições novas, recalcula o site e envia ao GitHub. A coleta roda num computador e não no GitHub porque o site da Câmara bloqueia os servidores do GitHub Actions.
+- **Uma vez por mês (semiautomática):** folha de pagamento e diárias. O Portal da Transparência pede a verificação "Confirme que é humano" em cada consulta, então o responsável confirma a verificação e o script baixa o resto.
+- **Vigia:** o workflow `vigia.yml` confere todo dia se os dados foram atualizados. Se passar de 2 dias sem atualização, ele falha e o GitHub avisa por e-mail.
+- **Páginas para o Google:** a cada atualização, `coletor/paginas.py` gera uma página estática por vereador (`/vereador/<nome>/`), o `sitemap.xml` e as marcações para buscadores.
 
 Para rodar no computador:
 

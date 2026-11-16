@@ -1,14 +1,14 @@
-name: Atualizar dados
+name: Atualizar dados (reserva)
+
+# A coleta diária roda no computador do responsável (o site da Câmara bloqueia os servidores do GitHub).
+# Este workflow fica só como reserva: botão "Run workflow" para recalcular o site ou coletar a API.
 
 on:
-  schedule:
-    - cron: "17 9 * * 5"   # toda sexta, 06h17 de Brasília (depois das sessões da semana)
-  workflow_dispatch:        # botão "Run workflow" para rodar na hora
-  push:
-    paths:
-      - "dados/manual/**"   # subiu planilha nova de folha ou diárias: recalcula o site
-      - "dados/correcoes.json"
-      - "dados/config.json"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "montar = só recalcula o site | api = coleta a API e recalcula"
+        default: montar
 
 permissions:
   contents: write
@@ -20,50 +20,30 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
       - name: Testes
         run: python -m testes.test_coletor
-
       - name: Coletar e montar
-        id: coleta
-        continue-on-error: true
         env:
           RADAR_TOKEN: ${{ secrets.RADAR_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            python -m coletor.coletar importar && python -m coletor.coletar montar
-          else
-            python -m coletor.coletar atualizar
+          if [ "${{ github.event.inputs.modo }}" = "api" ]; then
+            python -m coletor.coletar api
           fi
-
-      - name: Garantir que o site foi montado
-        if: steps.coleta.outcome == 'failure'
-        run: python -m coletor.coletar montar
-
+          python -m coletor.coletar montar
       - name: Publicar
         run: |
           git config user.name "quem-paga-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs dados
-          if git diff --cached --quiet; then
-            echo "Nada mudou."
-          else
-            git commit -m "Atualização automática dos dados ($(date +%d/%m/%Y))"
+          if git diff --cached --quiet; then echo "Nada mudou."; else
+            git commit -m "Atualização manual pelo GitHub ($(date +%d/%m/%Y))"
             git push
           fi
-
-      - name: Avisar se a Câmara bloqueou a coleta
-        if: steps.coleta.outcome == 'failure'
-        run: |
-          echo "::error::A coleta parou no meio (provável bloqueio anti-robô do site da Câmara). O site foi mantido com os dados anteriores. Rode RODAR.bat no computador para completar."
-          exit 1

@@ -98,7 +98,7 @@ def agregar(con, minimo_sessoes=None):
                        "AND votacao_coletada = 1 ORDER BY data", (*PLENARIO, hoje + " 23:59")).fetchall()
     if len(sess) < minimo:
         print(f"Votações e presença NÃO atualizadas: só {len(sess)} sessões com votação lida (o site já tem {minimo}). "
-              "Rode o RODAR.bat para completar. Proposições e pedidos foram atualizados.")
+              "A coleta diária no computador completa isso. Proposições e pedidos foram atualizados.")
         if not con.execute("SELECT COUNT(*) FROM proposicoes").fetchone()[0]:
             return None
         anterior = ler(BRUTOS / "coletado.json", {}) or {}

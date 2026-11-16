@@ -1,0 +1,30 @@
+name: Vigia da atualização diária
+
+# Todo dia às 18h (Brasília) confere quando os dados do site foram atualizados pela última vez.
+# Se passar de 2 dias, o workflow falha e o GitHub envia um e-mail de alerta ao dono do repositório.
+
+on:
+  schedule:
+    - cron: "7 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - name: Conferir a data da última atualização
+        run: |
+          ultimo=$(git log -1 --format=%ct -- docs/data.json)
+          agora=$(date +%s)
+          horas=$(( (agora - ultimo) / 3600 ))
+          echo "Última atualização dos dados: $(date -d @$ultimo '+%d/%m/%Y %H:%M') UTC (há $horas horas)"
+          if [ "$horas" -gt 48 ]; then
+            echo "::error::O site está há $horas horas sem dados novos. Verifique se o computador ligou e se a tarefa agendada rodou (veja coleta_log.txt na pasta do projeto)."
+            exit 1
+          fi

@@ -1,5 +1,5 @@
 {
- "atualizadoProps": "16/11/2026",
+ "atualizado": "16/11/2026",
  "props": {
   "Valentim Blasius": {
    "indicacao": 145,
@@ -146,6 +146,1874 @@
    "pl_homenagem": 1,
    "pl_substantivo": 218,
    "outros": 1
+  }
+ },
+ "votos": {
+  "Valentim Blasius": {
+   "fav": 161,
+   "con": 4,
+   "conExec": 1,
+   "nr": 17,
+   "abs": 0,
+   "pres": 1631,
+   "sessoes": 118,
+   "semVoto": 3
+  },
+  "Jonatas Mizael Rosenbrock": {
+   "fav": 1777,
+   "con": 21,
+   "conExec": 2,
+   "nr": 0,
+   "abs": 0,
+   "pres": 15,
+   "sessoes": 118,
+   "semVoto": 1
+  },
+  "Valmir Jordani": {
+   "fav": 1781,
+   "con": 20,
+   "conExec": 3,
+   "nr": 12,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 2
+  },
+  "Diogo de Pinho": {
+   "fav": 1780,
+   "con": 30,
+   "conExec": 2,
+   "nr": 2,
+   "abs": 1,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 1
+  },
+  "Carlos Eduardo Cunha": {
+   "fav": 1791,
+   "con": 22,
+   "conExec": 15,
+   "nr": 0,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 1
+  },
+  "Caroline Laís Bertoldi": {
+   "fav": 1794,
+   "con": 19,
+   "conExec": 3,
+   "nr": 0,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 1
+  },
+  "Elaine Pickler": {
+   "fav": 1749,
+   "con": 32,
+   "conExec": 16,
+   "nr": 32,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 2
+  },
+  "Elton Marcos Possamai": {
+   "fav": 1779,
+   "con": 34,
+   "conExec": 21,
+   "nr": 0,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 1
+  },
+  "Fernanda Jacobi dos Santos": {
+   "fav": 1183,
+   "con": 7,
+   "conExec": 1,
+   "nr": 622,
+   "abs": 1,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 43
+  },
+  "Flávio Augusto Ferri Molinari": {
+   "fav": 1707,
+   "con": 19,
+   "conExec": 2,
+   "nr": 87,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 7
+  },
+  "Henrique Fritz": {
+   "fav": 1444,
+   "con": 19,
+   "conExec": 8,
+   "nr": 350,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 22
+  },
+  "José Carlos Peixer": {
+   "fav": 1665,
+   "con": 22,
+   "conExec": 4,
+   "nr": 126,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 14
+  },
+  "Lucio Vanderlinde": {
+   "fav": 1735,
+   "con": 37,
+   "conExec": 23,
+   "nr": 41,
+   "abs": 0,
+   "pres": 0,
+   "sessoes": 118,
+   "semVoto": 2
+  }
+ },
+ "contra": {
+  "Valentim Blasius": [
+   20,
+   36,
+   59,
+   71
+  ],
+  "Jonatas Mizael Rosenbrock": [
+   14,
+   17,
+   21,
+   25,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   43,
+   46,
+   47,
+   53,
+   61,
+   63,
+   64,
+   65,
+   70
+  ],
+  "Valmir Jordani": [
+   14,
+   16,
+   17,
+   23,
+   24,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   43,
+   46,
+   61,
+   63,
+   64,
+   65,
+   70
+  ],
+  "Diogo de Pinho": [
+   3,
+   4,
+   12,
+   14,
+   17,
+   21,
+   25,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   40,
+   43,
+   46,
+   47,
+   52,
+   61,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   73
+  ],
+  "Carlos Eduardo Cunha": [
+   16,
+   17,
+   18,
+   20,
+   35,
+   36,
+   37,
+   39,
+   41,
+   42,
+   43,
+   44,
+   59,
+   70,
+   71,
+   72,
+   74,
+   75,
+   77,
+   78,
+   82,
+   83
+  ],
+  "Caroline Laís Bertoldi": [
+   1,
+   2,
+   13,
+   16,
+   20,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   43,
+   61,
+   63,
+   64,
+   65,
+   70
+  ],
+  "Elaine Pickler": [
+   1,
+   2,
+   3,
+   4,
+   13,
+   15,
+   16,
+   20,
+   26,
+   27,
+   35,
+   36,
+   37,
+   42,
+   43,
+   45,
+   48,
+   49,
+   54,
+   55,
+   59,
+   62,
+   70,
+   71,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   81,
+   83
+  ],
+  "Elton Marcos Possamai": [
+   0,
+   1,
+   2,
+   13,
+   16,
+   20,
+   26,
+   32,
+   35,
+   36,
+   37,
+   39,
+   41,
+   42,
+   43,
+   44,
+   48,
+   49,
+   50,
+   51,
+   59,
+   70,
+   71,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83
+  ],
+  "Fernanda Jacobi dos Santos": [
+   3,
+   11,
+   14,
+   17,
+   25,
+   46,
+   70
+  ],
+  "Flávio Augusto Ferri Molinari": [
+   13,
+   25,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   40,
+   43,
+   46,
+   47,
+   61,
+   63,
+   64,
+   65,
+   70
+  ],
+  "Henrique Fritz": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   13,
+   16,
+   26,
+   28,
+   36,
+   38,
+   39,
+   42,
+   43,
+   46,
+   70
+  ],
+  "José Carlos Peixer": [
+   14,
+   17,
+   22,
+   25,
+   27,
+   28,
+   29,
+   30,
+   31,
+   33,
+   34,
+   38,
+   40,
+   43,
+   46,
+   61,
+   63,
+   64,
+   65,
+   70,
+   77,
+   78
+  ],
+  "Lucio Vanderlinde": [
+   0,
+   1,
+   2,
+   3,
+   8,
+   10,
+   14,
+   16,
+   17,
+   19,
+   20,
+   23,
+   24,
+   26,
+   32,
+   35,
+   36,
+   37,
+   39,
+   41,
+   42,
+   43,
+   44,
+   46,
+   48,
+   49,
+   56,
+   57,
+   58,
+   59,
+   60,
+   62,
+   70,
+   71,
+   72,
+   80,
+   83
+  ]
+ },
+ "divididas": [
+  {
+   "data": "2025-03-11",
+   "materia": "Projeto de Lei Ordinária nº 19/2025",
+   "ementa": "Ratifica alterações no protocolo de intenções do consórcio intermunicipal do médio vale do itajaí - cimvi, e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-03-25",
+   "materia": "Projeto de Lei Complementar nº 5/2025",
+   "ementa": "Altera a tabela II do anexo I da Lei Complementar 217, de 29 de junho de 2018.",
+   "autoria": "Mesa Diretora",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 4",
+   "contra": [
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-03-26",
+   "materia": "Projeto de Lei Complementar nº 5/2025",
+   "ementa": "Altera a tabela II do anexo I da Lei Complementar 217, de 29 de junho de 2018.",
+   "autoria": "Mesa Diretora",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 4",
+   "contra": [
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-08",
+   "materia": "Projeto de Lei Ordinária nº 16/2025 - Pedido de Vista (Caroline Laís",
+   "ementa": "Bertoldi)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 5",
+   "contra": [
+    "Diogo de Pinho",
+    "Elaine Pickler",
+    "Fernanda Jacobi dos Santos",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-08",
+   "materia": "Projeto de Lei Ordinária nº 19/2025 - Pedido de Vista (Caroline Laís",
+   "ementa": "Bertoldi)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 3",
+   "contra": [
+    "Diogo de Pinho",
+    "Elaine Pickler",
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-10",
+   "materia": "SUBEMENDA N° 1 À EMENDA DE REDAÇÃO N° 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 16/2025",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-10",
+   "materia": "EMENDA VERBAL N° 1 AO PROJETO DE LEI Nº 16/2025",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-10",
+   "materia": "Emenda de Redação nº 1 ao Projeto de Lei Ordinária nº 16/2025",
+   "ementa": "Altera dispositivos do Projeto de Lei Odinária n° 16/2025.",
+   "autoria": "Comissão de Justiça e Redação (CJR)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-10",
+   "materia": "Projeto de Lei Ordinária nº 16/2025",
+   "ementa": "Institui o Serviço de Inspeção Municipal de Produtos de Origem Animal (SIM -POA), dispõe sobre a inspeção sanitária e industrial dos produtos de origem animal no município de Indaial e dá outras providências.",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-10",
+   "materia": "Projeto de Lei Ordinária nº 19/2025",
+   "ementa": "Ratifica alterações no protocolo de intenções do consórcio intermunicipal do médio vale do itajaí - cimvi, e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-04-14",
+   "materia": "Projeto de Lei Ordinária nº 16/2025",
+   "ementa": "Institui o Serviço de Inspeção Municipal de Produtos de Origem Animal (SIM -POA), dispõe sobre a inspeção sanitária e industrial dos produtos de origem animal no município de Indaial e dá outras providências.",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-15",
+   "materia": "Projeto de Lei Ordinária nº 41/2025 - Pedido de Vista (Carlos Eduardo",
+   "ementa": "Cunha)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Fernanda Jacobi dos Santos"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-19",
+   "materia": "Projeto de Lei Ordinária nº 41/2025 - Pedido de Vista (Henrique Fritz)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-22",
+   "materia": "Projeto de Lei Ordinária nº 57/2025 - Pedido de Vista (Diogo de Pinho)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 5",
+   "contra": [
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-22",
+   "materia": "Projeto de Lei Ordinária nº 42/2025 - Comissão de Justiça e Redação",
+   "ementa": "(CJR) (Parecer) DISPÕE SOBRE LEITURA BÍBLICA COMO RECURSO PARADIDATICO NAS ESCOLAS PÚBLICAS DO MUNICÍPIO DE INDAIAL. (Autoria: vereador Jonatas Mizael Rosenbrock).",
+   "autoria": "vereador Jonatas Mizael Rosenbrock).",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Fernanda Jacobi dos Santos",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-27",
+   "materia": "Projeto de Lei Complementar nº 8/2025",
+   "ementa": "Altera dispositivos da lei complementar 64/2005 - dispõe sobre o regime de previdência social dos servidores públicos do município de indaial e cria o instituto de aposentadoria e pensões dos servidores públicos municipais de indaial - indaprev",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 12 a favor · contra 1",
+   "contra": [
+    "Elaine Pickler"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-27",
+   "materia": "Projeto de Lei Ordinária nº 41/2025",
+   "ementa": "Dispõe sobre as medidas e dimensões da rua adolfo molinari, denomina pela lei 1781/1988",
+   "autoria": "Prefeitura",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 7",
+   "contra": [
+    "Valmir Jordani",
+    "Carlos Eduardo Cunha",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-27",
+   "materia": "Projeto de Lei Ordinária nº 57/2025",
+   "ementa": "Dispõe sobre o reajuste salarial para os servidores efetivos e comissionados da Câmara Municipal de Indaial.",
+   "autoria": "Mesa Diretora",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 7",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Carlos Eduardo Cunha",
+    "Fernanda Jacobi dos Santos",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-05-27",
+   "materia": "Projeto de Lei Ordinária nº 58/2025",
+   "ementa": "DENOMINA VIA PÚBLICA / RUA BERTHODO KERTZENDORFF. (Autoria: Vereador Henrique Fritz).",
+   "autoria": "Vereador Henrique Fritz).",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Carlos Eduardo Cunha"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-06-10",
+   "materia": "Projeto de Lei Ordinária nº 63/2025",
+   "ementa": "Autoriza alteração orçamentária para abertura de Crédito Adicional Suplementar por Anulação de Crédito Orçamentário Disponível no Orçamento Anual do MUNICÍPIO DE INDAIAL.",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-06-26",
+   "materia": "VETO GLOBAL Nº 1 AO PROJETO DE LEI ORDINÁRIA Nº 7/2025",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 6 a favor · contra 6",
+   "contra": [
+    "Valentim Blasius",
+    "Carlos Eduardo Cunha",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-06-26",
+   "materia": "Projeto de Lei Ordinária nº 83/2025 - Pedido de Vista (Valmir Jordani)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-07-01",
+   "materia": "Projeto de Lei Ordinária nº 83/2025 - Pedido de Vista (Diogo de Pinho)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-07-08",
+   "materia": "Projeto de Lei Ordinária nº 83/2025",
+   "ementa": "DISPÕE SOBRE AS MEDIDAS E DIMENSÕES DA RUA ADOLFO MOLINARI, DENOMINADA PELA LEI 1781/1988 (Autoria: Vereadores Carlos Eduardo Cunha, Diogo de Pinho, Elton Marcos Possamai, Fernanda dos Santos Moser, Flávio Augusto Ferri Molinari, Jonatas Mizael Rosenbrock , José Carlos Peixer, Lúcio Vanderlinde e Valentim Blasius).",
+   "autoria": "Vereadores Carlos Eduardo Cunha, Diogo de Pinho, Elton Marcos Possamai, Fernanda",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Valmir Jordani",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-07-10",
+   "materia": "Projeto de Lei Ordinária nº 83/2025",
+   "ementa": "DISPÕE SOBRE AS MEDIDAS E DIMENSÕES DA RUA ADOLFO MOLINARI, DENOMINADA PELA LEI 1781/1988 (Autoria: Vereadores Carlos Eduardo Cunha, Diogo de Pinho, Elton Marcos Possamai, Fernanda dos Santos Moser, Flávio Augusto Ferri Molinari, Jonatas Mizael Rosenbrock , José Carlos Peixer, Lúcio Vanderlinde e Valentim Blasius).",
+   "autoria": "Vereadores Carlos Eduardo Cunha, Diogo de Pinho, Elton Marcos Possamai, Fernanda",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Valmir Jordani",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-08-21",
+   "materia": "Requerimento nº 304/2025",
+   "ementa": "Convocação Secretário Municipal de Educação.",
+   "autoria": "Elaine Pickler; Carlos Eduardo Cunha; Elton Marcos Possamai",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 5",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Diogo de Pinho",
+    "Fernanda Jacobi dos Santos",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "Substitutivo nº 1 ao Projeto de Lei Ordinária nº 120/2025 - Pedido de",
+   "ementa": "Dispensa de Pareceres (Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 2 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADOR ELTON MARCOS POSSAMAI",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 4 a favor · contra 7",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 3 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADOR ELTON MARCOS POSSAMAI",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 4 a favor · contra 7",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 4 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADORA ELAINE PICKLER",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 5 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADORA ELAINE PICKLER",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 6 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADOR LUCIO VANDERLINDE",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "Substitutivo nº 1 ao Projeto de Lei Ordinária nº 120/2025",
+   "ementa": "Institui o programa de valorização por resultados na aprendizagem no âmbito das escolas da rede pública municipal de ensino de indaial",
+   "autoria": "Comissão de Justiça e Redação (CJR)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-08-26",
+   "materia": "EMENDA VERBAL N° 1 - SUBSTITUTIVO Nº 1 AO PROJETO DE LEI",
+   "ementa": "ORDINÁRIA Nº 120/2025 - VEREADOR ELTON MARCOS POSSAMAI",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-11-04",
+   "materia": "Projeto de Lei Ordinária nº 163/2025 - Pedido de Vista (Elaine Pickler)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-11-04",
+   "materia": "Projeto de Lei Ordinária nº 163/2025",
+   "ementa": "Autoriza o poder executivo a contratar operação de crédito com a caixa econômica federal e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-11-06",
+   "materia": "Projeto de Lei Ordinária nº 173/2025 - Pedido de Dispensa de Pareceres",
+   "ementa": "(Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Valentim Blasius",
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-11-06",
+   "materia": "Projeto de Lei Ordinária nº 163/2025",
+   "ementa": "Autoriza o poder executivo a contratar operação de crédito com a caixa econômica federal e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 6 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-12-09",
+   "materia": "Projeto de Lei Ordinária nº 177/2025 - Apresentação de Emenda Verbal",
+   "ementa": "(Lucio Vanderlinde)",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 4 a favor · contra 7",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-12-09",
+   "materia": "Projeto de Lei Ordinária nº 182/2025",
+   "ementa": "Dispõe sobre a utilização da capela mortuária municipal e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elton Marcos Possamai",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-12-09",
+   "materia": "Projeto de Lei Complementar nº 18/2025 - Apresentação de Emenda",
+   "ementa": "Verbal (Elaine Pickler)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 8 a favor · contra 3",
+   "contra": [
+    "Diogo de Pinho",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-12-09",
+   "materia": "Projeto de Lei Complementar nº 18/2025",
+   "ementa": "Altera lei complementar 227, de 2019 que dispõe sobre a estrutura organizacional da administração pública do poder executivo municipal de indaial, reestruturação de cargos, estabelece princípios e diretrizes de gestão e adota outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 3",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2025-12-11",
+   "materia": "Projeto de Lei Ordinária nº 177/2025",
+   "ementa": "Estabelece valores de ingressos e passaportes do 39° torneio de verão de indaial – ano 2026",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 6 a favor · contra 5",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Henrique Fritz",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-12-11",
+   "materia": "Projeto de Lei Ordinária nº 182/2025",
+   "ementa": "Dispõe sobre a utilização da capela mortuária municipal e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 0 a favor · contra 11",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Carlos Eduardo Cunha",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-12-11",
+   "materia": "Projeto de Lei Complementar nº 18/2025",
+   "ementa": "Altera lei complementar 227, de 2019 que dispõe sobre a estrutura organizacional da administração pública do poder executivo municipal de indaial, reestruturação de cargos, estabelece princípios e diretrizes de gestão e adota outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 3",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2025-12-16",
+   "materia": "Projeto de Lei Ordinária nº 195/2025 - Pedido de Regime de Urgência",
+   "ementa": "(Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 1",
+   "contra": [
+    "Elaine Pickler"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-02-03",
+   "materia": "Projeto de Lei Ordinária nº 200/2025",
+   "ementa": "DECLARA DE UTILIDADE PÚBLICA MUNICIPAL / CENTRO CULTURAL, EDUCACIONAL E ASSISTENCIAL ILE AXE IJOBA ODE ERIN-REINO DE OSOOSSI. (Autoria: vereador Elton Marcos Possamai).",
+   "autoria": "vereador Elton Marcos Possamai).",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 4 a favor · contra 8",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Fernanda Jacobi dos Santos",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-02-19",
+   "materia": "Projeto de Lei Complementar nº 21/2025 - Pedido de Vista (Carlos Eduardo",
+   "ementa": "Cunha)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 8 a favor · contra 3",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Diogo de Pinho",
+    "Flávio Augusto Ferri Molinari"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-02-24",
+   "materia": "Projeto de Lei Complementar nº 21/2025",
+   "ementa": "Altera lei complementar n. 221/2019 – institui a lei de parcelamento do solo no município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 3",
+   "contra": [
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-02-26",
+   "materia": "Projeto de Lei Complementar nº 21/2025",
+   "ementa": "Altera lei complementar n. 221/2019 – institui a lei de parcelamento do solo no município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 3",
+   "contra": [
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-03-12",
+   "materia": "Projeto de Decreto nº 1/2026",
+   "ementa": "Autoriza a Câmara Municipal de Indaial a filiar-se e contribuir anualmente com a UVESC – Federação das Câmaras de Vereadores de Santa Catarina, e dá outras providências.",
+   "autoria": "Mesa Diretora",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Elton Marcos Possamai"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-07",
+   "materia": "Projeto de Lei Ordinária nº 11/2026",
+   "ementa": "Dispõe sobre a disponibilização digital da Nota Fiscal de Serviços Eletrônica (NFS-e) no âmbito do Município de Indaial. (Autoria: Vereador Diogo de Pinho).",
+   "autoria": "Vereador Diogo de Pinho).",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Elton Marcos Possamai"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-09",
+   "materia": "Moção nº 10/2026",
+   "ementa": "Moção Apelo ao Governo do Estado de Santa Catarina para assunção da intervenção, cofinanciamento e apoio estrutural ao Hospital Beatriz Ramos, no Município de Indaial.",
+   "autoria": "Lucio Vanderlinde; Carlos Eduardo Cunha; Caroline Laís Bertoldi; Elaine Pickler; Elton",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-14",
+   "materia": "Emenda Modificativa nº 1 ao Projeto de Lei Ordinária nº 202/2025",
+   "ementa": "Altera inciso III do art. 3º do Projeto de Lei nº 202/2025.",
+   "autoria": "Comissão de Justiça e Redação (CJR)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Jonatas Mizael Rosenbrock"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-14",
+   "materia": "Emenda Supressiva nº 1 ao Projeto de Lei Ordinária nº 202/2025",
+   "ementa": "Emenda Supressiva ao Projeto de Lei Ordinária n° 202/2025.",
+   "autoria": "Comissão de Segurança Pública e Trânsito (CSPT)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Elaine Pickler"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-14",
+   "materia": "Emenda Modificativa nº 2 ao Projeto de Lei Ordinária nº 202/2025",
+   "ementa": "Emenda Modificativa 2 ao Projeto de Lei Ordinária nº 202/2025.",
+   "autoria": "Comissão de Segurança Pública e Trânsito (CSPT)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Elaine Pickler"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-14",
+   "materia": "Projeto de Lei Ordinária nº 202/2025 - Apresentação de Emenda Verbal",
+   "ementa": "(Elaine Pickler)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-14",
+   "materia": "Projeto de Lei Ordinária nº 202/2025",
+   "ementa": "Regulamenta a legislação nacional de trânsito no que diz respeito à circulação, nas vias urbanas de indaial, de ciclomotores, bicicletas elétricas e equipamentos de mobilidade individual autopropelidos; e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-04-16",
+   "materia": "Projeto de Lei Ordinária nº 202/2025",
+   "ementa": "Regulamenta a legislação nacional de trânsito no que diz respeito à circulação, nas vias urbanas de indaial, de ciclomotores, bicicletas elétricas e equipamentos de mobilidade individual autopropelidos; e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-12",
+   "materia": "Projeto de Decreto nº 2/2026",
+   "ementa": "Aprova as Contas do Prefeito do exercício de 2024.",
+   "autoria": "Comissão de Finanças e Orçamento (CFO)",
+   "rejeitada": false,
+   "resultado": "Aprovado · 6 a favor · contra 5",
+   "contra": [
+    "Valentim Blasius",
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-12",
+   "materia": "Projeto de Lei Ordinária nº 23/2026",
+   "ementa": "Autoriza a desafetação de área pública municipal e a sua destinação para construção de unidades habitacionais do programa casa catarina, do governo do estado de santa catarina, e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 1",
+   "contra": [
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-14",
+   "materia": "Projeto de Lei Ordinária nº 23/2026 - Pedido de Vista (Lucio Vanderlinde)",
+   "ementa": "",
+   "autoria": "",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 5 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-14",
+   "materia": "Projeto de Lei Ordinária nº 23/2026",
+   "ementa": "Autoriza a desafetação de área pública municipal e a sua destinação para construção de unidades habitacionais do programa casa catarina, do governo do estado de santa catarina, e dá outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Elaine Pickler",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-21",
+   "materia": "Projeto de Lei Ordinária nº 30/2026 - Pedido de Adiamento (Fernanda",
+   "ementa": "Jacobi dos Santos )",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-21",
+   "materia": "Projeto de Lei Ordinária nº 31/2026 - Pedido de Adiamento (Fernanda",
+   "ementa": "Jacobi dos Santos )",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-05-21",
+   "materia": "Projeto de Lei Ordinária nº 32/2026 - Pedido de Adiamento (Fernanda",
+   "ementa": "Jacobi dos Santos )",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 6",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Flávio Augusto Ferri Molinari",
+    "José Carlos Peixer"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-06-02",
+   "materia": "Projeto de Lei Ordinária nº 30/2026 - Pedido de Adiamento (Elton Marcos",
+   "ementa": "Possamai)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-06-02",
+   "materia": "Projeto de Lei Ordinária nº 31/2026 - Pedido de Adiamento (Elton Marcos",
+   "ementa": "Possamai)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-06-02",
+   "materia": "Projeto de Lei Ordinária nº 32/2026 - Pedido de Adiamento (Elton Marcos",
+   "ementa": "Possamai)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-08-13",
+   "materia": "Projeto de Lei Complementar nº 6/2026",
+   "ementa": "Altera a Lei Complementar nº 221, de 05 de abril de 2019, que institui a Lei do Parcelamento do Solo no Município de Indaial, para dispor sobre a implantação de hidrantes de coluna nos loteamentos, e dá outras providências. (Autoria: vereador Valmir Jordani).",
+   "autoria": "vereador Valmir Jordani).",
+   "rejeitada": false,
+   "resultado": "Aprovado · 12 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-08-13",
+   "materia": "Projeto de Lei Ordinária nº 7/2026",
+   "ementa": "Altera lei 6.512/2025 que institui o serviço de inspeção municipal de produtos de origem animal (sim -poa), dispõe sobre a inspeção sanitária e industrial dos produtos de origem animal no município de indaial e dá outras providências/revoga lei 6.513/2025",
+   "autoria": "Prefeitura",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 0 a favor · contra 12",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Carlos Eduardo Cunha",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Fernanda Jacobi dos Santos",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-08-19",
+   "materia": "Projeto de Lei Complementar nº 4/2026",
+   "ementa": "Altera lei complementar 227, de 2019 que dispõe sobre a estrutura organizacional da administração pública do poder executivo municipal de indaial, cria cargoestabelece princípios e diretrizes de gestão e adota outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 5",
+   "contra": [
+    "Valentim Blasius",
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-08-20",
+   "materia": "Projeto de Lei Complementar nº 4/2026",
+   "ementa": "Altera lei complementar 227, de 2019 que dispõe sobre a estrutura organizacional da administração pública do poder executivo municipal de indaial, cria cargoestabelece princípios e diretrizes de gestão e adota outras providências",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-03",
+   "materia": "Projeto de Lei Ordinária nº 77/2026 - Comissão de Justiça e Redação",
+   "ementa": "(CJR) (Parecer) Dispõe sobre o direito à instalação de estação de recarga individual para veículos elétricos em edificações residenciais e comerciais no Município de Indaial e dá outras providências. (Autoria: vereador Lucio Vanderlinde).",
+   "autoria": "vereador Lucio Vanderlinde).",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Diogo de Pinho"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-09-10",
+   "materia": "Projeto de Lei Ordinária nº 133/2026 - Pedido de Regime de Urgência",
+   "ementa": "(Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 8 a favor · contra 3",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-10",
+   "materia": "Projeto de Lei Ordinária nº 134/2026 - Pedido de Regime de Urgência",
+   "ementa": "(Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 8 a favor · contra 3",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-10",
+   "materia": "Projeto de Lei Ordinária nº 137/2026 - Pedido de Regime de Urgência",
+   "ementa": "(Flávio Augusto Ferri Molinari)",
+   "autoria": "",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Elaine Pickler",
+    "Elton Marcos Possamai"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-10",
+   "materia": "Projeto de Lei Ordinária nº 134/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual do município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-10",
+   "materia": "Projeto de Lei Ordinária nº 137/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar no município de indaial por anulação de crédito orçamentário disponível no orçamento anual da fundação municipal de esportes vereador maro marcos hadlich",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "José Carlos Peixer"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-09-22",
+   "materia": "Projeto de Lei Ordinária nº 123/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual do município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 1",
+   "contra": [
+    "Elton Marcos Possamai"
+   ],
+   "semAta": false
+  },
+  {
+   "data": "2026-10-15",
+   "materia": "Projeto de Lei Ordinária nº 142/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual da fundação municipal de esportes vereador maro marcos hadlich",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-10-15",
+   "materia": "Projeto de Lei Ordinária nº 144/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual do município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 10 a favor · contra 2",
+   "contra": [
+    "Elaine Pickler",
+    "Elton Marcos Possamai"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-10-20",
+   "materia": "Projeto de Lei Ordinária nº 142/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual da fundação municipal de esportes vereador maro marcos hadlich",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 9 a favor · contra 2",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elton Marcos Possamai"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-10-20",
+   "materia": "Projeto de Lei Ordinária nº 144/2026",
+   "ementa": "Autoriza alteração orçamentária para abertura de crédito adicional suplementar por anulação de crédito orçamentário disponível no orçamento anual do município de indaial",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 7 a favor · contra 4",
+   "contra": [
+    "Carlos Eduardo Cunha",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  }
+ ],
+ "atas": [
+  {
+   "num": 39,
+   "ano": 2025,
+   "data": "2025-08-26"
+  },
+  {
+   "num": 40,
+   "ano": 2025,
+   "data": "2025-09-02"
+  },
+  {
+   "num": 49,
+   "ano": 2025,
+   "data": "2025-10-14"
+  },
+  {
+   "num": 51,
+   "ano": 2025,
+   "data": "2025-10-21"
+  },
+  {
+   "num": 53,
+   "ano": 2025,
+   "data": "2025-11-06"
+  },
+  {
+   "num": 54,
+   "ano": 2025,
+   "data": "2025-11-11"
+  },
+  {
+   "num": 55,
+   "ano": 2025,
+   "data": "2025-11-13"
+  },
+  {
+   "num": 56,
+   "ano": 2025,
+   "data": "2025-11-25"
+  },
+  {
+   "num": 57,
+   "ano": 2025,
+   "data": "2025-11-27"
+  },
+  {
+   "num": 60,
+   "ano": 2025,
+   "data": "2025-12-11"
+  },
+  {
+   "num": 37,
+   "ano": 2026,
+   "data": "2026-08-19"
+  },
+  {
+   "num": 38,
+   "ano": 2026,
+   "data": "2026-08-20"
+  },
+  {
+   "num": 39,
+   "ano": 2026,
+   "data": "2026-08-31"
+  },
+  {
+   "num": 41,
+   "ano": 2026,
+   "data": "2026-09-10"
+  },
+  {
+   "num": 43,
+   "ano": 2026,
+   "data": "2026-09-17"
+  },
+  {
+   "num": 45,
+   "ano": 2026,
+   "data": "2026-09-29"
+  },
+  {
+   "num": 46,
+   "ano": 2026,
+   "data": "2026-10-06"
+  },
+  {
+   "num": 48,
+   "ano": 2026,
+   "data": "2026-10-15"
+  },
+  {
+   "num": 49,
+   "ano": 2026,
+   "data": "2026-10-20"
+  },
+  {
+   "num": 50,
+   "ano": 2026,
+   "data": "2026-10-22"
+  },
+  {
+   "num": 51,
+   "ano": 2026,
+   "data": "2026-10-29"
+  },
+  {
+   "num": 52,
+   "ano": 2026,
+   "data": "2026-11-03"
+  },
+  {
+   "num": 53,
+   "ano": 2026,
+   "data": "2026-11-05"
+  }
+ ],
+ "presenca": {
+  "Valentim Blasius": {
+   "pres": 115,
+   "just": 0,
+   "semJust": 1,
+   "semAta": 2,
+   "licenca": 0
+  },
+  "Jonatas Mizael Rosenbrock": {
+   "pres": 117,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Valmir Jordani": {
+   "pres": 116,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 2,
+   "licenca": 0
+  },
+  "Diogo de Pinho": {
+   "pres": 77,
+   "just": 1,
+   "semJust": 37,
+   "semAta": 1,
+   "licenca": 2
+  },
+  "Carlos Eduardo Cunha": {
+   "pres": 117,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Caroline Laís Bertoldi": {
+   "pres": 117,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Elaine Pickler": {
+   "pres": 116,
+   "just": 0,
+   "semJust": 1,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Elton Marcos Possamai": {
+   "pres": 117,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Fernanda Jacobi dos Santos": {
+   "pres": 78,
+   "just": 0,
+   "semJust": 11,
+   "semAta": 17,
+   "licenca": 12
+  },
+  "Flávio Augusto Ferri Molinari": {
+   "pres": 111,
+   "just": 0,
+   "semJust": 6,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Henrique Fritz": {
+   "pres": 98,
+   "just": 0,
+   "semJust": 19,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "José Carlos Peixer": {
+   "pres": 104,
+   "just": 0,
+   "semJust": 5,
+   "semAta": 9,
+   "licenca": 0
+  },
+  "Lucio Vanderlinde": {
+   "pres": 116,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 2,
+   "licenca": 0
   }
  },
  "pedidos": {
@@ -1089,8 +2957,8 @@
     "aut": {
      "Carlos Eduardo Cunha": 5,
      "Fernanda Jacobi dos Santos": 2,
-     "Henrique Fritz": 2,
      "Jonatas Mizael Rosenbrock": 1,
+     "Henrique Fritz": 2,
      "Lucio Vanderlinde": 2,
      "Valentim Blasius": 1
     }
@@ -1243,6 +3111,13 @@
   "infTotal": 843
  },
  "camara": {
+  "votacoes": 1813,
+  "sessoes": 118,
+  "rejeitadas": 16,
+  "divididas": 84,
+  "rejSemAta": 8,
+  "divSemAta": 24,
+  "votSemAta": 382,
   "propsTotal": 4619
  }
 }
