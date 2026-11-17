@@ -1,8 +1,8 @@
 {
- "atualizado": "16/11/2026",
+ "atualizado": "17/11/2026",
  "props": {
   "Valentim Blasius": {
-   "indicacao": 145,
+   "indicacao": 148,
    "mocao_homenagem": 9,
    "mocao_posicionamento": 5,
    "pl_rua": 1,
@@ -13,24 +13,24 @@
    "outros": 6
   },
   "Jonatas Mizael Rosenbrock": {
-   "indicacao": 104,
+   "indicacao": 107,
    "mocao_homenagem": 23,
    "mocao_posicionamento": 5,
    "pl_rua": 1,
    "pl_homenagem": 7,
    "pl_substantivo": 3,
-   "req_info": 10,
+   "req_info": 12,
    "req_outros": 3,
    "outros": 5
   },
   "Valmir Jordani": {
-   "indicacao": 214,
+   "indicacao": 217,
    "mocao_homenagem": 13,
    "mocao_posicionamento": 5,
    "pl_rua": 7,
    "pl_homenagem": 4,
    "pl_substantivo": 15,
-   "req_info": 101,
+   "req_info": 102,
    "req_outros": 5,
    "outros": 23
   },
@@ -38,7 +38,7 @@
    "indicacao": 24,
    "mocao_homenagem": 24,
    "mocao_posicionamento": 4,
-   "pl_rua": 13,
+   "pl_rua": 17,
    "pl_homenagem": 1,
    "pl_substantivo": 5,
    "req_info": 13,
@@ -46,34 +46,34 @@
    "outros": 4
   },
   "Carlos Eduardo Cunha": {
-   "indicacao": 962,
+   "indicacao": 991,
    "mocao_homenagem": 20,
    "mocao_posicionamento": 6,
    "pl_rua": 8,
    "pl_homenagem": 3,
    "pl_substantivo": 11,
-   "req_info": 282,
+   "req_info": 287,
    "req_outros": 13,
    "outros": 4
   },
   "Caroline Laís Bertoldi": {
-   "indicacao": 151,
+   "indicacao": 156,
    "mocao_homenagem": 10,
    "mocao_posicionamento": 7,
    "pl_homenagem": 7,
    "pl_substantivo": 7,
-   "req_info": 62,
+   "req_info": 63,
    "req_outros": 2,
    "outros": 3
   },
   "Elaine Pickler": {
-   "indicacao": 272,
+   "indicacao": 276,
    "mocao_homenagem": 12,
    "mocao_posicionamento": 7,
    "pl_rua": 2,
    "pl_homenagem": 3,
    "pl_substantivo": 1,
-   "req_info": 124,
+   "req_info": 128,
    "req_outros": 11,
    "outros": 6
   },
@@ -89,7 +89,7 @@
    "outros": 4
   },
   "Fernanda Jacobi dos Santos": {
-   "indicacao": 150,
+   "indicacao": 152,
    "mocao_homenagem": 11,
    "mocao_posicionamento": 5,
    "pl_rua": 1,
@@ -106,21 +106,21 @@
    "pl_rua": 16,
    "pl_homenagem": 1,
    "pl_substantivo": 4,
-   "req_info": 6,
+   "req_info": 7,
    "outros": 4
   },
   "Henrique Fritz": {
-   "indicacao": 256,
+   "indicacao": 265,
    "mocao_homenagem": 13,
    "mocao_posicionamento": 4,
-   "pl_rua": 35,
+   "pl_rua": 36,
    "pl_homenagem": 2,
    "req_info": 21,
    "req_outros": 4,
    "outros": 5
   },
   "José Carlos Peixer": {
-   "indicacao": 432,
+   "indicacao": 435,
    "mocao_homenagem": 20,
    "mocao_posicionamento": 5,
    "pl_rua": 3,
@@ -131,7 +131,7 @@
    "outros": 4
   },
   "Lucio Vanderlinde": {
-   "indicacao": 464,
+   "indicacao": 473,
    "mocao_homenagem": 16,
    "mocao_posicionamento": 9,
    "pl_rua": 1,
@@ -144,7 +144,7 @@
   "Executivo": {
    "pl_rua": 14,
    "pl_homenagem": 1,
-   "pl_substantivo": 218,
+   "pl_substantivo": 221,
    "outros": 1
   }
  },
@@ -156,8 +156,8 @@
    "nr": 17,
    "abs": 0,
    "pres": 1631,
-   "sessoes": 118,
-   "semVoto": 3
+   "sessoes": 119,
+   "semVoto": 4
   },
   "Jonatas Mizael Rosenbrock": {
    "fav": 1777,
@@ -166,8 +166,8 @@
    "nr": 0,
    "abs": 0,
    "pres": 15,
-   "sessoes": 118,
-   "semVoto": 1
+   "sessoes": 119,
+   "semVoto": 2
   },
   "Valmir Jordani": {
    "fav": 1781,
@@ -176,8 +176,8 @@
    "nr": 12,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 2
+   "sessoes": 119,
+   "semVoto": 3
   },
   "Diogo de Pinho": {
    "fav": 1780,
@@ -186,8 +186,8 @@
    "nr": 2,
    "abs": 1,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 1
+   "sessoes": 119,
+   "semVoto": 2
   },
   "Carlos Eduardo Cunha": {
    "fav": 1791,
@@ -196,8 +196,8 @@
    "nr": 0,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 1
+   "sessoes": 119,
+   "semVoto": 2
   },
   "Caroline Laís Bertoldi": {
    "fav": 1794,
@@ -206,8 +206,8 @@
    "nr": 0,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 1
+   "sessoes": 119,
+   "semVoto": 2
   },
   "Elaine Pickler": {
    "fav": 1749,
@@ -216,8 +216,8 @@
    "nr": 32,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 2
+   "sessoes": 119,
+   "semVoto": 3
   },
   "Elton Marcos Possamai": {
    "fav": 1779,
@@ -226,8 +226,8 @@
    "nr": 0,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 1
+   "sessoes": 119,
+   "semVoto": 2
   },
   "Fernanda Jacobi dos Santos": {
    "fav": 1183,
@@ -236,8 +236,8 @@
    "nr": 622,
    "abs": 1,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 43
+   "sessoes": 119,
+   "semVoto": 44
   },
   "Flávio Augusto Ferri Molinari": {
    "fav": 1707,
@@ -246,8 +246,8 @@
    "nr": 87,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 7
+   "sessoes": 119,
+   "semVoto": 8
   },
   "Henrique Fritz": {
    "fav": 1444,
@@ -256,8 +256,8 @@
    "nr": 350,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 22
+   "sessoes": 119,
+   "semVoto": 23
   },
   "José Carlos Peixer": {
    "fav": 1665,
@@ -266,8 +266,8 @@
    "nr": 126,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 14
+   "sessoes": 119,
+   "semVoto": 15
   },
   "Lucio Vanderlinde": {
    "fav": 1735,
@@ -276,8 +276,8 @@
    "nr": 41,
    "abs": 0,
    "pres": 0,
-   "sessoes": 118,
-   "semVoto": 2
+   "sessoes": 119,
+   "semVoto": 3
   }
  },
  "contra": {
@@ -1921,6 +1921,11 @@
    "num": 53,
    "ano": 2026,
    "data": "2026-11-05"
+  },
+  {
+   "num": 54,
+   "ano": 2026,
+   "data": "2026-11-17"
   }
  ],
  "presenca": {
@@ -1928,91 +1933,91 @@
    "pres": 115,
    "just": 0,
    "semJust": 1,
-   "semAta": 2,
+   "semAta": 3,
    "licenca": 0
   },
   "Jonatas Mizael Rosenbrock": {
    "pres": 117,
    "just": 0,
    "semJust": 0,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Valmir Jordani": {
    "pres": 116,
    "just": 0,
    "semJust": 0,
-   "semAta": 2,
+   "semAta": 3,
    "licenca": 0
   },
   "Diogo de Pinho": {
    "pres": 77,
    "just": 1,
    "semJust": 37,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 2
   },
   "Carlos Eduardo Cunha": {
    "pres": 117,
    "just": 0,
    "semJust": 0,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Caroline Laís Bertoldi": {
    "pres": 117,
    "just": 0,
    "semJust": 0,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Elaine Pickler": {
    "pres": 116,
    "just": 0,
    "semJust": 1,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Elton Marcos Possamai": {
    "pres": 117,
    "just": 0,
    "semJust": 0,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Fernanda Jacobi dos Santos": {
    "pres": 78,
    "just": 0,
    "semJust": 11,
-   "semAta": 17,
+   "semAta": 18,
    "licenca": 12
   },
   "Flávio Augusto Ferri Molinari": {
    "pres": 111,
    "just": 0,
    "semJust": 6,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "Henrique Fritz": {
    "pres": 98,
    "just": 0,
    "semJust": 19,
-   "semAta": 1,
+   "semAta": 2,
    "licenca": 0
   },
   "José Carlos Peixer": {
    "pres": 104,
    "just": 0,
    "semJust": 5,
-   "semAta": 9,
+   "semAta": 10,
    "licenca": 0
   },
   "Lucio Vanderlinde": {
    "pres": 116,
    "just": 0,
    "semJust": 0,
-   "semAta": 2,
+   "semAta": 3,
    "licenca": 0
   }
  },
@@ -2020,14 +2025,14 @@
   "per": {
    "Valentim Blasius": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 49,
+     "Buracos, asfalto e manutenção de ruas": 50,
+     "Outros": 11,
+     "Trânsito e sinalização": 7,
      "Drenagem e bueiros": 24,
      "Transporte coletivo": 9,
-     "Trânsito e sinalização": 6,
      "Roçada e limpeza": 16,
      "Iluminação pública": 25,
      "Calçadas e acessibilidade": 4,
-     "Outros": 10,
      "Obras e reformas": 1,
      "Educação": 1
     },
@@ -2037,7 +2042,7 @@
      "Trânsito e sinalização": 1,
      "Buracos, asfalto e manutenção de ruas": 1
     },
-    "selfRep": 61,
+    "selfRep": 62,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua uberaba",
@@ -2056,15 +2061,15 @@
       4
      ],
      [
-      "Buracos, asfalto e manutenção de ruas|rua canaa",
+      "Buracos, asfalto e manutenção de ruas|rua bertolina may kechele",
       3
      ]
     ]
    },
    "Jonatas Mizael Rosenbrock": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 36,
-     "Drenagem e bueiros": 15,
+     "Buracos, asfalto e manutenção de ruas": 38,
+     "Drenagem e bueiros": 16,
      "Iluminação pública": 16,
      "Outros": 4,
      "Água e esgoto": 3,
@@ -2078,14 +2083,19 @@
      "Educação": 1
     },
     "inf": {
+     "Outros": 4,
+     "Educação": 1,
      "Trânsito e sinalização": 2,
-     "Outros": 3,
      "Obras e reformas": 3,
      "Iluminação pública": 1,
      "Transporte coletivo": 1
     },
-    "selfRep": 20,
+    "selfRep": 22,
     "selfTop": [
+     [
+      "Buracos, asfalto e manutenção de ruas|rua canaa",
+      2
+     ],
      [
       "Buracos, asfalto e manutenção de ruas|rua marechal deodoro da fonseca",
       2
@@ -2101,21 +2111,17 @@
      [
       "Drenagem e bueiros|rua timoteo felix martins",
       2
-     ],
-     [
-      "Roçada e limpeza|rua kurt ladevig",
-      2
      ]
     ]
    },
    "Valmir Jordani": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 107,
+     "Buracos, asfalto e manutenção de ruas": 109,
+     "Roçada e limpeza": 22,
      "Drenagem e bueiros": 20,
      "Trânsito e sinalização": 19,
      "Água e esgoto": 1,
      "Iluminação pública": 28,
-     "Roçada e limpeza": 21,
      "Poda e árvores": 3,
      "Outros": 10,
      "Saúde": 2,
@@ -2124,6 +2130,7 @@
      "Transporte coletivo": 1
     },
     "inf": {
+     "Água e esgoto": 6,
      "Educação": 11,
      "Praças, esporte e lazer": 3,
      "Iluminação pública": 7,
@@ -2134,7 +2141,6 @@
      "Saúde": 7,
      "Obras e reformas": 1,
      "Servidores e gestão": 2,
-     "Água e esgoto": 5,
      "Transporte coletivo": 3,
      "Calçadas e acessibilidade": 1,
      "Roçada e limpeza": 1
@@ -2191,34 +2197,34 @@
    },
    "Carlos Eduardo Cunha": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 438,
-     "Drenagem e bueiros": 145,
-     "Água e esgoto": 29,
+     "Buracos, asfalto e manutenção de ruas": 459,
+     "Iluminação pública": 90,
+     "Trânsito e sinalização": 41,
+     "Obras e reformas": 4,
+     "Água e esgoto": 30,
+     "Drenagem e bueiros": 146,
      "Roçada e limpeza": 155,
      "Calçadas e acessibilidade": 13,
      "Poda e árvores": 17,
-     "Iluminação pública": 87,
-     "Trânsito e sinalização": 39,
      "Saúde": 7,
      "Outros": 23,
      "Servidores e gestão": 1,
      "Transporte coletivo": 3,
-     "Obras e reformas": 3,
      "Segurança": 1,
      "Educação": 1
     },
     "inf": {
+     "Drenagem e bueiros": 11,
+     "Trânsito e sinalização": 39,
+     "Contratos e gastos": 9,
+     "Outros": 79,
      "Calçadas e acessibilidade": 6,
-     "Contratos e gastos": 8,
      "Saúde": 28,
      "Educação": 31,
-     "Outros": 78,
      "Buracos, asfalto e manutenção de ruas": 30,
      "Iluminação pública": 6,
      "Obras e reformas": 16,
      "Segurança": 4,
-     "Drenagem e bueiros": 9,
-     "Trânsito e sinalização": 38,
      "Água e esgoto": 4,
      "Roçada e limpeza": 2,
      "Praças, esporte e lazer": 11,
@@ -2226,7 +2232,7 @@
      "Poda e árvores": 1,
      "Servidores e gestão": 1
     },
-    "selfRep": 577,
+    "selfRep": 596,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua augusto maass",
@@ -2237,26 +2243,26 @@
       11
      ],
      [
+      "Buracos, asfalto e manutenção de ruas|rua marechal floriano peixoto",
+      9
+     ],
+     [
       "Buracos, asfalto e manutenção de ruas|rua cacador",
       9
      ],
      [
       "Roçada e limpeza|rua brusque",
       9
-     ],
-     [
-      "Buracos, asfalto e manutenção de ruas|rua bertolina may kechele",
-      8
      ]
     ]
    },
    "Caroline Laís Bertoldi": {
     "ind": {
+     "Trânsito e sinalização": 17,
+     "Buracos, asfalto e manutenção de ruas": 60,
      "Roçada e limpeza": 27,
-     "Buracos, asfalto e manutenção de ruas": 56,
      "Transporte coletivo": 4,
      "Outros": 6,
-     "Trânsito e sinalização": 16,
      "Drenagem e bueiros": 10,
      "Praças, esporte e lazer": 4,
      "Iluminação pública": 19,
@@ -2267,19 +2273,19 @@
      "Educação": 1
     },
     "inf": {
+     "Buracos, asfalto e manutenção de ruas": 8,
      "Praças, esporte e lazer": 3,
      "Outros": 23,
      "Saúde": 8,
      "Educação": 11,
      "Obras e reformas": 3,
-     "Buracos, asfalto e manutenção de ruas": 7,
      "Segurança": 3,
      "Iluminação pública": 1,
      "Drenagem e bueiros": 1,
      "Transporte coletivo": 1,
      "Trânsito e sinalização": 1
     },
-    "selfRep": 26,
+    "selfRep": 30,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua firmo jose da silva",
@@ -2290,28 +2296,28 @@
       3
      ],
      [
+      "Trânsito e sinalização|rua maranhao",
+      2
+     ],
+     [
+      "Buracos, asfalto e manutenção de ruas|rua marechal floriano peixoto",
+      2
+     ],
+     [
       "Buracos, asfalto e manutenção de ruas|rua ipiranga",
-      2
-     ],
-     [
-      "Buracos, asfalto e manutenção de ruas|rua lima",
-      2
-     ],
-     [
-      "Drenagem e bueiros|rua melvin jones",
       2
      ]
     ]
    },
    "Elaine Pickler": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 99,
+     "Trânsito e sinalização": 27,
+     "Drenagem e bueiros": 24,
+     "Buracos, asfalto e manutenção de ruas": 100,
      "Água e esgoto": 9,
      "Outros": 21,
-     "Trânsito e sinalização": 26,
      "Saúde": 3,
      "Praças, esporte e lazer": 4,
-     "Drenagem e bueiros": 22,
      "Iluminação pública": 40,
      "Roçada e limpeza": 22,
      "Calçadas e acessibilidade": 8,
@@ -2323,13 +2329,13 @@
      "Servidores e gestão": 2
     },
     "inf": {
+     "Outros": 34,
+     "Educação": 19,
+     "Saúde": 20,
      "Praças, esporte e lazer": 5,
      "Calçadas e acessibilidade": 4,
-     "Educação": 18,
      "Buracos, asfalto e manutenção de ruas": 13,
      "Contratos e gastos": 9,
-     "Outros": 32,
-     "Saúde": 19,
      "Obras e reformas": 6,
      "Trânsito e sinalização": 8,
      "Transporte coletivo": 4,
@@ -2337,7 +2343,7 @@
      "Animais": 2,
      "Água e esgoto": 2
     },
-    "selfRep": 61,
+    "selfRep": 63,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua marechal floriano peixoto",
@@ -2416,7 +2422,7 @@
    },
    "Fernanda Jacobi dos Santos": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 80,
+     "Buracos, asfalto e manutenção de ruas": 82,
      "Iluminação pública": 14,
      "Roçada e limpeza": 21,
      "Drenagem e bueiros": 7,
@@ -2479,6 +2485,7 @@
      "Educação": 1
     },
     "inf": {
+     "Educação": 1,
      "Obras e reformas": 2,
      "Buracos, asfalto e manutenção de ruas": 1,
      "Outros": 3
@@ -2488,12 +2495,13 @@
    },
    "Henrique Fritz": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 78,
-     "Outros": 21,
-     "Trânsito e sinalização": 37,
-     "Roçada e limpeza": 21,
-     "Saúde": 8,
-     "Drenagem e bueiros": 21,
+     "Roçada e limpeza": 22,
+     "Segurança": 3,
+     "Drenagem e bueiros": 24,
+     "Trânsito e sinalização": 38,
+     "Buracos, asfalto e manutenção de ruas": 79,
+     "Saúde": 9,
+     "Outros": 22,
      "Iluminação pública": 28,
      "Obras e reformas": 18,
      "Calçadas e acessibilidade": 6,
@@ -2501,7 +2509,6 @@
      "Praças, esporte e lazer": 3,
      "Poda e árvores": 4,
      "Educação": 3,
-     "Segurança": 2,
      "Transporte coletivo": 3
     },
     "inf": {
@@ -2512,7 +2519,7 @@
      "Educação": 1,
      "Calçadas e acessibilidade": 1
     },
-    "selfRep": 113,
+    "selfRep": 118,
     "selfTop": [
      [
       "Trânsito e sinalização|rua marechal deodoro da fonseca",
@@ -2527,19 +2534,19 @@
       5
      ],
      [
-      "Obras e reformas|rua artur zarling",
+      "Buracos, asfalto e manutenção de ruas|rua sao paulo",
       4
      ],
      [
-      "Trânsito e sinalização|avenida maria simao",
+      "Obras e reformas|rua artur zarling",
       4
      ]
     ]
    },
    "José Carlos Peixer": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 203,
-     "Drenagem e bueiros": 96,
+     "Buracos, asfalto e manutenção de ruas": 205,
+     "Drenagem e bueiros": 97,
      "Iluminação pública": 33,
      "Outros": 16,
      "Trânsito e sinalização": 31,
@@ -2565,7 +2572,7 @@
      "Obras e reformas": 4,
      "Contratos e gastos": 1
     },
-    "selfRep": 213,
+    "selfRep": 215,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua 11 de junho",
@@ -2591,12 +2598,12 @@
    },
    "Lucio Vanderlinde": {
     "ind": {
-     "Buracos, asfalto e manutenção de ruas": 188,
+     "Buracos, asfalto e manutenção de ruas": 194,
+     "Roçada e limpeza": 43,
+     "Drenagem e bueiros": 65,
      "Calçadas e acessibilidade": 22,
-     "Drenagem e bueiros": 63,
      "Transporte coletivo": 5,
      "Iluminação pública": 37,
-     "Roçada e limpeza": 42,
      "Água e esgoto": 25,
      "Poda e árvores": 11,
      "Trânsito e sinalização": 23,
@@ -2622,7 +2629,7 @@
      "Obras e reformas": 4,
      "Iluminação pública": 2
     },
-    "selfRep": 156,
+    "selfRep": 165,
     "selfTop": [
      [
       "Buracos, asfalto e manutenção de ruas|rua das nacoes",
@@ -2651,51 +2658,67 @@
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua marechal floriano peixoto",
-    "n": 34,
+    "n": 37,
     "de": "2025-01-27",
-    "ate": "2026-10-14",
+    "ate": "2026-11-16",
     "aut": {
+     "Carlos Eduardo Cunha": 9,
+     "Caroline Laís Bertoldi": 2,
      "Valmir Jordani": 6,
-     "Carlos Eduardo Cunha": 7,
      "Fernanda Jacobi dos Santos": 4,
      "Elaine Pickler": 7,
      "Jonatas Mizael Rosenbrock": 1,
      "José Carlos Peixer": 5,
-     "Caroline Laís Bertoldi": 1,
      "Henrique Fritz": 3
     }
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua bage",
-    "n": 18,
+    "n": 19,
     "de": "2025-02-10",
-    "ate": "2026-10-05",
+    "ate": "2026-11-16",
     "aut": {
+     "Elaine Pickler": 2,
      "Carlos Eduardo Cunha": 7,
      "Lucio Vanderlinde": 2,
      "Caroline Laís Bertoldi": 1,
      "Fernanda Jacobi dos Santos": 2,
      "Valentim Blasius": 2,
      "Valmir Jordani": 1,
-     "Jonatas Mizael Rosenbrock": 2,
-     "Elaine Pickler": 1
+     "Jonatas Mizael Rosenbrock": 2
     }
    },
    {
     "tema": "Drenagem e bueiros",
     "rua": "rua melvin jones",
-    "n": 18,
+    "n": 19,
     "de": "2025-03-10",
-    "ate": "2026-09-28",
+    "ate": "2026-11-16",
     "aut": {
+     "Carlos Eduardo Cunha": 2,
      "Caroline Laís Bertoldi": 2,
      "Lucio Vanderlinde": 2,
      "José Carlos Peixer": 10,
-     "Carlos Eduardo Cunha": 1,
      "Valmir Jordani": 1,
      "Valentim Blasius": 1,
      "Fernanda Jacobi dos Santos": 1
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua doutor blumenau",
+    "n": 18,
+    "de": "2025-02-10",
+    "ate": "2026-11-16",
+    "aut": {
+     "Carlos Eduardo Cunha": 7,
+     "Valentim Blasius": 1,
+     "José Carlos Peixer": 4,
+     "Lucio Vanderlinde": 3,
+     "Jonatas Mizael Rosenbrock": 1,
+     "Elaine Pickler": 1,
+     "Henrique Fritz": 1
     }
    },
    {
@@ -2731,17 +2754,29 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua doutor blumenau",
-    "n": 17,
-    "de": "2025-02-10",
-    "ate": "2026-10-09",
+    "rua": "rua 11 de junho",
+    "n": 16,
+    "de": "2025-02-21",
+    "ate": "2026-11-16",
     "aut": {
-     "Carlos Eduardo Cunha": 6,
-     "Valentim Blasius": 1,
-     "José Carlos Peixer": 4,
-     "Lucio Vanderlinde": 3,
-     "Jonatas Mizael Rosenbrock": 1,
-     "Elaine Pickler": 1,
+     "Carlos Eduardo Cunha": 3,
+     "José Carlos Peixer": 10,
+     "Caroline Laís Bertoldi": 2,
+     "Valentim Blasius": 1
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua firmo jose da silva",
+    "n": 16,
+    "de": "2025-01-20",
+    "ate": "2026-11-16",
+    "aut": {
+     "Carlos Eduardo Cunha": 5,
+     "Caroline Laís Bertoldi": 3,
+     "Lucio Vanderlinde": 2,
+     "José Carlos Peixer": 3,
+     "Elaine Pickler": 3,
      "Henrique Fritz": 1
     }
    },
@@ -2774,19 +2809,6 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua 11 de junho",
-    "n": 15,
-    "de": "2025-02-21",
-    "ate": "2026-10-28",
-    "aut": {
-     "José Carlos Peixer": 10,
-     "Caroline Laís Bertoldi": 2,
-     "Carlos Eduardo Cunha": 2,
-     "Valentim Blasius": 1
-    }
-   },
-   {
-    "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua botuvera",
     "n": 15,
     "de": "2025-02-05",
@@ -2795,21 +2817,6 @@
      "Carlos Eduardo Cunha": 3,
      "José Carlos Peixer": 3,
      "Lucio Vanderlinde": 8,
-     "Henrique Fritz": 1
-    }
-   },
-   {
-    "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua firmo jose da silva",
-    "n": 15,
-    "de": "2025-01-20",
-    "ate": "2026-10-09",
-    "aut": {
-     "Caroline Laís Bertoldi": 3,
-     "Lucio Vanderlinde": 2,
-     "Carlos Eduardo Cunha": 4,
-     "José Carlos Peixer": 3,
-     "Elaine Pickler": 3,
      "Henrique Fritz": 1
     }
    },
@@ -2844,6 +2851,48 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua palotina",
+    "n": 14,
+    "de": "2025-10-30",
+    "ate": "2026-11-16",
+    "aut": {
+     "Carlos Eduardo Cunha": 8,
+     "José Carlos Peixer": 1,
+     "Lucio Vanderlinde": 1,
+     "Valmir Jordani": 2,
+     "Valentim Blasius": 2
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua corupa",
+    "n": 14,
+    "de": "2025-01-30",
+    "ate": "2026-11-16",
+    "aut": {
+     "Carlos Eduardo Cunha": 8,
+     "Caroline Laís Bertoldi": 1,
+     "Henrique Fritz": 1,
+     "Lucio Vanderlinde": 1,
+     "José Carlos Peixer": 2,
+     "Elton Marcos Possamai": 2
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua bertolina may kechele",
+    "n": 13,
+    "de": "2025-02-24",
+    "ate": "2026-11-16",
+    "aut": {
+     "Valentim Blasius": 3,
+     "Carlos Eduardo Cunha": 8,
+     "Fernanda Jacobi dos Santos": 1,
+     "Lucio Vanderlinde": 1
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua otto gramkow",
     "n": 13,
     "de": "2025-02-21",
@@ -2872,35 +2921,6 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua corupa",
-    "n": 13,
-    "de": "2025-01-30",
-    "ate": "2026-10-09",
-    "aut": {
-     "Carlos Eduardo Cunha": 7,
-     "Caroline Laís Bertoldi": 1,
-     "Henrique Fritz": 1,
-     "Lucio Vanderlinde": 1,
-     "José Carlos Peixer": 2,
-     "Elton Marcos Possamai": 2
-    }
-   },
-   {
-    "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua palotina",
-    "n": 13,
-    "de": "2025-10-30",
-    "ate": "2026-10-05",
-    "aut": {
-     "Carlos Eduardo Cunha": 7,
-     "José Carlos Peixer": 1,
-     "Lucio Vanderlinde": 1,
-     "Valmir Jordani": 2,
-     "Valentim Blasius": 2
-    }
-   },
-   {
-    "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua melvin jones",
     "n": 13,
     "de": "2025-06-09",
@@ -2913,15 +2933,17 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua bertolina may kechele",
+    "rua": "rua 25 de janeiro",
     "n": 12,
-    "de": "2025-02-24",
-    "ate": "2026-10-19",
+    "de": "2025-01-29",
+    "ate": "2026-11-16",
     "aut": {
-     "Carlos Eduardo Cunha": 8,
-     "Fernanda Jacobi dos Santos": 1,
-     "Valentim Blasius": 2,
-     "Lucio Vanderlinde": 1
+     "Carlos Eduardo Cunha": 1,
+     "Caroline Laís Bertoldi": 1,
+     "José Carlos Peixer": 5,
+     "Valmir Jordani": 1,
+     "Lucio Vanderlinde": 3,
+     "Valentim Blasius": 1
     }
    },
    {
@@ -2950,6 +2972,34 @@
    },
    {
     "tema": "Buracos, asfalto e manutenção de ruas",
+    "rua": "rua tres coracoes",
+    "n": 11,
+    "de": "2025-01-30",
+    "ate": "2026-11-16",
+    "aut": {
+     "Valmir Jordani": 1,
+     "Carlos Eduardo Cunha": 1,
+     "Fernanda Jacobi dos Santos": 5,
+     "José Carlos Peixer": 2,
+     "Lucio Vanderlinde": 2,
+     "Caroline Laís Bertoldi": 1
+    }
+   },
+   {
+    "tema": "Roçada e limpeza",
+    "rua": "rua palotina",
+    "n": 11,
+    "de": "2025-01-20",
+    "ate": "2026-11-16",
+    "aut": {
+     "Henrique Fritz": 2,
+     "Carlos Eduardo Cunha": 7,
+     "Valentim Blasius": 1,
+     "Valmir Jordani": 1
+    }
+   },
+   {
+    "tema": "Buracos, asfalto e manutenção de ruas",
     "rua": "rua guaramirim",
     "n": 11,
     "de": "2025-02-12",
@@ -2957,8 +3007,8 @@
     "aut": {
      "Carlos Eduardo Cunha": 5,
      "Fernanda Jacobi dos Santos": 2,
-     "Jonatas Mizael Rosenbrock": 1,
      "Henrique Fritz": 2,
+     "Jonatas Mizael Rosenbrock": 1,
      "Lucio Vanderlinde": 2,
      "Valentim Blasius": 1
     }
@@ -3024,100 +3074,60 @@
      "Elaine Pickler": 2,
      "Elton Marcos Possamai": 1
     }
-   },
-   {
-    "tema": "Drenagem e bueiros",
-    "rua": "rua marechal floriano peixoto",
-    "n": 11,
-    "de": "2025-07-09",
-    "ate": "2026-08-28",
-    "aut": {
-     "Elaine Pickler": 2,
-     "Carlos Eduardo Cunha": 3,
-     "José Carlos Peixer": 1,
-     "Valmir Jordani": 3,
-     "Jonatas Mizael Rosenbrock": 2
-    }
-   },
-   {
-    "tema": "Iluminação pública",
-    "rua": "rua marechal deodoro da fonseca",
-    "n": 11,
-    "de": "2025-01-28",
-    "ate": "2026-08-18",
-    "aut": {
-     "Henrique Fritz": 6,
-     "José Carlos Peixer": 2,
-     "Carlos Eduardo Cunha": 2,
-     "Lucio Vanderlinde": 1
-    }
-   },
-   {
-    "tema": "Buracos, asfalto e manutenção de ruas",
-    "rua": "rua ribeirao das pedras",
-    "n": 10,
-    "de": "2025-04-07",
-    "ate": "2026-10-09",
-    "aut": {
-     "Carlos Eduardo Cunha": 5,
-     "Elaine Pickler": 3,
-     "José Carlos Peixer": 1,
-     "Valmir Jordani": 1
-    }
    }
   ],
   "indT": {
-   "Buracos, asfalto e manutenção de ruas": 1340,
-   "Drenagem e bueiros": 433,
-   "Roçada e limpeza": 366,
-   "Água e esgoto": 74,
-   "Iluminação pública": 339,
-   "Outros": 155,
-   "Trânsito e sinalização": 220,
-   "Saúde": 30,
+   "Buracos, asfalto e manutenção de ruas": 1382,
+   "Iluminação pública": 342,
+   "Roçada e limpeza": 369,
+   "Drenagem e bueiros": 443,
+   "Segurança": 8,
+   "Trânsito e sinalização": 226,
+   "Obras e reformas": 32,
+   "Outros": 157,
+   "Saúde": 31,
+   "Água e esgoto": 75,
    "Praças, esporte e lazer": 18,
    "Calçadas e acessibilidade": 65,
    "Transporte coletivo": 37,
    "Poda e árvores": 47,
    "Educação": 11,
    "Servidores e gestão": 3,
-   "Obras e reformas": 31,
-   "Segurança": 7,
    "Contratos e gastos": 4
   },
   "infT": {
-   "Educação": 92,
+   "Água e esgoto": 21,
+   "Educação": 95,
+   "Outros": 295,
+   "Drenagem e bueiros": 25,
+   "Trânsito e sinalização": 77,
+   "Contratos e gastos": 26,
+   "Saúde": 82,
+   "Buracos, asfalto e manutenção de ruas": 84,
    "Praças, esporte e lazer": 27,
    "Calçadas e acessibilidade": 13,
-   "Saúde": 81,
-   "Buracos, asfalto e manutenção de ruas": 83,
-   "Contratos e gastos": 25,
-   "Outros": 291,
    "Obras e reformas": 36,
-   "Trânsito e sinalização": 76,
    "Iluminação pública": 21,
    "Segurança": 9,
-   "Drenagem e bueiros": 23,
    "Roçada e limpeza": 7,
    "Transporte coletivo": 23,
    "Animais": 3,
-   "Água e esgoto": 20,
    "Servidores e gestão": 11,
    "Poda e árvores": 2
   },
-  "repGrupos": 492,
-  "repPedidos": 1985,
-  "indTotal": 3180,
-  "infTotal": 843
+  "repGrupos": 500,
+  "repPedidos": 2043,
+  "indTotal": 3250,
+  "infTotal": 857
  },
  "camara": {
   "votacoes": 1813,
-  "sessoes": 118,
+  "sessoes": 119,
   "rejeitadas": 16,
   "divididas": 84,
   "rejSemAta": 8,
   "divSemAta": 24,
   "votSemAta": 382,
-  "propsTotal": 4619
+  "propsTotal": 4711
  }
 }
