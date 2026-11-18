@@ -148,7 +148,8 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
 td.num{font-family:var(--mono);white-space:nowrap}
 td .em{color:var(--muted);font-size:13px;display:block;max-width:62ch}
 .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px;font-size:14px}
-select{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+select,.filters input[type=search],.filters input[type=date]{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.filters input[type=search]{min-width:260px}
 label.chk{display:flex;gap:6px;align-items:center}
 details summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);padding:4px 0}
 .back{font-size:14px;text-decoration:none;color:var(--muted)}
@@ -207,7 +208,7 @@ nav.tabs a[aria-current="page"]{border-color:var(--ink)}
   .donut-wrap svg{align-self:center}
   .legend{width:100%}
   .filters{flex-direction:column;align-items:stretch}
-  .filters select{width:100%}
+  .filters select,.filters input{width:100%;min-width:0}
   /* tabelas viram cartões */
   .tablewrap{border:0;background:transparent;box-shadow:none;overflow:visible}
   .tablewrap table, .tablewrap tbody, .tablewrap tr, .tablewrap td{display:block;width:100%}
@@ -226,13 +227,15 @@ nav.tabs a[aria-current="page"]{border-color:var(--ink)}
 @media (max-width:520px){ .rrow{grid-template-columns:22px minmax(90px,130px) 1fr auto;gap:6px} .tbar{grid-template-columns:100px 1fr 38px} th,td{padding:8px 10px} }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .seo-links{font-size:13px;color:var(--muted);padding-top:10px}.seo-links ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px}.seo-links a{color:var(--muted)}
+.destaque{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin-top:10px;color:var(--ink)}
+.portas{display:flex;gap:6px;margin-left:auto}.portas a{font:700 14px var(--display);padding:6px 14px;border-radius:999px;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--surface)}.portas a.on{background:var(--accent);border-color:var(--accent);color:#fff}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="wrap bar1">
     <a class="logo" href="#inicio">Quem paga, <span>Indaial?</span></a>
-    <span class="beta">beta</span>
+    <nav class="portas" aria-label="Área"><a class="on" href="/">Câmara</a><a href="/prefeitura/">Prefeitura</a></nav>
   </div>
   <div class="navrow">
     <nav class="tabs wrap" aria-label="Seções">
@@ -534,19 +537,33 @@ function pedidos(){
 }
 
 function votacoes(){
-  return `<section class="hero"><h1>Votações divididas</h1><p>${C.divididas} das ${num(C.votacoes)} votações tiveram ao menos um voto contra. Em todas as outras, quem votou votou igual.</p></section>
+  return `<section class="hero"><h1>Votações divididas</h1><p>${C.divididas} das ${num(C.votacoes)} votações tiveram ao menos um voto contra.</p><p class="destaque">Nas outras <b>${num(C.votacoes-C.divididas)} votações</b>, todos os vereadores que votaram votaram igual. Por isso elas não aparecem nesta lista.</p></section>
   <div class="filters">
     <label for="fv">Vereador</label><select id="fv"><option value="">Todos</option>${V.map(v=>`<option>${esc(v.nome)}</option>`).join('')}</select>
     <label class="chk"><input type="checkbox" id="fr"> só rejeitadas</label>
     <label class="chk"><input type="checkbox" id="fa"> só sessões sem ata</label>
   </div>
+  <div class="filters">
+    <label for="fq">Buscar</label><input id="fq" type="search" placeholder="Nº do projeto (ex.: 19/2025) ou palavra" autocomplete="off">
+    <label for="fd1">De</label><input id="fd1" type="date" min="2025-01-01">
+    <label for="fd2">Até</label><input id="fd2" type="date" min="2025-01-01">
+    <label for="fo">Ordenar</label><select id="fo"><option value="desc">Mais recentes primeiro</option><option value="asc">Mais antigas primeiro</option><option value="mat">Matéria (tipo e número)</option></select>
+  </div>
+  <p class="note" id="fcount"></p>
   <div class="tablewrap"><table><thead><tr><th>Data</th><th>Matéria</th><th>Resultado</th><th>Votaram contra</th></tr></thead><tbody id="tb"></tbody></table></div>`;
 }
 function wireVot(){
-  const fv=document.getElementById('fv'),fr=document.getElementById('fr'),fa=document.getElementById('fa'),tb=document.getElementById('tb');
-  const draw=()=>{ const r=D.divididas.filter(d=>(!fv.value||d.contra.includes(fv.value))&&(!fr.checked||d.rejeitada)&&(!fa.checked||d.semAta));
+  const g=id=>document.getElementById(id), fv=g('fv'),fr=g('fr'),fa=g('fa'),tb=g('tb'),fq=g('fq'),fd1=g('fd1'),fd2=g('fd2'),fo=g('fo'),fc=g('fcount');
+  const sem=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const numMat=m=>{const x=/n[ºo°]?\s*([\d.]+)\s*\/\s*(\d{4})/i.exec(m||'');return x?[+x[2],+x[1].replace(/\./g,'')]:[0,0];};
+  const casa=(d,q)=>{ if(!q) return true; const alvo=sem(d.materia+' '+d.ementa+' '+(d.autoria||''));
+    if(/^\d+(\/\d{2,4})?$/.test(q)){ const [n,a]=q.split('/'); const re=new RegExp('n[ºo°]?\\s*0*'+n+'\\s*/\\s*'+(a?(a.length==2?'20'+a:a):'\\d{4}'),'i'); return re.test(d.materia); }
+    return sem(q).split(/\s+/).every(w=>alvo.includes(w)); };
+  const draw=()=>{ const q=fq.value.trim(); let r=D.divididas.filter(d=>(!fv.value||d.contra.includes(fv.value))&&(!fr.checked||d.rejeitada)&&(!fa.checked||d.semAta)&&(!fd1.value||d.data>=fd1.value)&&(!fd2.value||d.data<=fd2.value)&&casa(d,q));
+    r=r.slice().sort((a,b)=>fo.value==='asc'?a.data.localeCompare(b.data):fo.value==='mat'?(sem(a.materia).replace(/n[ºo°]?\s*[\d.].*/,'').localeCompare(sem(b.materia).replace(/n[ºo°]?\s*[\d.].*/,''))||numMat(a.materia)[0]-numMat(b.materia)[0]||numMat(a.materia)[1]-numMat(b.materia)[1]):b.data.localeCompare(a.data));
+    fc.textContent=r.length+' de '+D.divididas.length+' votações divididas';
     tb.innerHTML=r.map(d=>`<tr><td class="num">${dt(d.data)}</td><td>${esc(d.materia)}<span class="em">${esc(d.ementa)}${d.autoria?' · Autoria: '+esc(d.autoria):''}</span></td><td>${d.rejeitada?'<span class="pill red">Rejeitado</span>':'<span class="pill">Aprovado</span>'} ${d.semAta?'<span class="pill warn">sem ata</span>':''}<span class="em">${esc(d.resultado)}</span></td><td>${d.contra.map(n=>esc(short(n))).join(', ')}</td></tr>`).join('')||'<tr><td colspan="4">Nenhuma votação com esses filtros.</td></tr>'; labelTables(); };
-  [fv,fr,fa].forEach(e=>e.addEventListener('change',draw)); draw();
+  [fv,fr,fa,fd1,fd2,fo].forEach(e=>e.addEventListener('change',draw)); fq.addEventListener('input',draw); draw();
 }
 function atas(){
   return `<section class="hero"><h1>Atas que faltam</h1><p>A ata é o registro oficial de cada sessão. Estas ${D.atas.length} sessões ordinárias aconteceram, mas a ata não está no site da Câmara. As votações delas existem no painel eletrônico.</p></section>
@@ -585,7 +602,6 @@ function sobre(){
       <p style="margin:0 0 10px"><b>Guilherme Patrick Chimilouski Glatz</b><br>Morador da região, profissional da área de dados.</p>
       <div class="receipt">
         <div class="line"><span>Contato e correções<small>contato@quempagaindaial.com.br</small></span><span class="v"><a href="mailto:contato@quempagaindaial.com.br">escrever</a></span></div>
-        <div class="line"><span>Instagram<small>@quempagaindaial</small></span><span class="v"><a href="https://www.instagram.com/quempagaindaial/">abrir</a></span></div>
         ${D.repo?`<div class="line"><span>Código e dados abertos<small>github.com/${esc(D.repo)}</small></span><span class="v"><a href="https://github.com/${esc(D.repo)}">abrir</a></span></div>`:''}
       </div>
       
