@@ -4,15 +4,15 @@
 <link rel="canonical" href="https://quempagaindaial.com.br/prefeitura/">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Quem paga, Indaial?">
 <meta property="og:title" content="Para onde vai o dinheiro da Prefeitura de Indaial"><meta property="og:description" content="Dívida, eventos, publicidade, fornecedores e contratações sem licitação, com cada pagamento e a fonte oficial.">
-<meta property="og:url" content="https://quempagaindaial.com.br/prefeitura/"><meta property="og:image" content="https://quempagaindaial.com.br/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#b3121f">
+<meta property="og:url" content="https://quempagaindaial.com.br/prefeitura/"><meta property="og:image" content="https://quempagaindaial.com.br/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0f1013">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Despesas da Prefeitura de Indaial (SC), 2024 a 2026","description":"Empenhos liquidados da Prefeitura de Indaial e seus fundos, por categoria, credor e evento, mais contratações sem licitação (PNCP) e série da dívida (Tesouro Nacional).","url":"https://quempagaindaial.com.br/prefeitura/","inLanguage":"pt-BR","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Guilherme Patrick Chimilouski Glatz"},"spatialCoverage":{"@type":"Place","name":"Indaial, Santa Catarina, Brasil"},"temporalCoverage":"2024-01-01/..","isBasedOn":["https://indaial.atende.net/transparencia/","https://pncp.gov.br","https://apidatalake.tesouro.gov.br"]}</script>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f2f1ed;--surface:#fff;--ink:#15171c;--muted:#61656e;--line:#e1dfd9;--accent:#b3121f;--accent-soft:#f7e4e5;--grey:#9aa0aa;--display:"Archivo",Arial,sans-serif;--body:"IBM Plex Sans","Segoe UI",sans-serif;--mono:"IBM Plex Mono",monospace}
+:root{--paper:#0f1013;--surface:#181a1f;--surface2:#20232a;--ink:#ecebe8;--muted:#a3a6ae;--line:#2c2f36;--accent:#ff4d5a;--accent-soft:#3a1c20;--ok:#5fc48f;--ok-soft:#173326;--warn:#e8a94d;--warn-soft:#3a2a12;--grey:#6c717b;--shadow:none;color-scheme:dark;--display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"IBM Plex Sans","Segoe UI",Roboto,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;--r:14px}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--body)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
-.prev{background:#15171c;color:#fff;font:600 12px var(--mono);text-align:center;padding:6px}
-header{padding:14px 0 0}.logo{font:900 22px var(--display);text-decoration:none;color:var(--ink)}.logo span{color:var(--accent)}
+ .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.prev{background:#15171c;color:var(--surface);font:600 12px var(--mono);text-align:center;padding:6px}
+.logo{font:900 22px var(--display);text-decoration:none;color:var(--ink)}.logo span{color:var(--accent)}
 .doors{display:flex;gap:8px;margin:14px 0 0;border-bottom:1px solid var(--line)}.doors a{font:700 15px var(--display);padding:10px 16px;text-decoration:none;color:var(--muted);border-radius:10px 10px 0 0}.doors a.on{background:var(--surface);color:var(--accent);border:1px solid var(--line);border-bottom-color:var(--surface);margin-bottom:-1px}
 h1{font:900 34px/1.1 var(--display);margin:26px 0 8px}h2{font:800 22px var(--display);margin:0 0 4px}
 .lead{color:var(--muted);max-width:680px}
@@ -20,17 +20,17 @@ h1{font:900 34px/1.1 var(--display);margin:26px 0 8px}h2{font:800 22px var(--dis
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}.kpi .lab{font-size:13px;color:var(--muted)}.kpi .n{display:block;font:900 30px var(--display);margin:4px 0}.kpi.hot{border-color:var(--accent);background:var(--accent-soft)}.kpi.hot .n{color:var(--accent)}.kpi .exp{font-size:13px;color:var(--muted)}
 .card{overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;margin:16px 0}
 .sub{color:var(--muted);font-size:14px;margin:0 0 16px}
-.chart{display:flex;align-items:flex-end;gap:14px;height:220px;padding-top:24px}.col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}.cb{width:100%;max-width:90px;background:var(--accent);border-radius:8px 8px 0 0}.cb.gr{background:#3b3f48}.cv{font:600 12px var(--mono);margin-bottom:6px;white-space:nowrap}.cy{font:600 13px var(--mono);color:var(--muted);margin-top:6px}
-.rk{display:grid;grid-template-columns:140px 1fr 80px;gap:10px;align-items:center;padding:5px 0;font-size:14px}.rb{background:#efeee9;border-radius:6px;height:14px}.rb div{height:100%;background:var(--grey);border-radius:6px}.rk.me{font-weight:700}.rk.me .rb div{background:var(--accent)}.rk b{text-align:right;font-family:var(--mono)}
+.chart{display:flex;align-items:flex-end;gap:14px;height:220px;padding-top:24px}.col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}.cb{width:100%;max-width:90px;background:var(--accent);border-radius:8px 8px 0 0}.cb.gr{background:#6c717b}.cv{font:600 12px var(--mono);margin-bottom:6px;white-space:nowrap}.cy{font:600 13px var(--mono);color:var(--muted);margin-top:6px}
+.rk{display:grid;grid-template-columns:140px 1fr 80px;gap:10px;align-items:center;padding:5px 0;font-size:14px}.rb{background:var(--surface2);border-radius:6px;height:14px}.rb div{height:100%;background:var(--grey);border-radius:6px}.rk.me{font-weight:700}.rk.me .rb div{background:var(--accent)}.rk b{text-align:right;font-family:var(--mono)}
 .leg{display:flex;gap:16px;font-size:13px;color:var(--muted);margin-bottom:10px}.leg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .fn{display:grid;grid-template-columns:200px 1fr 90px;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}.fnl b{display:block}.fnl span{font-size:12px;color:var(--muted)}
-.bars .bar{height:16px;border-radius:5px;margin:3px 0;position:relative;min-width:2px}.bar.ind{background:var(--accent)}.bar.med{background:#c9c7c0}.bar i{position:absolute;left:calc(100% + 6px);top:-1px;font:600 11px var(--mono);white-space:nowrap;color:var(--ink);font-style:normal}
+.bars .bar{height:16px;border-radius:5px;margin:3px 0;position:relative;min-width:2px}.bar.ind{background:var(--accent)}.bar.med{background:#4a4e57}.bar i{position:absolute;left:calc(100% + 6px);top:-1px;font:600 11px var(--mono);white-space:nowrap;color:var(--ink);font-style:normal}
 .dif{font:700 13px var(--mono);text-align:right}.dif.up{color:var(--accent)}.dif.dn{color:#1f6b45}
 .wait{border:2px dashed var(--line);background:transparent}.wait p{color:var(--muted)}
 .note{font-size:13px;color:var(--muted)}footer{padding:24px 0 40px;font-size:13px;color:var(--muted)}
 @media(max-width:640px){h1{font-size:27px}.fn{grid-template-columns:1fr;gap:4px}.dif{text-align:left}.rk{grid-template-columns:100px 1fr 70px}.cv{font-size:9px}.bars{margin-right:80px}}
 
-.gr{display:grid;grid-template-columns:260px 1fr 110px;gap:12px;align-items:center;padding:6px 0;font-size:14px}.gb{background:#efeee9;border-radius:6px;height:16px}.gb div{height:100%;background:var(--accent);border-radius:6px}.gr b{text-align:right;font-family:var(--mono);font-size:13px}.gr.mut .gb div{background:var(--grey)}.gr.mut{color:var(--muted)}
+.gr{display:grid;grid-template-columns:260px 1fr 110px;gap:12px;align-items:center;padding:6px 0;font-size:14px}.gb{background:var(--surface2);border-radius:6px;height:16px}.gb div{height:100%;background:var(--accent);border-radius:6px}.gr b{text-align:right;font-family:var(--mono);font-size:13px}.gr.mut .gb div{background:var(--grey)}.gr.mut{color:var(--muted)}
 .cps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.cp{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:16px}.cpn{display:block;font:900 30px var(--display);color:var(--accent)}.cpl{font-weight:600}.cp p{margin:8px 0 0;font-size:14px;color:var(--muted)}
 table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px 6px;border-top:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;color:var(--muted);font-weight:600}.num{text-align:right;font-family:var(--mono);white-space:nowrap}.em{display:block;font-size:12px;color:var(--muted)}
 #busca{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:10px;width:100%;max-width:420px;margin-bottom:10px}
@@ -39,20 +39,42 @@ details summary{cursor:pointer;font:700 17px var(--display)}
 
 a.lk{color:inherit;text-decoration:none;display:block}a.lk:hover .gl,a.lk:hover b{color:var(--accent)}a.cp{text-decoration:none;color:inherit;transition:transform .15s}a.cp:hover{transform:translateY(-2px)}
 .go{font-size:12px;color:var(--accent);font-weight:600;margin-top:8px;display:inline-block}
-tr.cl{cursor:pointer}tr.cl:hover td{background:#faf6f6}
+tr.cl{cursor:pointer}tr.cl:hover td{background:var(--surface2)}
 .back{display:inline-block;margin:18px 0 0;font-weight:600;color:var(--accent);text-decoration:none}
 .tag{display:inline-block;font:600 12px var(--mono);background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:2px 10px}
 .mes{display:flex;align-items:flex-end;gap:6px;height:120px;margin-top:10px}.mes div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}.mes i{display:block;width:100%;background:var(--accent);border-radius:4px 4px 0 0;min-height:1px}.mes span{font:600 11px var(--mono);color:var(--muted);margin-top:4px}
-.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}.tools select,.tools input{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}.tools select,.tools input{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 .hist{font-size:13px;color:var(--muted);display:block;margin-top:2px}
-.anos{display:flex;gap:8px;margin:22px 0 0;flex-wrap:wrap}.anos button{font:700 14px var(--display);padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:var(--muted)}.anos button.on{background:var(--accent);border-color:var(--accent);color:#fff}.dl{font:600 11px var(--mono);margin-left:6px}.dl.up{color:var(--accent)}.dl.dn{color:#1f6b45}
+.anos{display:flex;gap:8px;margin:22px 0 0;flex-wrap:wrap}.anos button{font:700 14px var(--display);padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;color:var(--muted)}.anos button.on{background:var(--accent);border-color:var(--accent);color:#fff}.dl{font:600 11px var(--mono);margin-left:6px}.dl.up{color:var(--accent)}.dl.dn{color:#1f6b45}
+
+.qp-top{background:linear-gradient(180deg,#16080a 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+.qp-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px 12px;flex-wrap:wrap;max-width:1120px;margin:0 auto}
+.qp-bar .logo{font:900 24px var(--display);text-decoration:none;color:var(--ink)}.qp-bar .logo span{color:var(--accent)}
+.qp-switch{display:flex;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;box-shadow:0 0 0 3px rgba(255,77,90,.12)}
+.qp-switch a{display:flex;align-items:center;gap:10px;padding:10px 22px;border-radius:999px;text-decoration:none;color:var(--muted);transition:background .2s,color .2s}
+.qp-switch a svg{width:24px;height:24px;flex:none}
+.qp-switch a b{font:800 17px var(--display);display:block;line-height:1.1}.qp-switch a small{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.qp-switch a.on{background:var(--accent);color:#fff;box-shadow:0 4px 18px rgba(255,77,90,.35)}
+.qp-switch a:not(.on):hover{background:var(--surface);color:var(--ink)}
+.qp-where{max-width:1120px;margin:0 auto;padding:6px 20px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.qp-where .ico{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}.qp-where .ico svg{width:30px;height:30px}
+.qp-where .lbl{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.qp-where h2.area{margin:0;font:900 28px/1.1 var(--display);color:var(--ink)}
+.qp-where .alt{margin-left:auto;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.qp-where .alt:hover{background:var(--accent);color:#fff}
+@media(max-width:700px){.qp-bar{flex-direction:column;align-items:stretch}.qp-switch{width:100%}.qp-switch a{flex:1;justify-content:center;padding:10px 8px}.qp-switch a small{display:none}.qp-where h2.area{font-size:22px}.qp-where .alt{margin-left:0;width:100%;text-align:center}}
+.sub a,.em a,.card p a{color:var(--accent)}
+@media(max-width:640px){.hm{display:none}table{font-size:13px}td,th{padding:8px 4px}.kpi .n{font-size:26px}.cpn{font-size:26px}h1{font-size:25px}}
+.qp-where>div:nth-child(2){flex:1;min-width:0}@media(max-width:700px){.qp-where{flex-wrap:wrap}.qp-where .ico{width:44px;height:44px}.qp-where h2.area{font-size:20px}}
 </style></head><body>
-<header class="wrap"><a class="logo" href="/">Quem paga, <span>Indaial?</span></a><nav class="doors"><a href="/">Câmara</a><a class="on" href="#inicio">Prefeitura</a></nav></header>
+<header class="qp-top"><div class="qp-bar"><a class="logo" href="/">Quem paga, <span>Indaial?</span></a>
+<nav class="qp-switch" aria-label="Escolha o que ver"><a class="" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10h20L12 3 2 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Câmara</b><small>Vereadores</small></span></a><a class="on" href="/prefeitura/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01M12 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prefeitura</b><small>Gastos</small></span></a></nav></div>
+<div class="qp-where"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01M12 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="lbl">Você está vendo</div><h2 class="area">Prefeitura de Indaial</h2></div><a class="alt" href="/">Ver os vereadores da Câmara →</a></div></header>
 <main class="wrap" id="app"><p class="lead" style="margin-top:30px">Carregando…</p></main>
 <footer class="wrap">Fontes: Portal da Transparência da Prefeitura de Indaial (Empenhos Emitidos 2025, valores liquidados, incluindo fundos municipais e o instituto de previdência) e Tesouro Nacional/SICONFI. Pessoas físicas não são identificadas. Projeto independente, sem vínculo partidário e sem opinião: só números com fonte.</footer>
 <script>
 const DIV={"2021": 13379900, "2022": 17474843, "2023": 23166065, "2024": 32363868, "2025": 47260070}, VIZ=[["Educação", 2001, 1735], ["Saúde", 1766, 1870], ["Dívida", 662, 270], ["Urbanismo", 661, 761], ["Previdência Social", 586, 534], ["Administração", 430, 674], ["Saneamento", 302, 307], ["Assistência Social", 244, 189], ["Segurança Pública", 123, 55], ["Desporto e Lazer", 120, 139], ["Legislativa", 88, 96], ["Cultura", 56, 54], ["Judiciária", 48, 0], ["Agricultura", 41, 53], ["Comércio e Serviços", 31, 25]], MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'], ANOS=['2024','2025','2026'];
-let ANO='2025', I=null; const IX={}, cache={}; const app=document.getElementById('app');
+let ANO=ANOS.includes(String(new Date().getFullYear()))?String(new Date().getFullYear()):ANOS[ANOS.length-1], I=null; const IX={}, cache={}; const app=document.getElementById('app');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const mi=v=>'R$ '+(v/1e6).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mi';
 const fm=v=>v>=1e6?mi(v):v>=1e3?'R$ '+Math.round(v/1e3).toLocaleString('pt-BR')+' mil':'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -88,7 +110,7 @@ async function inicio(){
   <div class="kpi"><span class="lab">Dispensas (todas)</span><span class="n">${fm(I.sl.disp[1])}</span><span class="exp">${I.sl.disp[0]} contratações</span></div>
   <div class="kpi"><span class="lab">Inexigibilidades</span><span class="n">${fm(I.sl.inex[1])}</span><span class="exp">${I.sl.inex[0]} contratações. Usada quando só existe um fornecedor possível, como o hospital da cidade.</span></div></div>
   <table><thead><tr><th>Mês</th><th>O quê</th><th class="num">Valor</th></tr></thead><tbody>${I.sl.lista.slice(0,15).map(x=>`<tr><td class="num">${x.mes}</td><td>${x.emerg?'<span class="tag">emergencial</span> ':''}${esc(x.obj)}<span class="em">${esc(x.mod)} · ${esc(x.amp)} · ${esc(x.org)} · <a href="${x.link}" target="_blank" rel="noopener">ver no PNCP</a></span></td><td class="num">${fm(x.v)}</td></tr>`).join('')}</tbody></table></section>`:''}
-  <section class="card"><h2>Quem mais recebeu</h2><p class="sub">Empresas e entidades privadas que mais receberam (sem órgãos públicos).</p><table><thead><tr><th>#</th><th>Credor</th><th class="num">Pagamentos</th><th class="num">Total</th></tr></thead><tbody>${I.f.slice(0,20).map((f,i)=>`<tr class="cl" onclick="go('${f[0]}')"><td>${i+1}</td><td>${esc(f[1])}</td><td class="num">${f[3]}</td><td class="num">${fm(f[2])} ›</td></tr>`).join('')}</tbody></table></section>
+  <section class="card"><h2>Quem mais recebeu</h2><p class="sub">Empresas e entidades privadas que mais receberam (sem órgãos públicos).</p><table><thead><tr><th class="hm">#</th><th>Credor</th><th class="num hm">Pagamentos</th><th class="num">Total</th></tr></thead><tbody>${I.f.slice(0,20).map((f,i)=>`<tr class="cl" onclick="go('${f[0]}')"><td class="hm">${i+1}</td><td>${esc(f[1])}</td><td class="num hm">${f[3]}</td><td class="num">${fm(f[2])} ›</td></tr>`).join('')}</tbody></table></section>
   <section class="card"><h2>Tudo o que foi gasto, item por item</h2><p class="sub">As ${I.c.length} categorias de despesa. Busque por palavra: combustível, software, publicidade, diárias, flores...</p>
   <input id="busca" type="search" placeholder="Buscar categoria (ex.: expediente)"><table><thead><tr><th>Categoria</th><th class="num">Empenhos</th><th class="num">Total</th></tr></thead><tbody id="cat"></tbody></table></section>
   <section class="card"><details><summary>Comparação com cidades vizinhas (por habitante, 2025)</summary><p class="sub">Indaial x média de Gaspar, Rio do Sul, São Bento do Sul e Pomerode (Tesouro Nacional).</p><table><thead><tr><th>Área</th><th class="num">Indaial</th><th class="num">Média vizinhas</th></tr></thead><tbody>${VIZ.map(v=>`<tr><td>${esc(v[0])}</td><td class="num">R$ ${v[1].toLocaleString('pt-BR')}</td><td class="num">R$ ${v[2].toLocaleString('pt-BR')}</td></tr>`).join('')}</tbody></table></details></section>`;

@@ -6,7 +6,7 @@
 <title>Quem paga, Indaial? Quanto custa e o que faz cada vereador de Indaial</title>
 <meta name="description" content="Salários, assessores, diárias, presença, votos e pedidos dos 13 vereadores de Indaial (SC), com dados oficiais da Câmara e do Portal da Transparência. Atualizado todo dia.">
 <link rel="canonical" href="https://quempagaindaial.com.br/">
-<meta name="theme-color" content="#b3121f">
+<meta name="theme-color" content="#0f1013">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Quem paga, Indaial?">
@@ -23,24 +23,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  /* Layout: painel cívico em cards — resumo primeiro, detalhe ao clicar */
-  --paper:#f2f1ed; --surface:#ffffff; --ink:#15171c; --muted:#61656e; --line:#e1dfd9;
-  --accent:#b3121f; --accent-soft:#f7e4e5; --ok:#1f6b45; --ok-soft:#e3f1e9; --warn:#a15c00; --warn-soft:#fbefdc; --grey:#9aa0aa;
-  --display:"Archivo", "Arial Narrow", Arial, sans-serif;
-  --body:"IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
-  --r:14px; --shadow:0 1px 2px rgba(20,20,30,.05),0 4px 14px rgba(20,20,30,.05);
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --paper:#111216; --surface:#1a1c21; --ink:#ecebe8; --muted:#a3a6ae; --line:#2c2f36;
-  --accent:#ff5d66; --accent-soft:#3a1c20; --ok:#5fc48f; --ok-soft:#173326; --warn:#e8a94d; --warn-soft:#3a2a12; --grey:#6c717b;
-  --shadow:none; color-scheme: dark; } }
-:root[data-theme="dark"]{
-  --paper:#111216; --surface:#1a1c21; --ink:#ecebe8; --muted:#a3a6ae; --line:#2c2f36;
-  --accent:#ff5d66; --accent-soft:#3a1c20; --ok:#5fc48f; --ok-soft:#173326; --warn:#e8a94d; --warn-soft:#3a2a12; --grey:#6c717b;
-  --shadow:none; color-scheme: dark; }
+:root{--paper:#0f1013;--surface:#181a1f;--surface2:#20232a;--ink:#ecebe8;--muted:#a3a6ae;--line:#2c2f36;--accent:#ff4d5a;--accent-soft:#3a1c20;--ok:#5fc48f;--ok-soft:#173326;--warn:#e8a94d;--warn-soft:#3a2a12;--grey:#6c717b;--shadow:none;color-scheme:dark;--display:"Archivo","Arial Narrow",Arial,sans-serif;--body:"IBM Plex Sans","Segoe UI",Roboto,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;--r:14px}
+
+
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
@@ -228,15 +213,32 @@ nav.tabs a[aria-current="page"]{border-color:var(--ink)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .seo-links{font-size:13px;color:var(--muted);padding-top:10px}.seo-links ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px}.seo-links a{color:var(--muted)}
 .destaque{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin-top:10px;color:var(--ink)}
-.portas{display:flex;gap:6px;margin-left:auto}.portas a{font:700 14px var(--display);padding:6px 14px;border-radius:999px;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--surface)}.portas a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.qp-top{background:linear-gradient(180deg,#16080a 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+.qp-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px 12px;flex-wrap:wrap;max-width:1120px;margin:0 auto}
+.qp-bar .logo{font:900 24px var(--display);text-decoration:none;color:var(--ink)}.qp-bar .logo span{color:var(--accent)}
+.qp-switch{display:flex;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;box-shadow:0 0 0 3px rgba(255,77,90,.12)}
+.qp-switch a{display:flex;align-items:center;gap:10px;padding:10px 22px;border-radius:999px;text-decoration:none;color:var(--muted);transition:background .2s,color .2s}
+.qp-switch a svg{width:24px;height:24px;flex:none}
+.qp-switch a b{font:800 17px var(--display);display:block;line-height:1.1}.qp-switch a small{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.qp-switch a.on{background:var(--accent);color:#fff;box-shadow:0 4px 18px rgba(255,77,90,.35)}
+.qp-switch a:not(.on):hover{background:var(--surface);color:var(--ink)}
+.qp-where{max-width:1120px;margin:0 auto;padding:6px 20px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.qp-where .ico{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}.qp-where .ico svg{width:30px;height:30px}
+.qp-where .lbl{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.qp-where h2.area{margin:0;font:900 28px/1.1 var(--display);color:var(--ink)}
+.qp-where .alt{margin-left:auto;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.qp-where .alt:hover{background:var(--accent);color:#fff}
+@media(max-width:700px){.qp-bar{flex-direction:column;align-items:stretch}.qp-switch{width:100%}.qp-switch a{flex:1;justify-content:center;padding:10px 8px}.qp-switch a small{display:none}.qp-where h2.area{font-size:22px}.qp-where .alt{margin-left:0;width:100%;text-align:center}}
+.navrow{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.qp-where>div:nth-child(2){flex:1;min-width:0}@media(max-width:700px){.qp-where{flex-wrap:wrap}.qp-where .ico{width:44px;height:44px}.qp-where h2.area{font-size:20px}}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="wrap bar1">
-    <a class="logo" href="#inicio">Quem paga, <span>Indaial?</span></a>
-    <nav class="portas" aria-label="Área"><a class="on" href="/">Câmara</a><a href="/prefeitura/">Prefeitura</a></nav>
-  </div>
+<div class="top">
+  <header class="qp-top"><div class="qp-bar"><a class="logo" href="/">Quem paga, <span>Indaial?</span></a>
+<nav class="qp-switch" aria-label="Escolha o que ver"><a class="on" href="/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10h20L12 3 2 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Câmara</b><small>Vereadores</small></span></a><a class="" href="/prefeitura/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01M12 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prefeitura</b><small>Gastos</small></span></a></nav></div>
+<div class="qp-where"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10h20L12 3 2 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><div><div class="lbl">Você está vendo</div><h2 class="area">Câmara de Vereadores de Indaial</h2></div><a class="alt" href="/prefeitura/">Ver os gastos da Prefeitura →</a></div></header>
   <div class="navrow">
     <nav class="tabs wrap" aria-label="Seções">
       <a href="#inicio">Resumo</a>
@@ -249,7 +251,7 @@ nav.tabs a[aria-current="page"]{border-color:var(--ink)}
       <a href="#sobre">Quem faz</a>
     </nav>
   </div>
-</header>
+</div>
 <main class="wrap" id="app"></main>
 <!--VEREADORES--><nav class="wrap seo-links" aria-label="Páginas dos vereadores"><b>Vereadores de Indaial:</b><ul><li><a href="/vereador/carlos-eduardo-cunha/">Carlos Eduardo Cunha (MDB)</a></li><li><a href="/vereador/caroline-lais-bertoldi/">Caroline Laís Bertoldi (PP)</a></li><li><a href="/vereador/diogo-de-pinho/">Diogo de Pinho (PL)</a></li><li><a href="/vereador/elaine-pickler/">Elaine Pickler (PSDB)</a></li><li><a href="/vereador/elton-marcos-possamai/">Elton Marcos Possamai (NOVO)</a></li><li><a href="/vereador/fernanda-jacobi-dos-santos/">Fernanda Jacobi dos Santos (PL)</a></li><li><a href="/vereador/flavio-augusto-ferri-molinari/">Flávio Augusto Ferri Molinari (PSD)</a></li><li><a href="/vereador/henrique-fritz/">Henrique Fritz (MDB)</a></li><li><a href="/vereador/jonatas-mizael-rosenbrock/">Jonatas Mizael Rosenbrock (PODE)</a></li><li><a href="/vereador/jose-carlos-peixer/">José Carlos Peixer (PODE)</a></li><li><a href="/vereador/lucio-vanderlinde/">Lucio Vanderlinde (NOVO)</a></li><li><a href="/vereador/valentim-blasius/">Valentim Blasius (PSD)</a></li><li><a href="/vereador/valmir-jordani/">Valmir Jordani (UNIÃO)</a></li></ul></nav><!--/VEREADORES-->
 <footer class="wrap">
