@@ -66,6 +66,11 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:var(--surface2)}
 .sub a,.em a,.card p a{color:var(--accent)}
 @media(max-width:640px){.hm{display:none}table{font-size:13px}td,th{padding:8px 4px}.kpi .n{font-size:26px}.cpn{font-size:26px}h1{font-size:25px}}
 .qp-where>div:nth-child(2){flex:1;min-width:0}@media(max-width:700px){.qp-where{flex-wrap:wrap}.qp-where .ico{width:44px;height:44px}.qp-where h2.area{font-size:20px}}
+.gauge{position:relative;height:18px;background:var(--surface2);border-radius:9px;margin:30px 0 34px}.gauge .f{height:100%;border-radius:9px;background:var(--accent)}.gauge .m{position:absolute;top:-6px;bottom:-6px;border-left:2px dashed #6c717b}.gauge .m span{position:absolute;top:-22px;left:-40px;width:80px;text-align:center;font:600 11px var(--mono);color:var(--muted)}.gauge .m.bx span{top:auto;bottom:-22px}.gauge .ea,.gauge .eb{position:absolute;top:24px;font:600 11px var(--mono);color:var(--muted)}.gauge .ea{left:0}.gauge .eb{right:0}.gauge .m i{font-style:normal}@media(max-width:640px){.gauge .m.bx span,.gauge .m i{display:none}.chart{gap:4px}.chart .col{min-width:0}.chart .cv{font-size:11px}.chart .rs{display:none}}
+.gauge .m.lim{border-left:2px solid var(--warn)}.gauge .m.lim span{color:var(--warn)}.gauge .v{position:absolute;top:24px;font:700 13px var(--mono);color:var(--accent);transform:translateX(-50%)}
+tr.eu td{background:var(--accent-soft);font-weight:700}.nota{font-size:13px;color:var(--muted);margin-top:10px}
+.stk{display:flex;height:34px;border-radius:9px;overflow:hidden;margin:16px 0 8px}.stk div{height:100%}.lg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-bottom:14px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.duo .gr{grid-template-columns:minmax(0,1.2fr) 1fr 36px;font-size:13px}.duo h3{font-size:16px;margin-bottom:10px}.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){.duo{grid-template-columns:1fr}}
 </style></head><body>
 <header class="qp-top"><div class="qp-bar"><a class="logo" href="/">Quem paga, <span>Indaial?</span></a>
 <nav class="qp-switch" aria-label="Escolha o que ver"><a class="" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10h20L12 3 2 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Câmara</b><small>Vereadores</small></span></a><a class="on" href="/prefeitura/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01M12 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prefeitura</b><small>Gastos</small></span></a></nav></div>
@@ -76,6 +81,7 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:var(--surface2)}
 const DIV={"2021": 13379900, "2022": 17474843, "2023": 23166065, "2024": 32363868, "2025": 47260070}, VIZ=[["Educação", 2001, 1735], ["Saúde", 1766, 1870], ["Dívida", 662, 270], ["Urbanismo", 661, 761], ["Previdência Social", 586, 534], ["Administração", 430, 674], ["Saneamento", 302, 307], ["Assistência Social", 244, 189], ["Segurança Pública", 123, 55], ["Desporto e Lazer", 120, 139], ["Legislativa", 88, 96], ["Cultura", 56, 54], ["Judiciária", 48, 0], ["Agricultura", 41, 53], ["Comércio e Serviços", 31, 25]], MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'], ANOS=['2024','2025','2026'];
 let ANO=ANOS.includes(String(new Date().getFullYear()))?String(new Date().getFullYear()):ANOS[ANOS.length-1], I=null; const IX={}, cache={}; const app=document.getElementById('app');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const miC=v=>`<span class="rs">R$ </span>${(v/1e6).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})}<span class="rs"> mi</span>`;
 const mi=v=>'R$ '+(v/1e6).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' mi';
 const fm=v=>v>=1e6?mi(v):v>=1e3?'R$ '+Math.round(v/1e3).toLocaleString('pt-BR')+' mil':'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const rs=v=>'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -85,6 +91,58 @@ const parcial=()=>ANO=='2026'?` (até ${I.ate})`:'';
 async function idx(a){return IX[a]||(IX[a]=await (await fetch('dd/'+a+'/index.json')).json())}
 function delta(nome,v){const p=IX[String(+ANO-1)];if(!p||ANO=='2026')return '';const g=p.g.find(x=>x[1]==nome);if(!g||!g[2])return '';const d=100*(v/g[2]-1);if(Math.abs(d)<1)return '';return `<span class="dl ${d>0?'up':'dn'}">${d>0?'+':''}${d.toFixed(0)}% vs ${+ANO-1}</span>`}
 function bars(list,mx,dl){return list.map(([id,n,v])=>`<a class="lk" href="#${id}"><div class="gr ${n=='Demais despesas'?'mut':''}"><span class="gl">${esc(n)}${dl?delta(n,v):''}</span><div class="gb"><div style="width:${Math.max(.6,100*v/mx).toFixed(1)}%"></div></div><b>${fm(v)} ›</b></div></a>`).join('')}
+
+let PES=null;
+const PER={Q3:'jan a dez',S2:'jan a dez',Q2:'12 meses até agosto',Q1:'12 meses até abril',S1:'12 meses até junho'};
+async function pessoal(){
+  if(!PES){try{PES=await (await fetch('pessoal.json')).json()}catch(e){PES={linhas:[]}}}
+  const L=PES.linhas||[], me=L.filter(x=>x.cidade=='Indaial').sort((a,b)=>a.ano-b.ano);
+  if(!me.length) return '';
+  const u=me[me.length-1], ini=me[0], ult=Math.max(...L.map(x=>x.ano));
+  const viz=Object.values(L.reduce((m,x)=>{if(!m[x.cidade]||m[x.cidade].ano<x.ano)m[x.cidade]=x;return m},{})).sort((a,b)=>b.pct-a.pct);
+  const pc=x=>x.pct.toFixed(1).replace('.',','), hab=x=>'R$ '+Math.round(x.dtp/x.pop).toLocaleString('pt-BR');
+  const comp=me.filter(x=>x.p=='Q3'||x.p=='S2'), mx=Math.max(...me.map(x=>x.dtp)), esc60=v=>Math.max(0,100*(v-30)/30).toFixed(1);
+  const cresc=comp.length>1?Math.round(100*(comp[comp.length-1].dtp/comp[0].dtp-1)):0, crr=comp.length>1?Math.round(100*(comp[comp.length-1].rcl/comp[0].rcl-1)):0;
+  return `<section class="card"><h2>Folha de pagamento</h2><p class="sub">Quanto a Prefeitura gasta com servidores (salários, encargos e aposentadorias que entram na conta da Lei de Responsabilidade Fiscal), comparado com a receita. Valores em milhões de reais. Dados do Relatório de Gestão Fiscal enviado ao Tesouro Nacional.</p>
+  <div class="kpis"><div class="kpi hot"><span class="lab">Gasto com pessoal (${PER[u.p]||u.p} de ${u.ano})</span><span class="n">${mi(u.dtp)}</span><span class="exp">${hab(u)} por habitante</span></div>
+  <div class="kpi"><span class="lab">Parte da receita que vai para a folha</span><span class="n">${pc(u)}%</span><span class="exp">O limite da lei é 54%. Acima de 48,6% o Tribunal de Contas emite alerta.</span></div>
+  ${comp.length>1?`<div class="kpi"><span class="lab">Crescimento ${comp[0].ano}–${comp[comp.length-1].ano}</span><span class="n">+${cresc}%</span><span class="exp">A receita cresceu ${crr}% no mesmo período.</span></div>`:''}</div>
+  <div class="gauge"><div class="f" style="width:${esc60(u.pct)}%"></div><div class="v" style="left:${esc60(u.pct)}%">${pc(u)}%</div>
+  <div class="m" style="left:${esc60(48.6)}%"><span>alerta<i> 48,6%</i></span></div><div class="m bx" style="left:${esc60(51.3)}%"><span>prudencial</span></div><div class="m lim" style="left:${esc60(54)}%"><span>limite<i> 54%</i></span></div><div class="ea">30%</div><div class="eb">60%</div></div>
+  <div class="chart">${me.map(x=>`<div class="col"><div class="cv">${miC(x.dtp)}</div><div class="cb${x.p=='Q3'||x.p=='S2'?'':' gr'}" style="height:${(100*x.dtp/mx).toFixed(0)}%"></div><div class="cy">${x.ano}</div><div class="cy" style="margin-top:0">${pc(x)}%</div></div>`).join('')}</div>
+  <h3 style="margin-top:26px">Indaial e os vizinhos</h3>
+  <table><thead><tr><th>Cidade</th><th class="num">% da receita</th><th class="num">Por habitante</th></tr></thead><tbody>${viz.map(x=>`<tr class="${x.cidade=='Indaial'?'eu':''}"><td>${esc(x.cidade)}${x.ano<ult||x.p!=u.p?`<span class="em">${PER[x.p]||x.p} de ${x.ano}</span>`:''}</td><td class="num">${pc(x)}%</td><td class="num">${hab(x)}</td></tr>`).join('')}</tbody></table>
+  <p class="nota">Barra cinza: ano ainda em andamento (últimos 12 meses). Despesa total com pessoal do Poder Executivo pela regra do art. 18 da LRF. Por habitante: estimativa de população usada pelo Tesouro. Atualizado em ${esc(PES.atualizado||'')}.</p></section>`;
+}
+
+let VIN=null;
+const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const CORV={'COMISSIONADO':'var(--accent)','EFETIVO EM COMISSAO':'#ff9aa2','ESTATUTARIO':'#5f6b7a','ESPEC ADM':'#e8a94d','CELETISTA':'#5fc48f','ESTAGIARIOS':'#8e7cc3'};
+async function vinculos(){
+  if(!VIN){try{VIN=await (await fetch('vinculos.json')).json()}catch(e){VIN={meses:{}}}}
+  const ks=Object.keys(VIN.meses||{}).sort(); if(!ks.length) return '';
+  const k=ks[ks.length-1], d=VIN.meses[k], c=d.comissao, mesTxt=MESES[+k.slice(5)-1]+' de '+k.slice(0,4);
+  const nf=n=>n.toLocaleString('pt-BR'), rs=v=>'R$ '+Math.round(v).toLocaleString('pt-BR');
+  const tc=c.sem_concurso+c.concursados, est=d.vinculos.find(v=>v.regime=='ESTATUTARIO')||{};
+  const ae=(c.outros_cargos||[]).find(x=>/ASSISTENTE EDUC/i.test(x[0]));
+  const mxs=Math.max(...c.por_secretaria.map(x=>x[1]));
+  const tm=d.temporarios, tEd=(tm.por_secretaria.find(x=>/Educa/.test(x[0]))||[0,0])[1];
+  return `<section class="card"><h2>Quem trabalha na Prefeitura</h2><p class="sub">Servidores ativos em ${mesTxt}, por tipo de vínculo, e quanto cada grupo recebeu no mês. Só totais: o site não mostra nomes nem salários individuais.</p>
+  <div class="kpis"><div class="kpi"><span class="lab">Servidores</span><span class="n">${nf(d.total)}</span><span class="exp">Folha bruta do mês: ${mi(d.folha)}</span></div>
+  <div class="kpi hot"><span class="lab">Cargos em comissão sem concurso</span><span class="n">${c.sem_concurso} de ${tc}</span><span class="exp">${Math.round(100*c.sem_concurso/tc)}% dos cargos em comissão estão com pessoas de fora do quadro. Só ${c.concursados} são concursados.</span></div>
+  <div class="kpi"><span class="lab">Temporários</span><span class="n">${nf(tm.n)}</span><span class="exp">${Math.round(100*tm.n/d.total)}% dos servidores. ${nf(tEd)} deles estão na Educação.</span></div></div>
+  <div class="stk">${d.vinculos.filter(v=>v.n).map(v=>`<div title="${esc(v.rotulo)}: ${v.n}" style="width:${(100*v.n/d.total).toFixed(2)}%;background:${CORV[v.regime]||'#3a3e47'}"></div>`).join('')}</div>
+  <div class="lg">${d.vinculos.filter(v=>v.n).map(v=>`<span><i style="background:${CORV[v.regime]||'#3a3e47'}"></i>${esc(v.rotulo)}</span>`).join('')}</div>
+  <table><thead><tr><th>Vínculo</th><th class="num">Pessoas</th><th class="num hm">Folha do mês</th><th class="num">Média por pessoa</th></tr></thead><tbody>${d.vinculos.filter(v=>v.n).map(v=>`<tr class="${v.regime=='COMISSIONADO'?'eu':''}"><td>${esc(v.rotulo)}</td><td class="num">${nf(v.n)}</td><td class="num hm">${fm(v.folha)}</td><td class="num">${v.media?rs(v.media):'–'}</td></tr>`).join('')}</tbody></table>
+  <div class="duo" style="margin-top:26px"><div><h3>Onde estão os ${c.sem_concurso} comissionados sem concurso</h3>
+  ${c.por_secretaria.slice(0,7).map(([s,n])=>`<div class="gr"><span class="gl">${esc(s)}</span><div class="gb"><div style="width:${(100*n/mxs).toFixed(0)}%"></div></div><b class="gv">${n}</b></div>`).join('')}
+  ${ae?`<p class="nota">${ae[1]} deles ocupam o cargo de <b>Assistente Educacional</b> nas escolas. Pela Constituição, cargo em comissão é só para direção, chefia ou assessoramento.</p>`:''}</div>
+  <div><h3>Quanto ganha um cargo de chefia</h3>${d.tabela_cc&&d.tabela_cc.length?`<table><thead><tr><th>Nível</th><th class="num">Remuneração padrão</th></tr></thead><tbody>${d.tabela_cc.map(([n,v])=>`<tr><td>${n}${n=='CC-1'?' (secretário)':''}</td><td class="num">${rs(v)}</td></tr>`).join('')}</tbody></table>`:''}
+  <p class="nota">Em média, os comissionados em chefia (CC) receberam ${rs(c.media_cc)} no mês. Os concursados, ${rs(est.media||0)}. Ou seja, a questão é quantos são e onde estão, não supersalários.</p></div></div>
+  ${d.mesmo_cargo&&d.mesmo_cargo.length?`<h3 style="margin-top:26px">Temporário ganha menos?</h3><p class="sub" style="margin-bottom:8px">Não no mesmo cargo. A média geral dos temporários é menor porque os concursados têm tempo de casa e plano de carreira.</p>
+  <table><thead><tr><th>Cargo</th><th class="num">Concursado</th><th class="num">Temporário</th></tr></thead><tbody>${d.mesmo_cargo.map(m=>`<tr><td>${esc(m.cargo)}</td><td class="num">${rs(m.concursado)}</td><td class="num">${rs(m.temporario)}</td></tr>`).join('')}</tbody></table>`:''}
+  <p class="nota">Fonte: Portal da Transparência de Indaial (Relação de Funcionários e Relação Funcionário x Salário de ${mesTxt}). Médias: salário bruto de quem trabalhou o mês inteiro, sem férias, afastamento, admissão ou rescisão no mês. Atualizado em ${esc(VIN.atualizado||'')}.</p></section>`;
+}
 async function inicio(){
   if(ANO!='2024') await idx(String(+ANO-1));
   const g=Object.fromEntries(I.g.map(x=>[x[1],x[2]])), gid=Object.fromEntries(I.g.map(x=>[x[1],x[0]]));
@@ -94,7 +152,7 @@ async function inicio(){
   if(fimi[2]>0) cards.push([fimi[0],fm(fimi[2]),'na '+fimi[1],(exp?`${(fimi[2]/exp).toFixed(1).replace('.',',')} vezes todo o material de expediente do ano (${fm(exp)}).`:'')+(ANO=='2025'?' Só os shows de Michel Teló e Thalles Roberto custaram R$ 550 mil.':'')]);
   if(pub) cards.push([pub[0],fm(pub[2]),'em publicidade e propaganda',pub[4]?`Maior credor: ${pub[4]}.`:'']);
   if(cx) cards.push([cx[0],fm(cx[2]),'pagos à Caixa Econômica Federal',ANO=='2025'?'Três empréstimos FINISA: I (lei de 2019), II (2021) e III (2023). Só o FINISA II custou R$ 22,2 milhões em 2025.':'Parcelas e juros de empréstimos e parcelamentos com a Caixa.']);
-  const mxd=Math.max(...Object.values(DIV));
+  const mxd=Math.max(...Object.values(DIV)), pes=await pessoal(), vin=await vinculos();
   app.innerHTML=`<div class="anos">${ANOS.map(a=>`<button data-ano="${a}" class="${a==ANO?'on':''}">${a}${a=='2026'?' (parcial)':''}</button>`).join('')}</div>
   <h1>Para onde foi o dinheiro da Prefeitura em ${ANO}${parcial()}</h1>
   <p class="lead">Cada real pago pela Prefeitura de Indaial e seus fundos, somado a partir dos ${I.n.toLocaleString('pt-BR')} empenhos publicados no Portal da Transparência. <b>Clique em qualquer item para ver os pagamentos um a um.</b></p>
@@ -103,7 +161,9 @@ async function inicio(){
   <div class="kpi"><span class="lab">Eventos e festas</span><span class="n">${mi(evt)}</span><span class="exp">FIMI, Torneio de Verão, Natal, Festa do Colono, Réveillon e Páscoa</span></div></div>
   <div class="cps">${cards.map(([id,a,b,c])=>`<a class="cp" href="#${id}"><span class="cpn">${a}</span><span class="cpl">${esc(b)}</span><p>${esc(c)}</p><span class="go">Ver os pagamentos ›</span></a>`).join('')}</div>
   <section class="card"><h2>Onde foi cada real</h2><p class="sub">Total pago${parcial()} por tipo de gasto. Clique para abrir.</p>${bars(I.g,I.g[0][2],true)}</section>
-  <section class="card"><h2>A conta da dívida</h2><p class="sub">Juros e amortização pagos a cada ano (Tesouro Nacional).</p><div class="chart">${Object.entries(DIV).map(([a,v])=>`<div class="col"><div class="cv">${mi(v)}</div><div class="cb" style="height:${(100*v/mxd).toFixed(0)}%"></div><div class="cy">${a}</div></div>`).join('')}</div></section>
+  <section class="card"><h2>A conta da dívida</h2><p class="sub">Juros e amortização pagos a cada ano, em milhões de reais (Tesouro Nacional).</p><div class="chart">${Object.entries(DIV).map(([a,v])=>`<div class="col"><div class="cv">${miC(v)}</div><div class="cb" style="height:${(100*v/mxd).toFixed(0)}%"></div><div class="cy">${a}</div></div>`).join('')}</div></section>
+  ${pes}
+  ${vin}
   <section class="card"><h2>Eventos</h2><p class="sub">Tudo o que foi pago para cada evento: shows, estrutura, som, decoração, premiação.</p><table><tbody>${I.e.filter(e=>e[2]>0).map(e=>`<tr class="cl" onclick="go('${e[0]}')"><td><b>${esc(e[1])}</b><span class="em">${e[3]} pagamentos${e[4]?' · maior credor: '+esc(e[4][0])+', '+fm(e[4][1]):''}</span></td><td class="num">${fm(e[2])} ›</td></tr>`).join('')}</tbody></table></section>
   ${I.sl?`<section class="card"><h2>Sem licitação</h2><p class="sub">Contratações sem disputa entre empresas, publicadas no Portal Nacional de Contratações Públicas (PNCP). Valor homologado ou, quando ainda não houver, o estimado.</p>
   <div class="kpis"><div class="kpi hot"><span class="lab">Emergenciais (art. 75, VIII)</span><span class="n">${fm(I.sl.emerg[1])}</span><span class="exp">${I.sl.emerg[0]} contratações sem licitação por emergência</span></div>
