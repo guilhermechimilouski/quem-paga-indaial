@@ -71,6 +71,16 @@ tr.cl{cursor:pointer}tr.cl:hover td{background:var(--surface2)}
 tr.eu td{background:var(--accent-soft);font-weight:700}.nota{font-size:13px;color:var(--muted);margin-top:10px}
 .stk{display:flex;height:34px;border-radius:9px;overflow:hidden;margin:16px 0 8px}.stk div{height:100%}.lg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-bottom:14px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .duo .gr{grid-template-columns:minmax(0,1.2fr) 1fr 36px;font-size:13px}.duo h3{font-size:16px;margin-bottom:10px}.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){.duo{grid-template-columns:1fr}}
+.dn{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center}@media(max-width:700px){.dn{grid-template-columns:1fr}.dn svg{max-width:260px;margin:0 auto;display:block}}
+.dn svg path{cursor:pointer;transition:opacity .15s}.dn svg:hover path{opacity:.55}.dn svg path:hover{opacity:1}
+.lgd a{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;padding:7px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px}.lgd a:hover{background:var(--surface2)}.lgd i{width:12px;height:12px;border-radius:3px}.lgd b{font:600 13px var(--mono);white-space:nowrap}
+.btn{display:inline-block;margin-top:16px;padding:10px 16px;border:1px solid var(--accent);border-radius:10px;color:var(--accent);font-weight:700;text-decoration:none}.btn:hover{background:var(--accent-soft)}
+a.kpi{display:block;text-decoration:none;color:var(--ink);transition:border-color .15s}a.kpi:hover{border-color:var(--accent)}a.kpi .go{display:block;margin-top:8px;color:var(--accent);font-size:13px;font-weight:700}
+.seg{display:inline-flex;background:var(--surface2);border-radius:10px;padding:3px;gap:3px;margin:4px 10px 4px 0}.seg button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:7px 12px;border-radius:8px;cursor:pointer}.seg button.on{background:var(--accent);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}.chips button{background:var(--surface2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 13px var(--body);cursor:pointer}.chips button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.hb a{display:grid;grid-template-columns:150px 1fr 120px;gap:12px;align-items:center;padding:8px 4px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}.hb a:hover{background:var(--surface2)}.hb .t{background:var(--surface2);border-radius:6px;height:18px;overflow:hidden}.hb .t i{display:block;height:100%;background:#5f6b7a;border-radius:6px}.hb a.eu .t i{background:var(--accent)}.hb a.eu{font-weight:700}.hb b{font:600 13px var(--mono);text-align:right;white-space:nowrap}
+@media(max-width:640px){.hb a{grid-template-columns:96px 1fr 84px;gap:8px;font-size:13px}.hb b{font-size:11px}}
+details.sf summary{cursor:pointer;list-style:none}details.sf summary::-webkit-details-marker{display:none}details.sf .subs{padding:4px 0 10px 18px;font-size:13px;color:var(--muted)}details.sf .subs div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
 </style></head><body>
 <header class="qp-top"><div class="qp-bar"><a class="logo" href="/">Quem paga, <span>Indaial?</span></a>
 <nav class="qp-switch" aria-label="Escolha o que ver"><a class="" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10h20L12 3 2 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><b>Câmara</b><small>Vereadores</small></span></a><a class="on" href="/prefeitura/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01M12 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prefeitura</b><small>Gastos</small></span></a></nav></div>
@@ -143,6 +153,80 @@ async function vinculos(){
   <table><thead><tr><th>Cargo</th><th class="num">Concursado</th><th class="num">Temporário</th></tr></thead><tbody>${d.mesmo_cargo.map(m=>`<tr><td>${esc(m.cargo)}</td><td class="num">${rs(m.concursado)}</td><td class="num">${rs(m.temporario)}</td></tr>`).join('')}</tbody></table>`:''}
   <p class="nota">Fonte: Portal da Transparência de Indaial (Relação de Funcionários e Relação Funcionário x Salário de ${mesTxt}). Médias: salário bruto de quem trabalhou o mês inteiro, sem férias, afastamento, admissão ou rescisão no mês. Atualizado em ${esc(VIN.atualizado||'')}.</p></section>`;
 }
+
+const PAL=['#ff4d5a','#e8a94d','#5fc48f','#4da3ff','#b388ff','#ff8a65','#4dd0e1','#f06292','#aed581','#ffd54f'];
+function donut(items,total){
+  let a=-Math.PI/2;const R=120,r=72,cx=150,cy=150;
+  const arc=(a0,a1)=>{const L=a1-a0>Math.PI?1:0,p=(rr,an)=>[cx+rr*Math.cos(an),cy+rr*Math.sin(an)];const [x0,y0]=p(R,a0),[x1,y1]=p(R,a1),[x2,y2]=p(r,a1),[x3,y3]=p(r,a0);return `M${x0},${y0}A${R},${R} 0 ${L} 1 ${x1},${y1}L${x2},${y2}A${r},${r} 0 ${L} 0 ${x3},${y3}Z`};
+  const segs=items.map((it,i)=>{const s=Math.max(it.v/total*2*Math.PI,0.004),a0=a;a+=s;return `<a href="#${it.id}"><path d="${arc(a0,a-0.004)}" fill="${it.c}"><title>${esc(it.n)}: ${fm(it.v)}</title></path></a>`}).join('');
+  return `<svg viewBox="0 0 300 300" role="img" aria-label="Gráfico de pizza">${segs}<text x="150" y="142" text-anchor="middle" fill="var(--muted)" font-size="13" font-family="var(--body)">Total pago</text><text x="150" y="168" text-anchor="middle" fill="var(--ink)" font-size="22" font-weight="800" font-family="var(--display)">${mi(total)}</text></svg>`;
+}
+function pizzaGastos(){
+  const top=I.g.filter(g=>g[1]!='Demais despesas').slice(0,9), resto=I.tot-top.reduce((s,g)=>s+g[2],0);
+  const it=top.map((g,i)=>({id:g[0],n:g[1],v:g[2],c:PAL[i]})); if(resto>0) it.push({id:'todas',n:'Todo o resto',v:resto,c:'#4a4e57'});
+  return `<div class="dn">${donut(it,I.tot)}<div class="lgd">${it.map(x=>`<a href="#${x.id}"><i style="background:${x.c}"></i><span>${esc(x.n)} ${x.id!='todas'?delta(x.n,x.v):''}</span><b>${fm(x.v)} ›</b></a>`).join('')}</div></div>`;
+}
+function todas(){
+  app.innerHTML=`<a class="back" href="#voltar">‹ Voltar</a><p><span class="tag">${ANO}${parcial()}</span></p><h1>Tudo o que a Prefeitura pagou em ${ANO}${parcial()}</h1>
+  <section class="card"><h2>Por tipo de gasto</h2><p class="sub">Clique para ver o que compõe cada um.</p>${bars(I.g,I.g[0][2],true)}</section>
+  <section class="card"><h2>Item por item</h2><p class="sub">As ${I.c.length} categorias de despesa. Busque por palavra: combustível, software, publicidade, diárias, flores...</p>
+  <input id="busca" type="search" placeholder="Buscar categoria (ex.: expediente)"><table><thead><tr><th>Categoria</th><th class="num">Empenhos</th><th class="num">Total</th></tr></thead><tbody id="cat"></tbody></table></section>`;
+  const q=document.getElementById('busca'),tb=document.getElementById('cat');
+  const draw=()=>{const t=sem(q.value.trim());tb.innerHTML=I.c.filter(c=>!t||sem(c[1]).includes(t)).slice(0,t?400:60).map(c=>`<tr class="cl" onclick="go('${c[0]}')"><td>${esc(c[1])}${c[4]?'<span class="em">Maior: '+esc(c[4])+'</span>':''}</td><td class="num">${c[3]}</td><td class="num">${fm(c[2])} ›</td></tr>`).join('')||'<tr><td colspan=3>Nada encontrado.</td></tr>'};
+  q.addEventListener('input',draw);draw();
+}
+function semlic(tipo){
+  const T={'sl-emerg':['Contratações emergenciais','Sem licitação por emergência (art. 75, VIII da Lei 14.133).',x=>x.emerg,I.sl.emerg],'sl-disp':['Dispensas de licitação','Contratações em que a lei permite dispensar a disputa entre empresas.',x=>x.mod=='Dispensa',I.sl.disp],'sl-inex':['Inexigibilidades','Usada quando só existe um fornecedor possível, como o hospital da cidade ou um show de um artista específico.',x=>x.mod=='Inexigibilidade',I.sl.inex]}[tipo];
+  const L=I.sl.lista.filter(T[2]);
+  app.innerHTML=`<a class="back" href="#voltar">‹ Voltar</a><p><span class="tag">Sem licitação · ${ANO}${parcial()}</span></p><h1>${T[0]}</h1><p class="lead">${T[1]} Dados do Portal Nacional de Contratações Públicas (PNCP).</p>
+  <div class="kpis"><div class="kpi hot"><span class="lab">Total</span><span class="n">${fm(T[3][1])}</span><span class="exp">${T[3][0]} contratações em ${ANO}</span></div></div>
+  <section class="card"><h2>${L.length<T[3][0]?`As ${L.length} maiores`:'Todas'}</h2><table><thead><tr><th>Mês</th><th>O quê</th><th class="num">Valor</th></tr></thead><tbody>${L.map(x=>`<tr><td class="num">${x.mes}</td><td>${x.emerg?'<span class="tag">emergencial</span> ':''}${esc(x.obj)}<span class="em">${esc(x.mod)} · ${esc(x.amp)} · ${esc(x.org)} · <a href="${x.link}" target="_blank" rel="noopener">ver no PNCP</a></span></td><td class="num">${fm(x.v)}</td></tr>`).join('')||'<tr><td colspan=3>Nenhuma no ano.</td></tr>'}</tbody></table></section>`;
+}
+let VZ=null,VZA=null,VZM='t',VZF='';
+async function vzLoad(){if(!VZ){try{VZ=await (await fetch('../vizinhos.json')).json()}catch(e){VZ={anos:{}}}}return VZ}
+const vzAnos=()=>Object.keys(VZ.anos||{}).sort();
+const vzCompleto=()=>{const a=vzAnos().filter(a=>Object.values(VZ.anos[a]).every(c=>c.p==6));return a[a.length-1]||vzAnos().slice(-1)[0]};
+const vzPer=(a)=>{const ps=Object.values(VZ.anos[a]).map(c=>c.p);const p=Math.min(...ps);return p==6?'':` (até ${MES[2*p-1]})`};
+function vzValor(c,f){return f?((c.f.find(x=>x[0]==f)||[0,0])[1]):c.tot}
+function vzBarras(a,f,m){
+  const cs=Object.entries(VZ.anos[a]).map(([n,c])=>[n,m=='h'?vzValor(c,f)/c.pop:vzValor(c,f)]).sort((x,y)=>y[1]-x[1]), mx=Math.max(...cs.map(x=>x[1]),1);
+  const nomes=Object.keys(VZ.anos[a]), pm=Math.min(...Object.values(VZ.anos[a]).map(c=>c.p));
+  return `<div class="hb">${cs.map(([n,v])=>`<a href="#vz-${nomes.indexOf(n)}" class="${n=='Indaial'?'eu':''}"><span>${esc(n)}${VZ.anos[a][n].p!=pm?`<span class="em">até ${MES[2*VZ.anos[a][n].p-1]}</span>`:''}</span><span class="t"><i style="width:${(100*v/mx).toFixed(1)}%"></i></span><b>${m=='h'?'R$ '+Math.round(v).toLocaleString('pt-BR'):fm(v)} ›</b></a>`).join('')}</div>`;
+}
+async function vzCard(){
+  await vzLoad(); if(!vzAnos().length) return '';
+  const a=vzCompleto();
+  return `<section class="card" id="vzcard"><h2>Indaial e os vizinhos</h2><p class="sub">Tudo o que cada prefeitura gastou em ${a}${vzPer(a)}, pelos relatórios enviados ao Tesouro Nacional. Clique numa cidade para ver em que ela gasta.</p>
+  <div class="seg" id="vzseg"><button data-m="t" class="${VZM=='t'?'on':''}">Total</button><button data-m="h" class="${VZM=='h'?'on':''}">Por habitante</button></div>
+  <div id="vzb">${vzBarras(a,'',VZM)}</div><a class="btn" href="#viz">Comparar área por área (saúde, educação, Câmara...) ›</a></section>`;
+}
+function vzCardBind(){const s=document.getElementById('vzseg');if(!s)return;s.onclick=e=>{const b=e.target.closest('button');if(!b)return;VZM=b.dataset.m;s.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x==b));document.getElementById('vzb').innerHTML=vzBarras(vzCompleto(),'',VZM)}}
+async function viz(){
+  await vzLoad(); if(!VZA) VZA=vzCompleto();
+  const ind=VZ.anos[VZA]['Indaial']||Object.values(VZ.anos[VZA])[0];
+  const fs=ind.f.slice().sort((x,y)=>y[1]-x[1]).map(x=>x[0]);
+  const fl=VZF||'Tudo';
+  app.innerHTML=`<a class="back" href="#voltar">‹ Voltar</a><p><span class="tag">Comparação · Tesouro Nacional</span></p><h1>Indaial e os vizinhos: ${esc(fl=='Tudo'?'gasto total':fl)}</h1>
+  <p class="lead">Despesa liquidada de cada prefeitura (com Câmara, fundos e autarquias), por área de governo. Clique numa cidade para abrir os gastos dela.</p>
+  <section class="card"><div>${vzAnos().map(a=>`<span class="seg"><button data-a="${a}" class="${a==VZA?'on':''}">${a}${vzPer(a)}</button></span>`).join('')}</div>
+  <div class="seg" id="mseg"><button data-m="t" class="${VZM=='t'?'on':''}">Total</button><button data-m="h" class="${VZM=='h'?'on':''}">Por habitante</button></div>
+  <div class="chips">${['Tudo',...fs].map(f=>`<button data-f="${esc(f)}" class="${f==fl?'on':''}">${esc(f)}</button>`).join('')}</div>
+  <h2 style="margin-top:18px">${esc(fl=='Tudo'?'Gasto total':fl)} em ${VZA}${vzPer(VZA)}${VZM=='h'?', por habitante':''}</h2>${vzBarras(VZA,VZF,VZM)}
+  <p class="nota">Fonte: SICONFI/Tesouro Nacional, RREO Anexo 2 (despesa por função, liquidada, sem operações intraorçamentárias). Por habitante: população estimada usada pelo Tesouro. Timbó envia a versão simplificada do relatório.</p></section>`;
+  app.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{VZA=b.dataset.a;viz()});
+  app.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{VZM=b.dataset.m;viz()});
+  app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{VZF=b.dataset.f=='Tudo'?'':b.dataset.f;viz()});
+}
+async function vzCidade(h){
+  await vzLoad(); const a=VZA||vzCompleto(), nomes=Object.keys(VZ.anos[a]), n=nomes[+h.slice(3)], c=VZ.anos[a][n], ind=VZ.anos[a]['Indaial'];
+  if(!c){inicio();return}
+  const fs=c.f.slice().sort((x,y)=>y[1]-x[1]), mx=fs[0][1];
+  const ih=f=>{const x=ind&&ind.f.find(y=>y[0]==f);return x?Math.round(x[1]/ind.pop):0};
+  app.innerHTML=`<a class="back" href="#voltar">‹ Voltar</a><p><span class="tag">${a}${vzPer(a)} · Tesouro Nacional</span></p><h1>Em que ${esc(n)} gastou</h1>
+  <div class="kpis"><div class="kpi hot"><span class="lab">Gasto total em ${a}${vzPer(a)}</span><span class="n">${mi(c.tot)}</span><span class="exp">R$ ${Math.round(c.tot/c.pop).toLocaleString('pt-BR')} por habitante · ${c.pop.toLocaleString('pt-BR')} habitantes</span></div></div>
+  <section class="card"><h2>Por área</h2><p class="sub">Clique numa área para ver as subdivisões${n!='Indaial'?'. Entre parênteses, quanto Indaial gastou por habitante na mesma área':''}.</p>
+  ${fs.map(([f,v,subs])=>`<details class="sf"><summary><div class="gr"><span class="gl">${esc(f)} <span class="em" style="display:inline">R$ ${Math.round(v/c.pop).toLocaleString('pt-BR')}/hab${n!='Indaial'?` (Indaial: R$ ${ih(f).toLocaleString('pt-BR')})`:''}</span></span><div class="gb"><div style="width:${Math.max(.6,100*v/mx).toFixed(1)}%"></div></div><b class="gv">${fm(v)} ›</b></div></summary><div class="subs">${(subs||[]).map(([s,sv])=>`<div><span>${esc(s)}</span><span>${fm(sv)}</span></div>`).join('')}</div></details>`).join('')}</section>`;
+}
 async function inicio(){
   if(ANO!='2024') await idx(String(+ANO-1));
   const g=Object.fromEntries(I.g.map(x=>[x[1],x[2]])), gid=Object.fromEntries(I.g.map(x=>[x[1],x[0]]));
@@ -152,7 +236,7 @@ async function inicio(){
   if(fimi[2]>0) cards.push([fimi[0],fm(fimi[2]),'na '+fimi[1],(exp?`${(fimi[2]/exp).toFixed(1).replace('.',',')} vezes todo o material de expediente do ano (${fm(exp)}).`:'')+(ANO=='2025'?' Só os shows de Michel Teló e Thalles Roberto custaram R$ 550 mil.':'')]);
   if(pub) cards.push([pub[0],fm(pub[2]),'em publicidade e propaganda',pub[4]?`Maior credor: ${pub[4]}.`:'']);
   if(cx) cards.push([cx[0],fm(cx[2]),'pagos à Caixa Econômica Federal',ANO=='2025'?'Três empréstimos FINISA: I (lei de 2019), II (2021) e III (2023). Só o FINISA II custou R$ 22,2 milhões em 2025.':'Parcelas e juros de empréstimos e parcelamentos com a Caixa.']);
-  const mxd=Math.max(...Object.values(DIV)), pes=await pessoal(), vin=await vinculos();
+  const mxd=Math.max(...Object.values(DIV)), pes=await pessoal(), vin=await vinculos(), vzc=await vzCard();
   app.innerHTML=`<div class="anos">${ANOS.map(a=>`<button data-ano="${a}" class="${a==ANO?'on':''}">${a}${a=='2026'?' (parcial)':''}</button>`).join('')}</div>
   <h1>Para onde foi o dinheiro da Prefeitura em ${ANO}${parcial()}</h1>
   <p class="lead">Cada real pago pela Prefeitura de Indaial e seus fundos, somado a partir dos ${I.n.toLocaleString('pt-BR')} empenhos publicados no Portal da Transparência. <b>Clique em qualquer item para ver os pagamentos um a um.</b></p>
@@ -160,24 +244,21 @@ async function inicio(){
   <div class="kpi hot"><span class="lab">Pago em dívida</span><span class="n">${mi(dv)}</span><span class="exp">Juros e amortização de empréstimos. Em 2021 eram ${mi(DIV['2021'])}.</span></div>
   <div class="kpi"><span class="lab">Eventos e festas</span><span class="n">${mi(evt)}</span><span class="exp">FIMI, Torneio de Verão, Natal, Festa do Colono, Réveillon e Páscoa</span></div></div>
   <div class="cps">${cards.map(([id,a,b,c])=>`<a class="cp" href="#${id}"><span class="cpn">${a}</span><span class="cpl">${esc(b)}</span><p>${esc(c)}</p><span class="go">Ver os pagamentos ›</span></a>`).join('')}</div>
-  <section class="card"><h2>Onde foi cada real</h2><p class="sub">Total pago${parcial()} por tipo de gasto. Clique para abrir.</p>${bars(I.g,I.g[0][2],true)}</section>
+  <section class="card"><h2>Onde foi cada real</h2><p class="sub">Total pago${parcial()} por tipo de gasto. Clique numa fatia para abrir.</p>${pizzaGastos()}<a class="btn" href="#todas">Ver tudo o que foi gasto, item por item ›</a></section>
   <section class="card"><h2>A conta da dívida</h2><p class="sub">Juros e amortização pagos a cada ano, em milhões de reais (Tesouro Nacional).</p><div class="chart">${Object.entries(DIV).map(([a,v])=>`<div class="col"><div class="cv">${miC(v)}</div><div class="cb" style="height:${(100*v/mxd).toFixed(0)}%"></div><div class="cy">${a}</div></div>`).join('')}</div></section>
   ${pes}
   ${vin}
   <section class="card"><h2>Eventos</h2><p class="sub">Tudo o que foi pago para cada evento: shows, estrutura, som, decoração, premiação.</p><table><tbody>${I.e.filter(e=>e[2]>0).map(e=>`<tr class="cl" onclick="go('${e[0]}')"><td><b>${esc(e[1])}</b><span class="em">${e[3]} pagamentos${e[4]?' · maior credor: '+esc(e[4][0])+', '+fm(e[4][1]):''}</span></td><td class="num">${fm(e[2])} ›</td></tr>`).join('')}</tbody></table></section>
   ${I.sl?`<section class="card"><h2>Sem licitação</h2><p class="sub">Contratações sem disputa entre empresas, publicadas no Portal Nacional de Contratações Públicas (PNCP). Valor homologado ou, quando ainda não houver, o estimado.</p>
-  <div class="kpis"><div class="kpi hot"><span class="lab">Emergenciais (art. 75, VIII)</span><span class="n">${fm(I.sl.emerg[1])}</span><span class="exp">${I.sl.emerg[0]} contratações sem licitação por emergência</span></div>
-  <div class="kpi"><span class="lab">Dispensas (todas)</span><span class="n">${fm(I.sl.disp[1])}</span><span class="exp">${I.sl.disp[0]} contratações</span></div>
-  <div class="kpi"><span class="lab">Inexigibilidades</span><span class="n">${fm(I.sl.inex[1])}</span><span class="exp">${I.sl.inex[0]} contratações. Usada quando só existe um fornecedor possível, como o hospital da cidade.</span></div></div>
-  <table><thead><tr><th>Mês</th><th>O quê</th><th class="num">Valor</th></tr></thead><tbody>${I.sl.lista.slice(0,15).map(x=>`<tr><td class="num">${x.mes}</td><td>${x.emerg?'<span class="tag">emergencial</span> ':''}${esc(x.obj)}<span class="em">${esc(x.mod)} · ${esc(x.amp)} · ${esc(x.org)} · <a href="${x.link}" target="_blank" rel="noopener">ver no PNCP</a></span></td><td class="num">${fm(x.v)}</td></tr>`).join('')}</tbody></table></section>`:''}
-  <section class="card"><h2>Quem mais recebeu</h2><p class="sub">Empresas e entidades privadas que mais receberam (sem órgãos públicos).</p><table><thead><tr><th class="hm">#</th><th>Credor</th><th class="num hm">Pagamentos</th><th class="num">Total</th></tr></thead><tbody>${I.f.slice(0,20).map((f,i)=>`<tr class="cl" onclick="go('${f[0]}')"><td class="hm">${i+1}</td><td>${esc(f[1])}</td><td class="num hm">${f[3]}</td><td class="num">${fm(f[2])} ›</td></tr>`).join('')}</tbody></table></section>
-  <section class="card"><h2>Tudo o que foi gasto, item por item</h2><p class="sub">As ${I.c.length} categorias de despesa. Busque por palavra: combustível, software, publicidade, diárias, flores...</p>
-  <input id="busca" type="search" placeholder="Buscar categoria (ex.: expediente)"><table><thead><tr><th>Categoria</th><th class="num">Empenhos</th><th class="num">Total</th></tr></thead><tbody id="cat"></tbody></table></section>
-  <section class="card"><details><summary>Comparação com cidades vizinhas (por habitante, 2025)</summary><p class="sub">Indaial x média de Gaspar, Rio do Sul, São Bento do Sul e Pomerode (Tesouro Nacional).</p><table><thead><tr><th>Área</th><th class="num">Indaial</th><th class="num">Média vizinhas</th></tr></thead><tbody>${VIZ.map(v=>`<tr><td>${esc(v[0])}</td><td class="num">R$ ${v[1].toLocaleString('pt-BR')}</td><td class="num">R$ ${v[2].toLocaleString('pt-BR')}</td></tr>`).join('')}</tbody></table></details></section>`;
+  <div class="kpis"><a class="kpi hot" href="#sl-emerg"><span class="lab">Emergenciais (art. 75, VIII)</span><span class="n">${fm(I.sl.emerg[1])}</span><span class="exp">${I.sl.emerg[0]} contratações sem licitação por emergência</span><span class="go">Ver quais ›</span></a>
+  <a class="kpi" href="#sl-disp"><span class="lab">Dispensas (todas)</span><span class="n">${fm(I.sl.disp[1])}</span><span class="exp">${I.sl.disp[0]} contratações</span><span class="go">Ver quais ›</span></a>
+  <a class="kpi" href="#sl-inex"><span class="lab">Inexigibilidades</span><span class="n">${fm(I.sl.inex[1])}</span><span class="exp">${I.sl.inex[0]} contratações. Quando só existe um fornecedor possível.</span><span class="go">Ver quais ›</span></a></div>
+  </section>`:''}
+  <section class="card"><h2>Quem mais recebeu</h2><p class="sub">As 10 empresas e entidades privadas que mais receberam (sem órgãos públicos). Clique para ver os pagamentos.</p><table><thead><tr><th class="hm">#</th><th>Credor</th><th class="num hm">Pagamentos</th><th class="num">Total</th></tr></thead><tbody>${I.f.slice(0,10).map((f,i)=>`<tr class="cl" onclick="go('${f[0]}')"><td class="hm">${i+1}</td><td>${esc(f[1])}</td><td class="num hm">${f[3]}</td><td class="num">${fm(f[2])} ›</td></tr>`).join('')}</tbody></table></section>
+  
+  ${vzc}`;
   app.querySelectorAll('[data-ano]').forEach(b=>b.onclick=async()=>{ANO=b.dataset.ano;I=await idx(ANO);pilha.length=0;render('inicio')});
-  const q=document.getElementById('busca'),tb=document.getElementById('cat');
-  const draw=()=>{const t=sem(q.value.trim());tb.innerHTML=I.c.filter(c=>!t||sem(c[1]).includes(t)).slice(0,t?400:25).map(c=>`<tr class="cl" onclick="go('${c[0]}')"><td>${esc(c[1])}${c[4]?'<span class="em">Maior: '+esc(c[4])+'</span>':''}</td><td class="num">${c[3]}</td><td class="num">${fm(c[2])} ›</td></tr>`).join('')||'<tr><td colspan=3>Nada encontrado.</td></tr>'};
-  q.addEventListener('input',draw);draw();
+  vzCardBind();
 }
 function grupo(id){
   const g=I.g.find(x=>x[0]==id), cs=I.c.filter(c=>c[5]==g[1]);
@@ -206,7 +287,7 @@ async function det(id){
 }
 let atual='inicio';const pilha=[];
 function render(h){atual=h;window.scrollTo(0,0);
-  if(h=='inicio')inicio();else if(h[0]=='g')grupo(h);else if(/^[cfe]\d+$/.test(h))det(h);else{atual='inicio';inicio();}}
+  if(h=='inicio')inicio();else if(h=='todas')todas();else if(h.startsWith('sl-'))semlic(h);else if(h=='viz')viz();else if(h.startsWith('vz-'))vzCidade(h);else if(h[0]=='g')grupo(h);else if(/^[cfe]\d+$/.test(h))det(h);else{atual='inicio';inicio();}}
 function setHash(h){try{history.replaceState(null,'','#'+h)}catch(e){}}
 async function go(h){if(h=='voltar'){const p=pilha.pop();if(p){if(p[0]!=ANO){ANO=p[0];I=await idx(ANO)}render(p[1])}else render('inicio');setHash(atual);return}
   if(h==atual){render(h);return} pilha.push([ANO,atual]);render(h);setHash(h)}
