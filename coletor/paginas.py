@@ -8,7 +8,7 @@ Lê docs/data.json (gerado por montar.py) e escreve:
 import html
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from . import comum
 
@@ -56,7 +56,8 @@ def pagina(v, d):
     lp = "".join(f"<li>{rot}: {pr[k]}</li>" for k, rot in props.items() if pr.get(k))
     ld = [
         {"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "name": titulo, "inLanguage": "pt-BR",
-         "dateModified": datetime.now().strftime("%Y-%m-%d"),
+         "dateCreated": "2026-11-16T00:00:00-03:00",
+         "dateModified": datetime.now(timezone(timedelta(hours=-3))).replace(microsecond=0).isoformat(),
          "mainEntity": {"@type": "Person", "name": nome, "jobTitle": cargo(v), "sameAs": [v["perfil"]],
                         "memberOf": {"@type": "GovernmentOrganization", "name": "Câmara Municipal de Indaial",
                                      "url": "https://www.camaraindaial.sc.gov.br"},
@@ -80,7 +81,7 @@ def pagina(v, d):
 <meta property="og:title" content="{esc(titulo)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{URL}/og.png">
+<meta property="og:image" content="{URL}/og-site.png">
 <meta property="og:image:alt" content="Quem paga, Indaial? Quanto custa cada vereador">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b3121f">
@@ -146,7 +147,7 @@ ul{{padding-left:20px}}
 
 
 def sitemap(vs, hoje):
-    urls = [(URL + "/", "1.0")] + [(f"{URL}/vereador/{v['slug']}/", "0.8") for v in vs]
+    urls = [(URL + "/", "1.0"), (URL + "/prefeitura/", "0.9")] + [(f"{URL}/vereador/{v['slug']}/", "0.8") for v in vs]
     itens = "\n".join(f"  <url><loc>{u}</loc><lastmod>{hoje}</lastmod><changefreq>daily</changefreq><priority>{p}</priority></url>" for u, p in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{itens}\n</urlset>\n'
 
