@@ -150,134 +150,134 @@
  },
  "votos": {
   "Valentim Blasius": {
-   "fav": 161,
+   "fav": 162,
    "con": 4,
    "conExec": 1,
    "nr": 17,
    "abs": 0,
-   "pres": 1631,
+   "pres": 1654,
    "sessoes": 119,
-   "semVoto": 4
+   "semVoto": 3
   },
   "Jonatas Mizael Rosenbrock": {
-   "fav": 1777,
-   "con": 21,
+   "fav": 1799,
+   "con": 23,
    "conExec": 2,
    "nr": 0,
    "abs": 0,
    "pres": 15,
    "sessoes": 119,
-   "semVoto": 2
+   "semVoto": 1
   },
   "Valmir Jordani": {
-   "fav": 1781,
-   "con": 20,
+   "fav": 1803,
+   "con": 22,
    "conExec": 3,
    "nr": 12,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 3
-  },
-  "Diogo de Pinho": {
-   "fav": 1780,
-   "con": 30,
-   "conExec": 2,
-   "nr": 2,
-   "abs": 1,
-   "pres": 0,
-   "sessoes": 119,
    "semVoto": 2
   },
+  "Diogo de Pinho": {
+   "fav": 1801,
+   "con": 32,
+   "conExec": 2,
+   "nr": 2,
+   "abs": 2,
+   "pres": 0,
+   "sessoes": 119,
+   "semVoto": 1
+  },
   "Carlos Eduardo Cunha": {
-   "fav": 1791,
-   "con": 22,
+   "fav": 1814,
+   "con": 23,
    "conExec": 15,
    "nr": 0,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 2
+   "semVoto": 1
   },
   "Caroline Laís Bertoldi": {
-   "fav": 1794,
-   "con": 19,
+   "fav": 1816,
+   "con": 21,
    "conExec": 3,
    "nr": 0,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 2
+   "semVoto": 1
   },
   "Elaine Pickler": {
-   "fav": 1749,
-   "con": 32,
+   "fav": 1771,
+   "con": 34,
    "conExec": 16,
    "nr": 32,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 3
+   "semVoto": 2
   },
   "Elton Marcos Possamai": {
-   "fav": 1779,
-   "con": 34,
-   "conExec": 21,
+   "fav": 1801,
+   "con": 36,
+   "conExec": 22,
    "nr": 0,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 2
+   "semVoto": 1
   },
   "Fernanda Jacobi dos Santos": {
-   "fav": 1183,
-   "con": 7,
-   "conExec": 1,
+   "fav": 1205,
+   "con": 9,
+   "conExec": 2,
    "nr": 622,
    "abs": 1,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 44
+   "semVoto": 43
   },
   "Flávio Augusto Ferri Molinari": {
-   "fav": 1707,
-   "con": 19,
+   "fav": 1729,
+   "con": 21,
    "conExec": 2,
    "nr": 87,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 8
+   "semVoto": 7
   },
   "Henrique Fritz": {
-   "fav": 1444,
-   "con": 19,
+   "fav": 1466,
+   "con": 21,
    "conExec": 8,
    "nr": 350,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 23
+   "semVoto": 22
   },
   "José Carlos Peixer": {
-   "fav": 1665,
-   "con": 22,
+   "fav": 1687,
+   "con": 24,
    "conExec": 4,
    "nr": 126,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 15
+   "semVoto": 14
   },
   "Lucio Vanderlinde": {
-   "fav": 1735,
-   "con": 37,
+   "fav": 1757,
+   "con": 39,
    "conExec": 23,
    "nr": 41,
    "abs": 0,
    "pres": 0,
    "sessoes": 119,
-   "semVoto": 3
+   "semVoto": 2
   }
  },
  "contra": {
@@ -308,7 +308,9 @@
    63,
    64,
    65,
-   70
+   70,
+   84,
+   86
   ],
   "Valmir Jordani": [
    14,
@@ -330,7 +332,9 @@
    63,
    64,
    65,
-   70
+   70,
+   84,
+   86
   ],
   "Diogo de Pinho": [
    3,
@@ -362,7 +366,9 @@
    68,
    69,
    70,
-   73
+   73,
+   84,
+   86
   ],
   "Carlos Eduardo Cunha": [
    16,
@@ -386,7 +392,8 @@
    77,
    78,
    82,
-   83
+   83,
+   86
   ],
   "Caroline Laís Bertoldi": [
    1,
@@ -407,7 +414,9 @@
    63,
    64,
    65,
-   70
+   70,
+   84,
+   86
   ],
   "Elaine Pickler": [
    1,
@@ -441,7 +450,9 @@
    77,
    78,
    81,
-   83
+   83,
+   84,
+   86
   ],
   "Elton Marcos Possamai": [
    0,
@@ -477,7 +488,9 @@
    80,
    81,
    82,
-   83
+   83,
+   85,
+   86
   ],
   "Fernanda Jacobi dos Santos": [
    3,
@@ -486,7 +499,9 @@
    17,
    25,
    46,
-   70
+   70,
+   85,
+   86
   ],
   "Flávio Augusto Ferri Molinari": [
    13,
@@ -507,7 +522,9 @@
    63,
    64,
    65,
-   70
+   70,
+   84,
+   86
   ],
   "Henrique Fritz": [
    3,
@@ -528,7 +545,9 @@
    42,
    43,
    46,
-   70
+   70,
+   84,
+   86
   ],
   "José Carlos Peixer": [
    14,
@@ -552,7 +571,9 @@
    65,
    70,
    77,
-   78
+   78,
+   84,
+   86
   ],
   "Lucio Vanderlinde": [
    0,
@@ -591,7 +612,9 @@
    71,
    72,
    80,
-   83
+   83,
+   84,
+   86
   ]
  },
  "divididas": [
@@ -1804,6 +1827,62 @@
     "Lucio Vanderlinde"
    ],
    "semAta": true
+  },
+  {
+   "data": "2026-11-17",
+   "materia": "Emenda Modificativa nº 1 ao Projeto de Lei Complementar nº 9/2026",
+   "ementa": "Emenda Modificativa Verbal nº 1, ao Projeto de Lei Complementar n° 9/2026: Ementa: Modifica a redação do caput do art. 236 do Código Tributário Municipal, proposto no art. 4º do Projeto de Lei Complementar nº 09/2026, para adequar a exigência de quitação do ITBI à jurisprudência com repercussão geral do Supremo Tribunal Federal (Tema 1.124) e ao Código Civil brasileiro.",
+   "autoria": "Carlos Eduardo Cunha; Elton Marcos Possamai; Fernanda Jacobi dos Santos",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 3 a favor · contra 9",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-11-17",
+   "materia": "Projeto de Lei Complementar nº 9/2026",
+   "ementa": "ALTERA DISPOSITIVOS DA LEI COMPLEMENTAR Nº 79, DE 18 DE DEZEMBRO DE 2007 - CÓDIGO TRIBUTÁRIO DO MUNICÍPIO DE INDAIAL, RELATIVOS AO IMPOSTO SOBRE A TRANSMISSÃO INTER VIVOS DE BENS IMÓVEIS (ITBI), ÀS OBRIGAÇÕES ACESSÓRIAS DO IMPOSTO SOBRE SERVIÇOS DE QUALQUER NATUREZA (ISSQN) E À TAXA DE LICENÇA PARA OBRAS, E ADÉQUA A CONTRIBUIÇÃO DE ILUMINAÇÃO PÚBLICA AO ART. 149-A DA CONSTITUIÇÃO FEDERAL E AO ART. 82-A DA LEI Nº 5.172, DE 25 DE OUTUBRO DE 1966 (CÓDIGO TRIBUTÁRIO NACIONAL).",
+   "autoria": "Prefeitura",
+   "rejeitada": false,
+   "resultado": "Aprovado · 11 a favor · contra 2",
+   "contra": [
+    "Elton Marcos Possamai",
+    "Fernanda Jacobi dos Santos"
+   ],
+   "semAta": true
+  },
+  {
+   "data": "2026-11-17",
+   "materia": "Subemenda nº 1/2026 à Emenda Modificativa nº 1 ao Projeto de Lei",
+   "ementa": "Complementar nº 9/2026 SUBEMENDA SUBSTITUTIVA Nº 1/2026 À EMENDA MODIFICATIVA Nº 1/2026 AO PROJETO DE LEI COMPLEMENTAR Nº 9/2026",
+   "autoria": "Comissão de Justiça e Redação (CJR)",
+   "rejeitada": true,
+   "resultado": "Rejeitado · 0 a favor · contra 12",
+   "contra": [
+    "Jonatas Mizael Rosenbrock",
+    "Valmir Jordani",
+    "Diogo de Pinho",
+    "Carlos Eduardo Cunha",
+    "Caroline Laís Bertoldi",
+    "Elaine Pickler",
+    "Elton Marcos Possamai",
+    "Fernanda Jacobi dos Santos",
+    "Flávio Augusto Ferri Molinari",
+    "Henrique Fritz",
+    "José Carlos Peixer",
+    "Lucio Vanderlinde"
+   ],
+   "semAta": true
   }
  ],
  "atas": [
@@ -1930,94 +2009,94 @@
  ],
  "presenca": {
   "Valentim Blasius": {
-   "pres": 115,
+   "pres": 116,
    "just": 0,
    "semJust": 1,
-   "semAta": 3,
+   "semAta": 2,
    "licenca": 0
   },
   "Jonatas Mizael Rosenbrock": {
-   "pres": 117,
+   "pres": 118,
    "just": 0,
    "semJust": 0,
-   "semAta": 2,
+   "semAta": 1,
    "licenca": 0
   },
   "Valmir Jordani": {
-   "pres": 116,
+   "pres": 117,
    "just": 0,
    "semJust": 0,
-   "semAta": 3,
+   "semAta": 2,
    "licenca": 0
   },
   "Diogo de Pinho": {
-   "pres": 77,
+   "pres": 78,
    "just": 1,
    "semJust": 37,
-   "semAta": 2,
+   "semAta": 1,
    "licenca": 2
   },
   "Carlos Eduardo Cunha": {
-   "pres": 117,
+   "pres": 118,
    "just": 0,
    "semJust": 0,
-   "semAta": 2,
+   "semAta": 1,
    "licenca": 0
   },
   "Caroline Laís Bertoldi": {
-   "pres": 117,
+   "pres": 118,
    "just": 0,
    "semJust": 0,
-   "semAta": 2,
+   "semAta": 1,
    "licenca": 0
   },
   "Elaine Pickler": {
-   "pres": 116,
+   "pres": 117,
    "just": 0,
    "semJust": 1,
-   "semAta": 2,
+   "semAta": 1,
    "licenca": 0
   },
   "Elton Marcos Possamai": {
+   "pres": 118,
+   "just": 0,
+   "semJust": 0,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Fernanda Jacobi dos Santos": {
+   "pres": 79,
+   "just": 0,
+   "semJust": 11,
+   "semAta": 17,
+   "licenca": 12
+  },
+  "Flávio Augusto Ferri Molinari": {
+   "pres": 112,
+   "just": 0,
+   "semJust": 6,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "Henrique Fritz": {
+   "pres": 99,
+   "just": 0,
+   "semJust": 19,
+   "semAta": 1,
+   "licenca": 0
+  },
+  "José Carlos Peixer": {
+   "pres": 105,
+   "just": 0,
+   "semJust": 5,
+   "semAta": 9,
+   "licenca": 0
+  },
+  "Lucio Vanderlinde": {
    "pres": 117,
    "just": 0,
    "semJust": 0,
    "semAta": 2,
-   "licenca": 0
-  },
-  "Fernanda Jacobi dos Santos": {
-   "pres": 78,
-   "just": 0,
-   "semJust": 11,
-   "semAta": 18,
-   "licenca": 12
-  },
-  "Flávio Augusto Ferri Molinari": {
-   "pres": 111,
-   "just": 0,
-   "semJust": 6,
-   "semAta": 2,
-   "licenca": 0
-  },
-  "Henrique Fritz": {
-   "pres": 98,
-   "just": 0,
-   "semJust": 19,
-   "semAta": 2,
-   "licenca": 0
-  },
-  "José Carlos Peixer": {
-   "pres": 104,
-   "just": 0,
-   "semJust": 5,
-   "semAta": 10,
-   "licenca": 0
-  },
-  "Lucio Vanderlinde": {
-   "pres": 116,
-   "just": 0,
-   "semJust": 0,
-   "semAta": 3,
    "licenca": 0
   }
  },
@@ -3007,8 +3086,8 @@
     "aut": {
      "Carlos Eduardo Cunha": 5,
      "Fernanda Jacobi dos Santos": 2,
-     "Henrique Fritz": 2,
      "Jonatas Mizael Rosenbrock": 1,
+     "Henrique Fritz": 2,
      "Lucio Vanderlinde": 2,
      "Valentim Blasius": 1
     }
@@ -3121,13 +3200,13 @@
   "infTotal": 857
  },
  "camara": {
-  "votacoes": 1813,
+  "votacoes": 1837,
   "sessoes": 119,
-  "rejeitadas": 16,
-  "divididas": 84,
-  "rejSemAta": 8,
-  "divSemAta": 24,
-  "votSemAta": 382,
+  "rejeitadas": 18,
+  "divididas": 87,
+  "rejSemAta": 10,
+  "divSemAta": 27,
+  "votSemAta": 406,
   "propsTotal": 4711
  }
 }
